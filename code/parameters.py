@@ -157,7 +157,7 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
-    "MIN_STRATEGIC_PKM_DISTANCE": 5.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
+    "MIN_STRATEGIC_PKM_DISTANCE": 0.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
 
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
     **package_parameter_defaults(),
@@ -173,58 +173,88 @@ globals().update(NOMINAL_PARAMS)
 # -----------------------------------------------------------------------------
 # OPTION A: Define by Municipalities / Regions (Empty when in "zones" mode)
 # -----------------------------------------------------------------------------
-CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
-    "Zürich": ["Zürich"],
-    "Winterthur": ["Winterthur"],
-    "Airport / Glattal": [
-        "Kloten", "Opfikon", "Wallisellen", "Dübendorf",
-        "Dietlikon", "Wangen-Brüttisellen", "Bassersdorf", "Rümlang",
-        "Illnau-Effretikon", "Lindau", "Nürensdorf"
+CORRIDOR_DEFINITION_MODE = "zones"
+
+# The project uses complete Limmattal municipalities, but only Altstetten and
+# Höngg within the City of Zürich. Explicit zone IDs prevent the whole city from
+# being included in the reporting and assignment corridor.
+CORRIDOR_REGIONS = {
+    "Limmattal Gemeinden": [
+        "Schlieren",
+        "Dietikon",
+        "Urdorf",
+        "Oberengstringen",
+        "Unterengstringen",
+        "Weiningen (ZH)",
+        "Geroldswil",
+        "Oetwil an der Limmat",
     ],
-    "Eastern Switzerland (Gateways)": [
-        "Wiesendangen", "Elsau",
-        "Elgg", "Hagenbuch"
-    ]
+    "Stadt Zürich Quartiere": [
+        "Altstetten",
+        "Höngg",
+    ],
 }
 
-# Flat list of all corridor municipalities
-CORRIDOR_MUNICIPALITIES = [  # Derived flat list used by corridor selection and stage definitions.
-    muni for munis in CORRIDOR_REGIONS.values() for muni in munis
+# Retained for functions that still require municipality metadata. The actual
+# corridor footprint is controlled by CORRIDOR_ZONE_IDS below.
+CORRIDOR_MUNICIPALITIES = [
+    "Schlieren",
+    "Dietikon",
+    "Urdorf",
+    "Oberengstringen",
+    "Unterengstringen",
+    "Weiningen (ZH)",
+    "Geroldswil",
+    "Oetwil an der Limmat",
+    "Zürich",
+]
+
+PROJECT_ZONES = {
+    "Limmattal_Gemeinden": [
+        "24301001", "24301002", "24301003", "24301004", "24301005",
+        "24301006", "24301007", "24301008", "24301009", "24301010",
+        "24301011", "24301012", "24301013", "24301014", "24301015",
+        "24301016", "24301017", "24301018", "24301019", "24301020",
+        "24301021", "24301022", "24301023", "24301024", "24301025",
+        "24301026", "24301027", "24401001", "24401002", "24401003",
+        "24401004", "24401005", "24501001", "24501002", "24501003",
+        "24501004", "24601001", "24601002", "24701001", "24701002",
+        "24701003", "24701004", "24701005", "24701006", "24701007",
+        "24701008", "24701009", "24701010", "24701011", "24701012",
+        "24701013", "24701014", "24701015", "24701016", "24701017",
+        "24701018", "24701019", "24701020", "24901001", "24901002",
+        "24901003", "25001001", "25001002", "25001003", "25001004",
+        "25001005", "25001006", "25001007", "25001008", "25001009",
+        "25101001", "25101002", "25101003", "25101004",
+    ],
+    "Zuerich_Altstetten_Hoengg": [
+        "26101001", "26101002", "26101003", "26101004", "26101005",
+        "26101006", "26101007", "26101008", "26101010", "26101011",
+        "26101012", "26101013", "26101015", "26101016", "26101018",
+        "26101019", "26101020", "26101021", "26101022", "26101023",
+        "26101024", "26101027", "26101029", "26101030", "26101031",
+        "26101032", "26101033", "26101034", "26101039", "26101041",
+        "26101042", "26101045", "26101046", "26101054", "26101058",
+        "26101064", "26103306",
+    ],
+}
+
+CORRIDOR_ZONE_IDS = [
+    zone_id
+    for zone_ids in PROJECT_ZONES.values()
+    for zone_id in zone_ids
 ]
 
 # Optional project-relative or absolute detailed road-network cache path.
 # Notebook 02 prepares a missing cache; later notebooks require it to exist.
 # None uses the existing default cache. For a new project, select a new filename.
-DETAILED_NETWORK_FILE = None  # Example: "data/processed/my_project_detailed_network.pkl"
+DETAILED_NETWORK_FILE = "data/processed/bike_highway_altstetten_hoengg.pkl"
 
 # -----------------------------------------------------------------------------
 # OPTION B: Define by Explicit Zone IDs
 # -----------------------------------------------------------------------------
-# Example: enable zone selection, define groups, then flatten their IDs.
-# CORRIDOR_DEFINITION_MODE = "zones"
-# PROJECT_ZONES = {
-#     # 1. Zürich Eastern Alignment into CBD: Bellevue, Stadelhofen, Kreuzplatz, Römerhof,
-#     #    Hegibachplatz, Burgwies, Balgrist, Rehalp (S18 border loop), and Witikon
-#     "Zurich_S18_Alignment": [
-#         "26101165", "26101169", "26101171", "26101173", "26101174",
-#         "26101180", "26101181", "26101183", "26101185", "26101187",
-#         "26101189", "26101190", "26101194", "26101195", "26101198",
-#         "26101199", "26101201", "26101202", "26101203", "26101204",
-#         "26101209", "26101210", "26101215", "26101216", "26101218",
-#         "26101220", "26101221", "26101222", "26101225", "26101227",
-#         "26101228", "26101229", "26101231", "26101234", "26101235",
-#         "26101236", "26101242", "26101243", "26101245", "26101248",
-#         "26101251", "26101252", "26101255", "26101259", "26101262",
-#         "26101263", "26101264", "26101265", "26101267", "26101272",
-#         "26101273", "26101274", "26101275", "26101278", "26101281",
-#         "26101282", "26101283", "26101285", "26101287", "26101288",
-#         "26101289", "26101290", "26101294", "26101295", "26101296",
-#         "26101300", "26101301", "26101303", "26101304", "26101305",
-#     ]
-
-# }
-# Flat list of active corridor zone IDs:
-# CORRIDOR_ZONE_IDS = [z for zone_list in PROJECT_ZONES.values() for z in zone_list]
+# The active explicit-zone definition is configured above. Keep the zone IDs
+# aligned with data/transport/prepared/zones.parquet when prepared inputs change.
 # -----------------------------------------------------------------------------
 
 # Optional route coverage, including trips with endpoints outside the corridor.
