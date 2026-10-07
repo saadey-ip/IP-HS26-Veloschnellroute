@@ -394,10 +394,20 @@ def get_stages(params: dict | None = None, *, packages: dict | None = None,
 
     # Waiting effects cover different corridor municipalities in both directions.
     # Section in-vehicle savings instead follow parameters.SECTION route coverage.
-    service_od_pairs = [
-        {"origin": {"municipality_name": o}, "destination": {"municipality_name": d}}
-        for o, d in itertools.combinations(p.CORRIDOR_MUNICIPALITIES, 2)
+    areas = [
+        {"municipality_name": name}
+        for name in p.CORRIDOR_MUNICIPALITIES
+        if name != "Zürich"
+    ] + [
+        {"city_quartier": "Altstetten"},
+        {"city_quartier": "Höngg"},
     ]
+
+    service_od_pairs = [
+        {"origin": origin, "destination": destination}
+        for origin, destination in itertools.combinations(areas, 2)
+    ]
+
     return _assemble_stages(
         PACKAGES if packages is None else packages, params, service_od_pairs,
         combined_effects=combined_effects,

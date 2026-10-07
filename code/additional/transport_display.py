@@ -2022,9 +2022,10 @@ def municipality_od_explorer(
     municipalities: list[str] | tuple[str, ...] | set[str],
     *,
     matrix: pd.DataFrame | None = None,
+    zone_ids: list[str] | set[str] | None = None,
     height: int = 700,
 ) -> Any:
-    """Return a static Plotly heatmap of directed municipality-level demand.
+    """Return a static Plotly heatmap of directed municipality/quartier demand.
 
     A regular ``Figure`` is intentional: it keeps hover and zoom in the browser
     without FigureWidget relayout callbacks, avoiding frontend/backend Plotly
@@ -2036,6 +2037,7 @@ def municipality_od_explorer(
         context,
         municipalities,
         matrix=matrix,
+        zone_ids=zone_ids,
     )
     values = municipality_od.to_numpy(dtype=float)
     figure = go.Figure(go.Heatmap(
@@ -2052,9 +2054,9 @@ def municipality_od_explorer(
         ),
     ))
     figure.update_layout(
-        title="Cantonal-reference OD demand by municipality",
-        xaxis_title="Destination municipality",
-        yaxis_title="Origin municipality",
+        title="Cantonal-reference OD demand by corridor area",
+        xaxis_title="Destination area",
+        yaxis_title="Origin area",
         yaxis_autorange="reversed",
         height=int(height),
         margin={"l": 20, "r": 20, "t": 60, "b": 20},
@@ -2068,15 +2070,16 @@ def municipality_flow_map_explorer(
     municipalities: list[str] | tuple[str, ...] | set[str],
     *,
     matrix: pd.DataFrame | None = None,
+    zone_ids: list[str] | set[str] | None = None,
     n_bins: int = 5,
     trip_bin_edges: list[float] | None = None,
     min_trips: float = 0.0,
     max_flows: int = 150,
     height: int = 700,
 ) -> Any:
-    """Map directional municipality OD desire lines from any FSM matrix.
+    """Map directional corridor-area OD desire lines from any FSM matrix.
 
-    Municipal centroids anchor straight desire lines; they are not assigned
+    Area centroids anchor straight desire lines; they are not assigned
     routes. A regular Plotly ``Figure`` keeps the map independent of Jupyter
     widget relayout callbacks. Fixed trip intervals may be supplied through
     ``trip_bin_edges``; otherwise equal-count quantile bins are used.
@@ -2085,26 +2088,36 @@ def municipality_flow_map_explorer(
     import plotly.graph_objects as go
 
     _, links = tmi.aggregate_od_by_municipality(
-        context, municipalities, matrix=matrix
+        context, municipalities, matrix=matrix, zone_ids=zone_ids
     )
     links = links.loc[
         links["peak-hour passenger trips"] > float(min_trips)
     ].copy()
     if links.empty:
-        raise ValueError("No municipality OD flows exceed min_trips.")
+        raise ValueError("No corridor-area OD flows exceed min_trips.")
 
     requested = list(dict.fromkeys(map(str, municipalities)))
+    area_zone_ids = tmi.resolve_area_zone_ids(
+        context.zones,
+        requested,
+        allowed_zone_ids=zone_ids,
+    )
+    zone_to_area = {
+        zone_id: area_name
+        for area_name, selected_ids in area_zone_ids.items()
+        for zone_id in selected_ids
+    }
     zones = context.zones.loc[
-        context.zones["municipality_name"].astype(str).isin(requested),
-        ["municipality_name", "geometry"],
+        context.zones["grid_id"].astype(str).isin(zone_to_area),
+        ["grid_id", "municipality_name", "geometry"],
     ].copy()
     if zones.crs is None:
         raise ValueError("Zone geometries need a declared CRS.")
-    zones["municipality_name"] = zones["municipality_name"].astype(str)
-    municipality_shapes = zones.dissolve(by="municipality_name")
-    centres_projected = municipality_shapes.geometry.centroid
+    zones["area_name"] = zones["grid_id"].astype(str).map(zone_to_area)
+    area_shapes = zones.dissolve(by="area_name")
+    centres_projected = area_shapes.geometry.centroid
     centres_wgs84 = gpd.GeoSeries(
-        centres_projected, index=municipality_shapes.index, crs=zones.crs
+        centres_projected, index=area_shapes.index, crs=zones.crs
     ).to_crs(4326)
     coordinates = {
         str(name): (float(point.x), float(point.y))
@@ -2218,7 +2231,7 @@ def municipality_flow_map_explorer(
         text=names,
         textposition="top center",
         hovertemplate="%{text}<extra></extra>",
-        name="Municipalities",
+        name="Corridor areas",
     ))
     for bin_index in populated_bins:
         figure.add_trace(go.Scattermap(
@@ -2228,7 +2241,7 @@ def municipality_flow_map_explorer(
         ))
     figure.update_layout(
         title=(
-            "Cantonal-reference municipality OD desire lines "
+            "Cantonal-reference corridor-area OD desire lines "
             f"(showing {len(links)} flows)"
         ),
         map={

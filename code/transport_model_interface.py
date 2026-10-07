@@ -671,6 +671,55 @@ def get_zone_ids_for_municipalities(
     return resolve_corridor_zone_ids(zones, municipality_names)
 
 
+def resolve_area_zone_ids(
+    zones: pd.DataFrame,
+    area_names: Sequence[str],
+    *,
+    allowed_zone_ids: Sequence[str] | set[str] | None = None,
+) -> dict[str, list[str]]:
+    """Resolve municipality or quartier labels to disjoint FSM zone lists."""
+    requested = list(dict.fromkeys(map(str, area_names)))
+    if not requested:
+        raise ValueError("At least one municipality or quartier must be supplied.")
+
+    required = {"grid_id", "municipality_name"}
+    missing = required.difference(zones.columns)
+    if missing:
+        raise ValueError(f"Zone data are missing columns: {sorted(missing)}")
+
+    zone_table = zones[["grid_id", "municipality_name"]].copy()
+    zone_table["grid_id"] = zone_table["grid_id"].astype(str)
+    zone_table["municipality_name"] = zone_table["municipality_name"].astype(str)
+    if "city_quartier" in zones.columns:
+        zone_table["city_quartier"] = zones["city_quartier"].fillna("").astype(str)
+    else:
+        zone_table["city_quartier"] = ""
+
+    allowed = None if allowed_zone_ids is None else set(map(str, allowed_zone_ids))
+    result: dict[str, list[str]] = {}
+    assigned: dict[str, str] = {}
+    for name in requested:
+        matching = zone_table.loc[
+            zone_table["municipality_name"].eq(name)
+            | zone_table["city_quartier"].eq(name),
+            "grid_id",
+        ]
+        if allowed is not None:
+            matching = matching.loc[matching.isin(allowed)]
+        zone_ids = list(dict.fromkeys(matching))
+        if not zone_ids:
+            raise ValueError(f"No corridor zones matched area {name!r}.")
+        for zone_id in zone_ids:
+            previous = assigned.get(zone_id)
+            if previous is not None:
+                raise ValueError(
+                    f"Corridor areas {previous!r} and {name!r} overlap at zone {zone_id!r}."
+                )
+            assigned[zone_id] = name
+        result[name] = zone_ids
+    return result
+
+
 def _get_core_zones(zones: pd.DataFrame, corridor_municipalities: list[str]) -> pd.DataFrame:
     """Get core network zones based on the student's chosen definition mode in parameters.py."""
     zone_ids = resolve_corridor_zone_ids(zones, corridor_municipalities)
@@ -3594,16 +3643,17 @@ def aggregate_od_by_municipality(
     municipalities: list[str] | tuple[str, ...] | set[str],
     *,
     matrix: pd.DataFrame | None = None,
+    zone_ids: Sequence[str] | set[str] | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Aggregate an FSM zone-level OD matrix into directed municipality flows.
+    """Aggregate an FSM zone-level OD matrix into directed area flows.
 
-    The function is project-agnostic: the caller supplies the municipalities
-    and may replace the cantonal baseline with any square FSM OD matrix.
-    Returns both the municipality matrix and a long directional-link table.
+    Names may refer to municipalities or, when available, city quartiers.
+    The caller may replace the cantonal baseline with any square FSM OD matrix.
+    Returns both the area matrix and a long directional-link table.
     """
     requested = list(dict.fromkeys(map(str, municipalities)))
     if not requested:
-        raise ValueError("At least one municipality must be supplied.")
+        raise ValueError("At least one municipality or quartier must be supplied.")
 
     source = context.baseline_od if matrix is None else matrix
     if not isinstance(source, pd.DataFrame) or source.empty:
@@ -3618,38 +3668,39 @@ def aggregate_od_by_municipality(
     missing_columns = required_columns.difference(context.zones.columns)
     if missing_columns:
         raise ValueError(f"Zone data are missing columns: {sorted(missing_columns)}")
-    zones = context.zones[["grid_id", "municipality_name"]].copy()
-    zones["grid_id"] = zones["grid_id"].astype(str)
-    zones["municipality_name"] = zones["municipality_name"].astype(str)
-    selected_zones = zones.loc[zones["municipality_name"].isin(requested)].copy()
-    zone_ids = [
-        zone_id for zone_id in selected_zones["grid_id"]
-        if zone_id in source.index and zone_id in source.columns
-    ]
-    if not zone_ids:
-        raise ValueError("No FSM zones matched the selected municipalities.")
-
-    zone_to_municipality = (
-        selected_zones.drop_duplicates("grid_id")
-        .set_index("grid_id")
-        .loc[zone_ids, "municipality_name"]
+    area_zone_ids = resolve_area_zone_ids(
+        context.zones,
+        requested,
+        allowed_zone_ids=zone_ids,
     )
-    selected_od = source.loc[zone_ids, zone_ids].apply(pd.to_numeric, errors="coerce").fillna(0.0)
+    zone_to_area = {
+        zone_id: area_name
+        for area_name, selected_ids in area_zone_ids.items()
+        for zone_id in selected_ids
+        if zone_id in source.index and zone_id in source.columns
+    }
+    selected_zone_ids = list(zone_to_area)
+    if not selected_zone_ids:
+        raise ValueError("No FSM zones matched the selected municipalities or quartiers.")
+    zone_to_area_series = pd.Series(zone_to_area)
+    selected_od = source.loc[selected_zone_ids, selected_zone_ids].apply(
+        pd.to_numeric, errors="coerce"
+    ).fillna(0.0)
     if (selected_od.to_numpy(dtype=float) < 0).any():
         raise ValueError("OD demand cannot contain negative trip values.")
 
     # Aggregate origins, transpose, then aggregate destinations. This avoids
     # the deprecated ``groupby(axis=1)`` API and works across supported pandas versions.
-    municipality_od = selected_od.groupby(zone_to_municipality, sort=False).sum()
-    municipality_od = municipality_od.T.groupby(zone_to_municipality, sort=False).sum().T
-    municipality_order = [name for name in requested if name in municipality_od.index]
-    municipality_od = municipality_od.reindex(
-        index=municipality_order,
-        columns=municipality_order,
+    area_od = selected_od.groupby(zone_to_area_series, sort=False).sum()
+    area_od = area_od.T.groupby(zone_to_area_series, sort=False).sum().T
+    area_order = [name for name in requested if name in area_od.index]
+    area_od = area_od.reindex(
+        index=area_order,
+        columns=area_order,
         fill_value=0.0,
     )
 
-    directed_links = municipality_od.rename_axis("origin").reset_index().melt(
+    directed_links = area_od.rename_axis("origin").reset_index().melt(
         id_vars="origin",
         var_name="destination",
         value_name="peak-hour passenger trips",
@@ -3663,7 +3714,7 @@ def aggregate_od_by_municipality(
     directed_links = directed_links.sort_values(
         "peak-hour passenger trips", ascending=False
     ).reset_index(drop=True)
-    return municipality_od, directed_links
+    return area_od, directed_links
 
 
 # =============================================================================
@@ -5353,16 +5404,16 @@ def corridor_od_explorer(matrix: pd.DataFrame, corridor: CorridorContext, **flow
     return render(matrix, corridor, **flow_map_kwargs)
 
 
-def municipality_od_explorer(context: TransportContext, municipalities: list[str] | tuple[str, ...] | set[str], *, matrix: pd.DataFrame | None=None, height: int=700) -> Any:
+def municipality_od_explorer(context: TransportContext, municipalities: list[str] | tuple[str, ...] | set[str], *, matrix: pd.DataFrame | None=None, zone_ids: list[str] | set[str] | None=None, height: int=700) -> Any:
     """See additional.transport_display.municipality_od_explorer."""
     from additional.transport_display import municipality_od_explorer as render
-    return render(context, municipalities, matrix=matrix, height=height)
+    return render(context, municipalities, matrix=matrix, zone_ids=zone_ids, height=height)
 
 
-def municipality_flow_map_explorer(context: TransportContext, municipalities: list[str] | tuple[str, ...] | set[str], *, matrix: pd.DataFrame | None=None, n_bins: int=5, trip_bin_edges: list[float] | None=None, min_trips: float=0.0, max_flows: int=150, height: int=700) -> Any:
+def municipality_flow_map_explorer(context: TransportContext, municipalities: list[str] | tuple[str, ...] | set[str], *, matrix: pd.DataFrame | None=None, zone_ids: list[str] | set[str] | None=None, n_bins: int=5, trip_bin_edges: list[float] | None=None, min_trips: float=0.0, max_flows: int=150, height: int=700) -> Any:
     """See additional.transport_display.municipality_flow_map_explorer."""
     from additional.transport_display import municipality_flow_map_explorer as render
-    return render(context, municipalities, matrix=matrix, n_bins=n_bins, trip_bin_edges=trip_bin_edges, min_trips=min_trips, max_flows=max_flows, height=height)
+    return render(context, municipalities, matrix=matrix, zone_ids=zone_ids, n_bins=n_bins, trip_bin_edges=trip_bin_edges, min_trips=min_trips, max_flows=max_flows, height=height)
 
 
 def flow_map_explorer(context: TransportContext, mode_result: ModeChoiceResult | None=None, corridor_municipalities: list[str] | None=None, *, matrix: pd.DataFrame | None=None, buffer_m: float=DEFAULT_CORRIDOR_BUFFER_M, n_bins: int=5, max_flows: int=250, pass_through_factor: float=0.05, min_trips: float=0.0) -> Any:
