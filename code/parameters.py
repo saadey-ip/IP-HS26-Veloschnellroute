@@ -209,6 +209,13 @@ CORRIDOR_MUNICIPALITIES = [
     "Zürich",
 ]
 
+# Reporting areas use separate labels for the two selected Zürich quartiers.
+CORRIDOR_AREAS = [
+    municipality
+    for municipality in CORRIDOR_MUNICIPALITIES
+    if municipality != "Zürich"
+] + ["Altstetten", "Höngg"]
+
 PROJECT_ZONES = {
     "Limmattal_Gemeinden": [
         "24301001", "24301002", "24301003", "24301004", "24301005",
