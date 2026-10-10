@@ -51,7 +51,7 @@ ASSIGNMENT_SETTINGS = {
     # explicitly. Planning uses the separately prepared OD surrogate.
     "method": "MSA",
     "force_regenerate_corridor_network": False,  # Reuse prepared roads unless a rebuild is explicitly requested.
-    "max_iterations": 64,
+    "max_iterations": 70,
     "min_iterations": 8,
     "stopping_rule": "road_relative_gap",
     "road_gap_threshold": 0.02,

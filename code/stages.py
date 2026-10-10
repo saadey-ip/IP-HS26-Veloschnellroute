@@ -146,6 +146,7 @@ from math import isfinite
 # =============================================================================
 # 1. PACKAGES: RAILWAY IMPROVEMENTS, MOBILITY HUBS AND APPRAISAL
 # =============================================================================
+
 PACKAGES = {
     # --- Station package ---
     # ⚠️ STUDENT INSTRUCTION:
@@ -171,35 +172,88 @@ PACKAGES = {
 
 
     "stations": {
-        "name": "Stage 1 – Local Stations & Access Package",
+        "name": "Stage 1 – Major Underpasses",
 
         # Railway improvements
         # Section minutes follow parameters.SECTION route coverage, including
         # through travelers. Shorter headways reduce initial and transfer waiting
         # between different CORRIDOR_MUNICIPALITIES, in both directions.
-        "railway_expansions": [
-            {
-                "section_time_saving_min": 1.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 1.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.10,  # Fraction of baseline peak-hour comfort capacity (+10%).
-            },
-        ],
+        #"railway_expansions": [
+            #{
+                #"section_time_saving_min": 1.0,  # In-vehicle minutes saved relative to baseline.
+                #"headway_reduction_min": 1.0,  # Minutes removed from the baseline service interval.
+                #"capacity_increase": 0.10,  # Fraction of baseline peak-hour comfort capacity (+10%).
+            #},
+        #],
 
-        # Hub & Node Interventions
-        "mobility_hubs": [
+        #Bike-Highway Interventions
+        "bike_highways": [
             {
-                "name": "Station Upgrades (Dietlikon, Bassersdorf, Wallisellen)",
-                "zones": [
-                    {"municipality_name": "Dietlikon"},
-                    {"municipality_name": "Bassersdorf"},
-                    {"municipality_name": "Wallisellen"}
+                "name": "Limmattal Bike Highway (Altstetten - Dietikon, 8.5 km, 4.8 m)",
+                # Areas along the route: Altstetten -> Schlieren -> Unterengstringen -> Dietikon.
+                # Every pair is listed once; both_directions covers the way back.
+                "area_pairs": [
+                    # Schlieren
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Dietikon"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Urdorf"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oberengstringen"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Höngg"}},
+                        # Dietikon
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Urdorf"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oberengstringen"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Höngg"}},
+                        # Urdorf
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oberengstringen"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Höngg"}},
+                        # Oberengstringen
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Höngg"}},
+                        # Unterengstringen
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Höngg"}},
+                        # Weiningen (ZH)
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Höngg"}},
+                        # Geroldswil
+                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Höngg"}},
+                        # Oetwil an der Limmat
+                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Höngg"}},
+                        # Altstetten
+                        {"origin": {"city_quartier": "Altstetten"}, "destination": {"city_quartier": "Höngg"}},
                 ],
+                "both_directions": True,
                 "effects": {
-                    "access_time_reduction_pct": 25.0,  # Improved pedestrian ramps & bus loop access
-                    "transfer_time_reduction_pct": 15.0, # Shorter platform transfer paths
-                    # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
-                }
+                    "distance_reduction_pct": 5.0,  # Report: 5% shorter distance on the new route.
+                    # 13 km/h in mixed traffic -> 16 km/h on the bike highway (= +23.1%).
+                    "speed_increase_pct": 100.0 * (16.0 / 13.0 - 1.0),
+                },
             }
         ],
 
@@ -211,12 +265,12 @@ PACKAGES = {
         # Set capital_share to 0 to disable residual valuation (lifetime may then be None).
         # No asset replacement is assumed.
         "appraisal": {
-            "capital_cost_chf": 925_000_000,  # Station-package CAPEX (CHF).
-            "lifetime_years": 80,  # Service life of the share valued below (years).
-            "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
+            "capital_cost_chf": 28_422_872+2_681_000,  # Station-package CAPEX (CHF).
+            "lifetime_years": 40,  # Service life of the share valued below (years).
+            "capital_share": 0.0,  # Fraction of actual capital paid eligible for residual value.
             # Total construction emissions (tonnes CO2e), spread over construction years.
             # Pre-horizon emissions are charged at time zero; omitted entries mean zero.
-            # "construction_co2_tonnes": 0.0,  # Add a project-specific total when available.
+            "construction_co2_tonnes": 0.0,  # Add a project-specific total when available.
         },
     },
 
@@ -242,39 +296,106 @@ PACKAGES = {
     #       Provides 17-minute service and the Winterthur hub improvements;
     #       both packages together provide 15-minute service.
     "tunnel": {
-        "name": "Stage 2 - Tunnel & Winterthur Hub only",
+        "name": "Stage 2 - Additional Minor Underpasses",
 
         # Railway improvements: the same section and service OD scope as above.
-        "railway_expansions": [
-            {
-                "section_time_saving_min": 4.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 3.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.15,  # Fraction of baseline peak-hour comfort capacity (+15%).
-            },
-        ],
+        #"railway_expansions": [
+            #{
+                #"section_time_saving_min": 4.0,  # In-vehicle minutes saved relative to baseline.
+                #"headway_reduction_min": 3.0,  # Minutes removed from the baseline service interval.
+                #"capacity_increase": 0.15,  # Fraction of baseline peak-hour comfort capacity (+15%).
+            #},
+        #],
 
         # Hub & Node Interventions
-        "mobility_hubs": [
-            {
-                "name": "Winterthur Multimodal Hub (A1)",
-                "zones": [
-                    {"municipality_name": "Winterthur"}
-                ],
-                "effects": {
-                    "access_time_reduction_pct": 25.0,
-                    "transfer_time_reduction_pct": 15.0, # Optimized platform connections at Winterthur HB
+        #"mobility_hubs": [
+            #{
+                #"name": "Winterthur Multimodal Hub (A1)",
+                #"zones": [
+                   # {"municipality_name": "Winterthur"}
+                #],
+                #"effects": {
+                    #"access_time_reduction_pct": 25.0,
+                    #"transfer_time_reduction_pct": 15.0, # Optimized platform connections at Winterthur HB
                     # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
-                }
+                    #"egress_time_reduction_pct": 20.0,
+                #}
+            #}
+        #],
+        "bike_highways": [
+            {
+                "name": "Limmattal Bike Highway - 5 minor underpasses",
+                # Same areas and pairs as stage 1.
+                "area_pairs": [
+                    # Schlieren
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Dietikon"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Urdorf"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oberengstringen"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Höngg"}},
+                        # Dietikon
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Urdorf"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oberengstringen"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Höngg"}},
+                        # Urdorf
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oberengstringen"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Höngg"}},
+                        # Oberengstringen
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Unterengstringen"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Höngg"}},
+                        # Unterengstringen
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Höngg"}},
+                        # Weiningen (ZH)
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Geroldswil"}},
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Höngg"}},
+                        # Geroldswil
+                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Höngg"}},
+                        # Oetwil an der Limmat
+                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Altstetten"}},
+                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Höngg"}},
+                        # Altstetten
+                        {"origin": {"city_quartier": "Altstetten"}, "destination": {"city_quartier": "Höngg"}},
+                ],
+                "both_directions": True,
+                "effects": {
+                    # 16 km/h (stage 1) -> 18 km/h (stage 2) = +12.5%. No further distance reduction. At the moment evaluated from baseline, higher pct increse
+                    "speed_increase_pct": 12.5,
+                },
             }
         ],
 
         # Appraisal considerations: the same valuation and construction conventions.
         "appraisal": {
-            "capital_cost_chf": 2_302_600_000,  # Tunnel/Winterthur package CAPEX (CHF).
-            "lifetime_years": 80,  # Service life of the share valued below (years).
-            "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
-            "construction_co2_tonnes": 300_000.0,  # Total construction emissions (tonnes CO2e).
+            "capital_cost_chf": 5*537_624,  # Tunnel/Winterthur package CAPEX (CHF).
+            "lifetime_years": 40,  # Service life of the share valued below (years).
+            "capital_share": 0.0,  # Fraction of actual capital paid eligible for residual value.
+            "construction_co2_tonnes": 0.0,  # Total construction emissions (tonnes CO2e).
         },
     },
 }
@@ -286,13 +407,17 @@ PACKAGES = {
 # are added to the package values: 6 minutes of section saving and 5 minutes
 # of headway reduction in total (20-minute baseline -> 15-minute service).
 COMBINED_EFFECTS = {
-    "railway_expansions": [
-        {
-            "section_time_saving_min": 1.0,
-            "headway_reduction_min": 1.0,
-            "capacity_increase": 0.05,  # Extra fraction of baseline capacity, only when both packages operate.
-        },
-    ],
+     
+                        
+
+
+    #"railway_expansions": [
+        #{
+            #"section_time_saving_min": 1.0,
+            #"headway_reduction_min": 1.0,
+            #"capacity_increase": 0.05,  # Extra fraction of baseline capacity, only when both packages operate.
+        #},
+    #],
     # Capacity increases are additive: +10% stations +15% tunnel +5% combined = +30% of baseline.
     # Additional physical interventions can use the same dictionaries as above:
     # "mobility_hubs": [{
@@ -539,16 +664,17 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
             reduction = minute_effect(stage, "headway_reduction_min")
             if not isfinite(headway) or headway <= 0 or reduction >= headway:
                 raise ValueError("Total headway reduction must be smaller than a positive PT_HEADWAY_BASELINE.")
-            wait_effect = 100.0 * (1.0 - (headway - reduction) / headway)
-            # One final service-frequency intervention avoids compounding the
-            # packages' percentages when their minute savings are additive.
-            specification.setdefault("railway_expansions", []).append({
-                "name": "Corridor service frequency",
-                "area_pairs": deepcopy(service_od_pairs),
-                "both_directions": True,
-                "effects": {"initial_wait_reduction_pct": wait_effect,
-                            "transfer_wait_reduction_pct": wait_effect},
-            })
+            if reduction > 0:
+                wait_effect = 100.0 * (1.0 - (headway - reduction) / headway)
+                # One final service-frequency intervention avoids compounding the
+                # packages' percentages when their minute savings are additive.
+                specification.setdefault("railway_expansions", []).append({
+                    "name": "Corridor service frequency",
+                    "area_pairs": deepcopy(service_od_pairs),
+                    "both_directions": True,
+                    "effects": {"initial_wait_reduction_pct": wait_effect,
+                                "transfer_wait_reduction_pct": wait_effect},
+                })
         for key, defaults in effect_defaults.items():
             for intervention in specification.get(key, []):
                 intervention["effects"] = {**defaults, **intervention.get("effects", {})}
