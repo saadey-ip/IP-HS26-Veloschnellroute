@@ -69,23 +69,18 @@ SIGNPOSTS = {
 }
 
 DEFAULT_TRIGGERS = {
-    # Trigger 1: Section demand -> package 1 (local stations and access)
-    "trigger1": {
-        "signpost":        "section_combined_daily",
-        "threshold":       125_000,
-        "persistence":     2,       # Consecutive years above threshold
-        "lead_time":       6,       # Years of planning and station civil works
+    "trigger1": {                       # build Stage 1 (bike highway + 3 major underpasses)
+        "signpost":    "bike_trips",    # or the bike-PKM column
+        "threshold":   1.15*16897,               
+        "persistence": 2,
+        "lead_time":   5,
     },
-    # Trigger 2: The same section count -> package 2 (Brüttenertunnel)
-    # An absolute daily count keeps the signpost comparable when stations add
-    # capacity. The action threshold is separate from comfort capacity.
-    "trigger2": {
-        "signpost":        "section_combined_daily",
-        "threshold":       122_000,
-        "persistence":     2,
-        # Years of tunnel planning and construction after the decision.
-        "lead_time":       10,
-    }
+    "trigger2": {                       # build Stage 2 (5 minor underpasses)
+        "signpost":    "bike_trips",
+        "threshold":   1.777*16897,               
+        "persistence": 2,
+        "lead_time":   3,
+    },
 }
 
 
@@ -127,14 +122,14 @@ PLAN_DEFINITIONS = {
     "staged1": {
         "name": "Staged 1",
         "initial_packages": [],
-        "stations": {"type": "fixed", "opening_year": 8},
-        "tunnel": {"type": "fixed", "opening_year": 11},
+        "stations": {"type": "fixed", "opening_year": 1},
+        "tunnel": {"type": "fixed", "opening_year": 20},
     },
     "staged2": {
         "name": "Staged 2",
         "initial_packages": [],
-        "stations": {"type": "fixed", "opening_year": 6},
-        "tunnel": {"type": "fixed", "opening_year": 15},
+        "stations": {"type": "fixed", "opening_year": 1},
+        "tunnel": {"type": "fixed", "opening_year": 10},
     },
     "flexible": {
         "name": "Flexible",
