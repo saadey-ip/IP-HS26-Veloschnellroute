@@ -48,7 +48,7 @@ NOMINAL_PARAMS = {
     # Present-day values; *_Y40 values define the nominal endpoints.
     # -------------------------------------------------------------------------
     "PASSENGER_DEMAND_GROWTH": 0.0,  # Cumulative passenger OD growth relative to baseline; 0.20 means +20%.
-    "PASSENGER_DEMAND_GROWTH_Y40": 0.20,  # Nominal final passenger-demand growth.
+    "PASSENGER_DEMAND_GROWTH_Y40": 0.744,  # +1.4% per year (from apprasial)Nominal final passenger-demand growth.
     "PT_ASC_SHIFT": 0.0,  # Additive preference shift for both PT access modes (utility units, not percent).
     "PT_ASC_SHIFT_Y40": 0.10,  # Nominal final PT preference shift (utility units).
     "BIKE_ASC_SHIFT": 0.0,  # Additive preference shift for standalone cycling (utility units).
@@ -95,13 +95,13 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     # Values of passenger time (CHF/person-hour)
     # -------------------------------------------------------------------------
-    "C_TT_CAR": 42.54,  # Car travel-time value, including peak congestion delay (CHF/person-hour).
-    "C_TT_PT": 26.52,  # PT in-vehicle time value (CHF/person-hour).
-    "C_TT_PT_WAITING": 26.52,  # Initial and transfer waiting-time value (CHF/person-hour).
-    "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
-    "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting.
+    "C_TT_CAR": 23.3,  # according to appraisal. Car travel-time value, including peak congestion delay (CHF/person-hour).
+    "C_TT_PT": 14.40,  # according to appraisal.PT in-vehicle time value (CHF/person-hour).
+    "C_TT_PT_WAITING": 14.40,  # according to appraisal. in original also same as C_TT_PT. Initial and transfer waiting-time value (CHF/person-hour).
+    "C_TT_PT_ACCESS": 14.40,  # according to appraisal. in original also the same as C_TT_PT. PT access and egress walking/cycling time value (CHF/person-hour).
+    "C_TT_PT_TRANSFER": 14.40,  # according to appraisal. in original also the same as C_TT_PT. Physical transfer-walking time value (CHF/person-hour); excludes waiting.
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-        "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
+    "C_TT_BIKE": 18.7,  # according to appraisal. Cycling value of time (CHF/person-hour)
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
 
     # -------------------------------------------------------------------------
@@ -110,7 +110,7 @@ NOMINAL_PARAMS = {
     # Health rates apply to standalone cycling/walking person-km, including e-bikes.
     # The PT rate applies once per person-trip, including supplementary PT passengers.
     # Positive rates reduce societal costs; omitted rates default to zero.
-    "BENEFIT_HEALTH_BIKE_PER_KM": 1.0,  # Cycling health benefit (CHF/person-km).
+    "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,  # Cycling health benefit (CHF/person-km).
     "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
     "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
 
@@ -124,7 +124,7 @@ NOMINAL_PARAMS = {
     # Both road and rail emissions use this carbon value. Its reference-year
     # value is in constant 2019 CHF; annual real growth is compounded from the
     # reference year to APPRAISAL_START_YEAR + the zero-based appraisal year.
-    "CO2_VALUE_CHF_PER_TONNE": 123.2,  # Reference-year CO2 value (constant 2019 CHF/tonne CO2).
+    "CO2_VALUE_CHF_PER_TONNE": 41.68,  #according to appraisal. Reference-year CO2 value (constant 2019 CHF/tonne CO2).
     "CO2_REFERENCE_YEAR": 2015,  # Calendar year to which the reference CO2 value applies.
     "CO2_VALUE_ANNUAL_GROWTH": 0.03,  # Real annual CO2-value growth (fraction/year); 0.03 means 3% compounded.
 
@@ -132,7 +132,7 @@ NOMINAL_PARAMS = {
     # Other NIBA external costs (road and passenger rail)
     # -------------------------------------------------------------------------
     "C_NOISE_CAR": 0.01490,  # Road noise cost (CHF/vehicle-km); course NIBA coefficient.
-    "C_AIR_CAR": 0.01862,  # Road local air-pollution cost (CHF/vehicle-km); course NIBA coefficient.
+    "C_AIR_CAR": 0.0115,  #adding all the things according to the appraisal.Road local air-pollution cost (CHF/vehicle-km); course NIBA coefficient.
     "C_ACCIDENT_CAR": 0.08441,  # Road accident cost (CHF/vehicle-km); course NIBA coefficient.
     "C_AIR_PT": 0.00344,  # Rail local air-pollution cost (CHF/gross-tonne-km); course NIBA coefficient.
     "C_NOISE_PT": 0.00204,  # Rail noise cost (CHF/gross-tonne-km); course NIBA coefficient.
@@ -146,11 +146,11 @@ NOMINAL_PARAMS = {
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
     # Package-specific CAPEX is defined in stages.py, alongside each intervention.
-    "OPEX_RATE": 0.02,  # Annual infrastructure operating/maintenance cost as a fraction of base construction cost.
+    "OPEX_RATE": 0.005,  # Annual infrastructure operating/maintenance cost as a fraction of base construction cost.
     "OPEX_MULTIPLIER": 1.0,  # Multiplier on annual infrastructure operating/maintenance costs.
     "CAPEX_MULTIPLIER": 1.0,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)
-    "C_FLEX": 50_000_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
+    "C_FLEX": 1_500_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
 
     # -------------------------------------------------------------------------
     # Performance requirements and strategic mode-share indicators
@@ -347,66 +347,87 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum": -0.20,
-        "maximum": 0.50,
+        "minimum": 0.45,#0.744*(1+/-0.40), uncertainty is from the appraisal
+        "maximum": 1.04,
     },
-    "PT_ASC_SHIFT": {  # Final additive PT preference shift; negative values reduce PT attractiveness.
-        "category": "transport_modelling",
-        "use": "scenarios",
-        "transient": True,
-        "distribution": "triangular",
-        "minimum": -0.10,
-        "maximum": 0.30,
-    },
+    #"PT_ASC_SHIFT": {  # Final additive PT preference shift; negative values reduce PT attractiveness.
+        #"category": "transport_modelling",
+        #"use": "scenarios",
+        #"transient": True,
+        #"distribution": "triangular",
+        #"minimum": -0.10,
+        #"maximum": 0.30,
+    #},
     # Uncomment together with BIKE_ASC_SHIFT_Y40 above to include cycling preferences.
-    # "BIKE_ASC_SHIFT": {
-    #     "category": "transport_modelling",
-    #     "use": "scenarios",
-    #     "transient": True,
-    #     "distribution": "triangular",
-    #     "minimum": -0.50,
-    #     "maximum": 1.00,
-    # },
-    "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
-        "category": "transport_modelling",
+    "BIKE_ASC_SHIFT": {
+       "category": "transport_modelling",
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum": 0.35,
-        "maximum": 0.80,
-    },
-    "ROAD_FREIGHT_GROWTH": {  # Final prepared-background growth; sigma is in growth-fraction units.
-        "category": "transport_modelling",
-        "use": "scenarios",
-        "transient": True,
-        "distribution": "normal",
-        "sigma": 0.05,
-    },
-    "C_TT_PT": {  # PT value-of-time sensitivity; one CHF/person-hour draw for the whole horizon.
-        "category": "post_modelling",
-        "use": "sensitivity",
-        "transient": False,
+        "minimum":0.12,
+        "maximum":0.28,
+     },
+     "BIKE_PEAK_SHARE": {
+        "category": "post_modelling", "use": "sensitivity", "transient": False,
         "distribution": "uniform",
-        "minimum": 19.89,
-        "maximum": 33.15,
+        "minimum": 0.15 * (1 - 0.20),
+        "maximum": 0.15 * (1 + 0.20),
     },
-    "C_TT_CAR": {  # Car value-of-time sensitivity, including congestion time.
-        "category": "post_modelling",
-        "use": "sensitivity",
-        "transient": False,
-        "distribution": "uniform",
-        "minimum": 31.91,
-        "maximum": 53.18,
-    },
+    #"EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
+        #"category": "transport_modelling",
+        #"use": "scenarios",
+        #"transient": True,
+        #"distribution": "triangular",
+        #"minimum": 0.35,
+        #"maximum": 0.80,
+    #},
+    #"ROAD_FREIGHT_GROWTH": {  # Final prepared-background growth; sigma is in growth-fraction units.
+        #"category": "transport_modelling",
+        #"use": "scenarios",
+        #"transient": True,
+        #"distribution": "normal",
+        #"sigma": 0.05,
+    #},
+    #"C_TT_PT": {  # PT value-of-time sensitivity; one CHF/person-hour draw for the whole horizon.
+        #"category": "post_modelling",
+        #"use": "sensitivity",
+        #"transient": False,
+        #"distribution": "uniform",
+        #"minimum": 19.89,
+        #"maximum": 33.15,
+    #},
+    #"C_TT_CAR": {  # Car value-of-time sensitivity, including congestion time.
+        #"category": "post_modelling",
+        #"use": "sensitivity",
+        #"transient": False,
+        #"distribution": "uniform",
+        #"minimum": 31.91,
+        #"maximum": 53.18,
+    #},
     "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (constant 2019 CHF/tonne CO2).
-        # Triangular mode is the general reference value; the engine applies
+        #Triangular mode is the general reference value; the engine applies
         # CO2_VALUE_ANNUAL_GROWTH from CO2_REFERENCE_YEAR to each appraisal year.
         "category": "post_modelling",
         "use": "sensitivity",
         "transient": False,
         "distribution": "triangular",
-        "minimum": 70.0,
+        "minimum": 41.68*(1-0.5),
         "maximum": 217.0,
+    },
+    
+    "C_TT_BIKE": {  # Bike value-of-time sensitivity, including congestion time.
+        "category": "post_modelling",
+        "use": "sensitivity",
+        "transient": False,
+        "distribution": "uniform",
+        "minimum": 24.80*(1-0.25),
+        "maximum": 24.80*(1+0.25),
+    },
+    "BENEFIT_HEALTH_BIKE_PER_KM": {
+        "category": "post_modelling", "use": "sensitivity", "transient": False,
+        "distribution": "uniform",
+        "minimum": 1.306 * (1 - 0.50),
+        "maximum": 1.306 * (1 + 0.50),
     },
     "CAR_CO2_KG_PER_VEHICLE_KM": {  # Final car emissions (kg CO2/vehicle-km); sigma is relative to its nominal endpoint.
         "category": "post_modelling",
@@ -416,15 +437,15 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "sigma": 0.15,
         "relative_sigma": True,
     },
-    "NUMBER_OF_PEAK_HOURS": {  # Sensitivity: equally likely 3, 4 or 5 peak hours, constant over time.
-        "category": "post_modelling",
-        "use": "sensitivity",
-        "transient": False,
-        "distribution": "uniform",
-        "minimum": 3,
-        "maximum": 5,
-        "integer": True,
-    },
+    #"NUMBER_OF_PEAK_HOURS": {  # Sensitivity: equally likely 3, 4 or 5 peak hours, constant over time.
+        #"category": "post_modelling",
+        #"use": "sensitivity",
+        #"transient": False,
+        #"distribution": "uniform",
+        #"minimum": 3,
+        #"maximum": 5,
+        #"integer": True,
+    #},
     "OPEX_MULTIPLIER": {  # Operating-cost multiplier, sampled once per future.
         "category": "post_modelling",
         "use": "scenarios",
@@ -439,24 +460,24 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "transient": False,
         "distribution": "triangular",
         "minimum": 0.80,
-        "maximum": 1.20,
+        "maximum": 1.40,
     },
-    "ACCIDENT_COST_MULTIPLIER": {  # Final road/rail accident-cost factor.
-        "category": "post_modelling",
-        "use": "scenarios",
-        "transient": True,
-        "distribution": "normal",
-        "sigma": 0.15,
-        "relative_sigma": True,
-    },
-    "LOCAL_AIR_COST_MULTIPLIER": {  # Final road/rail local air-pollution cost factor.
-        "category": "post_modelling",
-        "use": "scenarios",
-        "transient": True,
-        "distribution": "normal",
-        "sigma": 0.15,
-        "relative_sigma": True,
-    },
+    #"ACCIDENT_COST_MULTIPLIER": {  # Final road/rail accident-cost factor.
+        #"category": "post_modelling",
+        #"use": "scenarios",
+        #"transient": True,
+        #"distribution": "normal",
+        #"sigma": 0.15,
+        #"relative_sigma": True,
+    #},
+    #"LOCAL_AIR_COST_MULTIPLIER": {  # Final road/rail local air-pollution cost factor.
+        #"category": "post_modelling",
+        #"use": "scenarios",
+        #"transient": True,
+        #"distribution": "normal",
+        #"sigma": 0.15,
+        #"relative_sigma": True,
+    #},
 }
 
 # Validate settings and prepare internal surrogate metadata.

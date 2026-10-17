@@ -15,25 +15,36 @@ SUPPORTED_DISTRIBUTIONS = ("normal", "uniform", "triangular", "lognormal", "beta
 TRANSPORT_SURROGATE_INPUTS = {}
 # Public parameter names stay unchanged through scenarios and surrogate inputs.
 TRANSPORT_BINDINGS = {
-    "PASSENGER_DEMAND_GROWTH": "passenger_demand_multiplier",
+    "PASSENGER_DEMAND_GROWTH": "passenger_demand_multiplier",   # used as uncertainty
+    "BIKE_ASC_SHIFT": "bike_asc_shift",                         # used as uncertainty
+    # Not used as uncertainties, but kept active: these are inputs of the transport
+    # surrogate (they take their nominal values). Do not comment them out.
     "PT_ASC_SHIFT": "pt_asc_shift",
-    "BIKE_ASC_SHIFT": "bike_asc_shift",
     "EBIKE_SHARE": "ebike_share",
-    "ROAD_FREIGHT_GROWTH": "road_freight_multiplier",
+    #"ROAD_FREIGHT_GROWTH": "road_freight_multiplier",
 }
 POST_MODELLING_TARGETS = {
-    "DISCOUNT_RATE", "OPEX_RATE", "OPEX_MULTIPLIER", "CAPEX_MULTIPLIER", "C_FLEX",
-    "C_TT_PT", "C_TT_CAR", "C_TT_BIKE", "C_TT_WALK",
-    "C_TT_PT_WAITING", "C_TT_PT_ACCESS", "C_TT_PT_TRANSFER",
-    "BENEFIT_HEALTH_BIKE_PER_KM", "BENEFIT_HEALTH_WALK_PER_KM", "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP",
-    "CAR_CO2_KG_PER_VEHICLE_KM", "CO2_VALUE_CHF_PER_TONNE", "CO2_VALUE_ANNUAL_GROWTH",
-    "RAIL_ENERGY_WH_PER_GROSS_TONNE_KM", "RAIL_ELECTRICITY_CO2_G_PER_KWH", "NUMBER_OF_PEAK_HOURS",
-    "ACCIDENT_COST_MULTIPLIER", "LOCAL_AIR_COST_MULTIPLIER", "CROWDING_SLOPE", "CROWDING_MAX",
-    "C_NOISE_CAR", "C_AIR_CAR", "C_ACCIDENT_CAR", "C_NOISE_PT", "C_AIR_PT", "C_ACCIDENT_PT",
-    "TRAIN_GROSS_TONNES", "PEAK_TO_ANNUAL_TRAIN", "C_INV_STAGE1", "C_INV_STAGE2",
-    "EQUIVALENT_DAYS_PER_YEAR", "PT_CAPACITY_BASELINE", "CAPACITY_INCREASE_STAGE1", "CAPACITY_INCREASE_STAGE2",
-    "CAPACITY_INCREASE_COMBINED",
-    *(f"{mode}_PEAK_SHARE" for mode in ("PT", "CAR", "BIKE", "WALK")),
+    # ---- used as uncertainties ----
+    "DISCOUNT_RATE", "CAPEX_MULTIPLIER",
+    "C_TT_BIKE",
+    "BENEFIT_HEALTH_BIKE_PER_KM",
+    "CAR_CO2_KG_PER_VEHICLE_KM", "CO2_VALUE_CHF_PER_TONNE",
+    "BIKE_PEAK_SHARE",
+    "OPEX_MULTIPLIER",
+
+    # ---- not used as uncertainties (values still come from NOMINAL_PARAMS) ----
+    # "OPEX_RATE", "OPEX_MULTIPLIER", "C_FLEX",
+    # "C_TT_PT", "C_TT_CAR", "C_TT_WALK",
+    # "C_TT_PT_WAITING", "C_TT_PT_ACCESS", "C_TT_PT_TRANSFER",
+    # "BENEFIT_HEALTH_WALK_PER_KM", "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP",
+    # "CO2_VALUE_ANNUAL_GROWTH",
+    # "RAIL_ENERGY_WH_PER_GROSS_TONNE_KM", "RAIL_ELECTRICITY_CO2_G_PER_KWH", "NUMBER_OF_PEAK_HOURS",
+    # "ACCIDENT_COST_MULTIPLIER", "LOCAL_AIR_COST_MULTIPLIER", "CROWDING_SLOPE", "CROWDING_MAX",
+    # "C_NOISE_CAR", "C_AIR_CAR", "C_ACCIDENT_CAR", "C_NOISE_PT", "C_AIR_PT", "C_ACCIDENT_PT",
+    # "TRAIN_GROSS_TONNES", "PEAK_TO_ANNUAL_TRAIN", "C_INV_STAGE1", "C_INV_STAGE2",
+    # "EQUIVALENT_DAYS_PER_YEAR", "PT_CAPACITY_BASELINE", "CAPACITY_INCREASE_STAGE1",
+    # "CAPACITY_INCREASE_STAGE2", "CAPACITY_INCREASE_COMBINED",
+    # *(f"{mode}_PEAK_SHARE" for mode in ("PT", "CAR", "WALK")),
 }
 # Physical/economic domains are validation rules, not scenario clipping rules.
 PARAMETER_DOMAINS = {
