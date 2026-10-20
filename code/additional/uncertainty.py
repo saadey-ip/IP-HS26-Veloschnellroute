@@ -21,7 +21,7 @@ TRANSPORT_BINDINGS = {
     # surrogate (they take their nominal values). Do not comment them out.
     "PT_ASC_SHIFT": "pt_asc_shift",
     "EBIKE_SHARE": "ebike_share",
-    #"ROAD_FREIGHT_GROWTH": "road_freight_multiplier",
+    "ROAD_FREIGHT_GROWTH": "road_freight_multiplier",
 }
 POST_MODELLING_TARGETS = {
     # ---- used as uncertainties ----
