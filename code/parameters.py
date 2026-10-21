@@ -373,14 +373,14 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "minimum": 0.15 * (1 - 0.20),
         "maximum": 0.15 * (1 + 0.20),
     },
-    #"EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
-        #"category": "transport_modelling",
-        #"use": "scenarios",
-        #"transient": True,
-        #"distribution": "triangular",
-        #"minimum": 0.35,
-        #"maximum": 0.80,
-    #},
+    "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
+        "category": "transport_modelling",
+        "use": "scenarios",
+        "transient": True,
+        "distribution": "triangular",
+        "minimum": 0.35,
+        "maximum": 0.80,
+    },
     #"ROAD_FREIGHT_GROWTH": {  # Final prepared-background growth; sigma is in growth-fraction units.
         #"category": "transport_modelling",
         #"use": "scenarios",
