@@ -144,6 +144,76 @@ import itertools
 from math import isfinite
 
 # =============================================================================
+# 0. BIKE-HIGHWAY CATCHMENT: CORE AND OUTER AREA PAIRS
+# =============================================================================
+# Core areas lie directly on the route (Altstetten -> Schlieren -> Unterengstringen
+# -> Dietikon). Outer areas only reach it via feeder roads, so pairs involving
+# an outer area receive a reduced share of the effect. Every pair is listed
+# once; both_directions covers the way back.
+OUTER_EFFECT_SHARE = 0.5  # Fraction of the core effect applied to outer pairs.
+
+CORE_PAIRS = [
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Dietikon"}},
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Unterengstringen"}},
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Altstetten"}},
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Unterengstringen"}},
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Altstetten"}},
+    {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Altstetten"}},
+]
+
+OUTER_PAIRS = [
+    # Schlieren
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Urdorf"}},
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oberengstringen"}},
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Geroldswil"}},
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+    {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Höngg"}},
+    # Dietikon
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Urdorf"}},
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oberengstringen"}},
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Geroldswil"}},
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+    {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Höngg"}},
+    # Urdorf
+    {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oberengstringen"}},
+    {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Unterengstringen"}},
+    {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+    {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Geroldswil"}},
+    {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+    {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Altstetten"}},
+    {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Höngg"}},
+    # Oberengstringen
+    {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Unterengstringen"}},
+    {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+    {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
+    {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+    {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Altstetten"}},
+    {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Höngg"}},
+    # Unterengstringen
+    {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
+    {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
+    {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+    {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Höngg"}},
+    # Weiningen (ZH)
+    {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Geroldswil"}},
+    {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+    {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Altstetten"}},
+    {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Höngg"}},
+    # Geroldswil
+    {"origin": {"municipality_name": "Geroldswil"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
+    {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Altstetten"}},
+    {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Höngg"}},
+    # Oetwil an der Limmat
+    {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Altstetten"}},
+    {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Höngg"}},
+    # Altstetten
+    {"origin": {"city_quartier": "Altstetten"}, "destination": {"city_quartier": "Höngg"}},
+]
+
+
+# =============================================================================
 # 1. PACKAGES: RAILWAY IMPROVEMENTS, MOBILITY HUBS AND APPRAISAL
 # =============================================================================
 
@@ -189,72 +259,24 @@ PACKAGES = {
         #Bike-Highway Interventions
         "bike_highways": [
             {
-                "name": "Limmattal Bike Highway (Altstetten - Dietikon, 8.5 km, 4.8 m)",
-                # Areas along the route: Altstetten -> Schlieren -> Unterengstringen -> Dietikon.
-                # Every pair is listed once; both_directions covers the way back.
-                "area_pairs": [
-                    # Schlieren
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Dietikon"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Urdorf"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oberengstringen"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Höngg"}},
-                        # Dietikon
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Urdorf"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oberengstringen"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Höngg"}},
-                        # Urdorf
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oberengstringen"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Höngg"}},
-                        # Oberengstringen
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Höngg"}},
-                        # Unterengstringen
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Höngg"}},
-                        # Weiningen (ZH)
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Höngg"}},
-                        # Geroldswil
-                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Höngg"}},
-                        # Oetwil an der Limmat
-                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Höngg"}},
-                        # Altstetten
-                        {"origin": {"city_quartier": "Altstetten"}, "destination": {"city_quartier": "Höngg"}},
-                ],
+                "name": "Limmattal Bike Highway (Altstetten - Dietikon, 8.5 km, 4.8 m) - core",
+                "area_pairs": deepcopy(CORE_PAIRS),
                 "both_directions": True,
                 "effects": {
                     "distance_reduction_pct": 5.0,  # Report: 5% shorter distance on the new route.
                     # 13 km/h in mixed traffic -> 16 km/h on the bike highway (= +23.1%).
                     "speed_increase_pct": 100.0 * (16.0 / 13.0 - 1.0),
                 },
-            }
+            },
+            {
+                "name": "Limmattal Bike Highway (Altstetten - Dietikon, 8.5 km, 4.8 m) - outer",
+                "area_pairs": deepcopy(OUTER_PAIRS),
+                "both_directions": True,
+                "effects": {
+                    "distance_reduction_pct": OUTER_EFFECT_SHARE * 5.0,
+                    "speed_increase_pct": OUTER_EFFECT_SHARE * 100.0 * (16.0 / 13.0 - 1.0),
+                },
+            },
         ],
 
         # Appraisal considerations
@@ -324,70 +346,25 @@ PACKAGES = {
         #],
         "bike_highways": [
             {
-                "name": "Limmattal Bike Highway - 5 minor underpasses",
-                # Same areas and pairs as stage 1.
-                "area_pairs": [
-                    # Schlieren
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Dietikon"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Urdorf"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oberengstringen"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Schlieren"}, "destination": {"city_quartier": "Höngg"}},
-                        # Dietikon
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Urdorf"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oberengstringen"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Dietikon"}, "destination": {"city_quartier": "Höngg"}},
-                        # Urdorf
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oberengstringen"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Urdorf"}, "destination": {"city_quartier": "Höngg"}},
-                        # Oberengstringen
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Unterengstringen"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Oberengstringen"}, "destination": {"city_quartier": "Höngg"}},
-                        # Unterengstringen
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Weiningen (ZH)"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Unterengstringen"}, "destination": {"city_quartier": "Höngg"}},
-                        # Weiningen (ZH)
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Geroldswil"}},
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Weiningen (ZH)"}, "destination": {"city_quartier": "Höngg"}},
-                        # Geroldswil
-                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"municipality_name": "Oetwil an der Limmat"}},
-                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Geroldswil"}, "destination": {"city_quartier": "Höngg"}},
-                        # Oetwil an der Limmat
-                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Altstetten"}},
-                        {"origin": {"municipality_name": "Oetwil an der Limmat"}, "destination": {"city_quartier": "Höngg"}},
-                        # Altstetten
-                        {"origin": {"city_quartier": "Altstetten"}, "destination": {"city_quartier": "Höngg"}},
-                ],
+                "name": "Limmattal Bike Highway - 5 minor underpasses - core",
+                "area_pairs": deepcopy(CORE_PAIRS),
                 "both_directions": True,
                 "effects": {
                     # 16 km/h (stage 1) -> 18 km/h (stage 2) = +12.5%. No further distance reduction. At the moment evaluated from baseline, higher pct increse
                     "speed_increase_pct": 12.5,
                 },
-            }
+                "standalone_effects": {"distance_reduction_pct": 5.0},
+            },
+            {
+                "name": "Limmattal Bike Highway - 5 minor underpasses - outer",
+                "area_pairs": deepcopy(OUTER_PAIRS),
+                "both_directions": True,
+                "effects": {
+                    "speed_increase_pct": OUTER_EFFECT_SHARE * 12.5,
+                },
+                "standalone_effects": {"distance_reduction_pct": OUTER_EFFECT_SHARE * 5.0},
+            },
+
         ],
 
         # Appraisal considerations: the same valuation and construction conventions.
@@ -630,6 +607,7 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
         ), 0.0),
     }
     stages = {0: {"name": "Stage 0 – Baseline Network", "section_time_saving_min": 0.0, **technology}}
+    combined_parts = {}
     for stage, package in ((1, "stations"), (2, "tunnel")):
         inputs = deepcopy(packages[package])
         inputs.pop("appraisal", None)
@@ -646,6 +624,15 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
             "section_time_saving_min": minute_effect(stage, "section_time_saving_min"),
             **technology, **inputs,
         }
+        #only for stand-alone of stage 2
+        combined_parts[stage] = {}
+        for key in ("railway_expansions", "mobility_hubs", "bike_highways", "road_capacity"):
+            combined_parts[stage][key] = deepcopy(specification.get(key, []))
+            for intervention in combined_parts[stage][key]:
+                intervention.pop("standalone_effects", None)
+            for intervention in specification.get(key, []):
+                intervention["effects"] = {**intervention.get("effects", {}),
+                                           **intervention.pop("standalone_effects", {})}
         stages[stage] = specification
     combined = deepcopy(stages[2])
     combined["name"] = "Both stages - Tunnel and Hubs"
@@ -653,10 +640,10 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
     for key in ("railway_expansions", "mobility_hubs", "bike_highways", "road_capacity"):
         if key in stages[1] or key in stages[2] or key in combined_effects:
             bonus = (_railway_od_interventions(combined_effects) if key == "railway_expansions"
-                     else combined_effects.get(key, []))
+                        else combined_effects.get(key, []))
             if isinstance(bonus, dict):
                 bonus = [bonus]
-            combined[key] = deepcopy(stages[1].get(key, []) + stages[2].get(key, []) + bonus)
+            combined[key] = deepcopy(combined_parts[1][key]+combined_parts[2][key]+bonus)
     stages[3] = combined
     for stage, specification in stages.items():
         if stage:

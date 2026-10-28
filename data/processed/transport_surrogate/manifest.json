@@ -229,7 +229,7 @@
     },
     "points_added": 0,
     "final_holdout_metrics": {
-      "weighted_rmse_min": 0.17700951120584066
+      "weighted_rmse_min": 0.15595047487202127
     },
     "target_reached": true
   },
@@ -357,7 +357,7 @@
     "test_004_stage2",
     "test_004_stage3"
   ],
-  "design_sha256": "86a1ded4473ab4d62066ae9fe1fef213ecebcc6ba87561b51ef9c1a1ef5cb0bf",
+  "design_sha256": "54ec5e7bf4af09d0e376d87cfbcb1b8e4a10838d68d957f1072a29d4014820b0",
   "training_counts_by_stage": {
     "0": 25,
     "1": 25,
@@ -366,8 +366,8 @@
   },
   "seed": 42,
   "design": "continuous LHS with balanced stage labels; independent paired-stage LHS holdout",
-  "model_fingerprint": "d70e9516184f6e3f0a05",
-  "cache_namespace": "06672e8ad7c719f377a4",
+  "model_fingerprint": "84fcd27edd22b2708dc9",
+  "cache_namespace": "6151a979b9ca79a4efb4",
   "portable_model_inputs": {
     "identity_version": 3,
     "corridor": {
@@ -523,6 +523,55 @@
                   "municipality_name": "Schlieren"
                 },
                 "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 5.0,
+              "speed_increase_pct": 23.076923076923084
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
                   "municipality_name": "Urdorf"
                 }
               },
@@ -532,14 +581,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oberengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "municipality_name": "Unterengstringen"
                 }
               },
               {
@@ -564,14 +605,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -603,14 +636,6 @@
                   "municipality_name": "Dietikon"
                 },
                 "destination": {
-                  "municipality_name": "Unterengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
                   "municipality_name": "Weiningen (ZH)"
                 }
               },
@@ -628,14 +653,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -772,14 +789,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Unterengstringen"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -873,8 +882,8 @@
             ],
             "both_directions": true,
             "effects": {
-              "distance_reduction_pct": 5.0,
-              "speed_increase_pct": 23.076923076923084
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 11.538461538461542
             }
           }
         ]
@@ -899,6 +908,55 @@
                   "municipality_name": "Schlieren"
                 },
                 "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 12.5,
+              "distance_reduction_pct": 5.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
                   "municipality_name": "Urdorf"
                 }
               },
@@ -908,14 +966,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oberengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "municipality_name": "Unterengstringen"
                 }
               },
               {
@@ -940,14 +990,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -979,14 +1021,6 @@
                   "municipality_name": "Dietikon"
                 },
                 "destination": {
-                  "municipality_name": "Unterengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
                   "municipality_name": "Weiningen (ZH)"
                 }
               },
@@ -1004,14 +1038,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1148,14 +1174,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Unterengstringen"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1249,7 +1267,8 @@
             ],
             "both_directions": true,
             "effects": {
-              "speed_increase_pct": 12.5
+              "speed_increase_pct": 6.25,
+              "distance_reduction_pct": 2.5
             }
           }
         ]
@@ -1274,6 +1293,55 @@
                   "municipality_name": "Schlieren"
                 },
                 "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 5.0,
+              "speed_increase_pct": 23.076923076923084
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
                   "municipality_name": "Urdorf"
                 }
               },
@@ -1283,14 +1351,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oberengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "municipality_name": "Unterengstringen"
                 }
               },
               {
@@ -1315,14 +1375,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1354,14 +1406,6 @@
                   "municipality_name": "Dietikon"
                 },
                 "destination": {
-                  "municipality_name": "Unterengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
                   "municipality_name": "Weiningen (ZH)"
                 }
               },
@@ -1379,14 +1423,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1523,14 +1559,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Unterengstringen"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1624,8 +1652,8 @@
             ],
             "both_directions": true,
             "effects": {
-              "distance_reduction_pct": 5.0,
-              "speed_increase_pct": 23.076923076923084
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 11.538461538461542
             }
           },
           {
@@ -1643,6 +1671,54 @@
                   "municipality_name": "Schlieren"
                 },
                 "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 12.5
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
                   "municipality_name": "Urdorf"
                 }
               },
@@ -1652,14 +1728,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oberengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "municipality_name": "Unterengstringen"
                 }
               },
               {
@@ -1684,14 +1752,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Schlieren"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1723,14 +1783,6 @@
                   "municipality_name": "Dietikon"
                 },
                 "destination": {
-                  "municipality_name": "Unterengstringen"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
                   "municipality_name": "Weiningen (ZH)"
                 }
               },
@@ -1748,14 +1800,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Dietikon"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1892,14 +1936,6 @@
                 },
                 "destination": {
                   "municipality_name": "Oetwil an der Limmat"
-                }
-              },
-              {
-                "origin": {
-                  "municipality_name": "Unterengstringen"
-                },
-                "destination": {
-                  "city_quartier": "Altstetten"
                 }
               },
               {
@@ -1993,17 +2029,17 @@
             ],
             "both_directions": true,
             "effects": {
-              "speed_increase_pct": 12.5
+              "speed_increase_pct": 6.25
             }
           }
         ]
       }
     },
     "section_signatures": {
-      "0": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1",
-      "1": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1",
-      "2": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1",
-      "3": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1"
+      "0": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661",
+      "1": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661",
+      "2": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661",
+      "3": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661"
     },
     "input_domain": {
       "PASSENGER_DEMAND_GROWTH": {
@@ -2040,7 +2076,7 @@
       "data/transport/prepared/skims.pkl.gz": "8c6e321818f13afe85cce069b7df002db2f1c74d33764fda4c175fc689b8d7bf",
       "data/transport/prepared/assignment_network.pkl": "26cbf5ab36717fedd1d071e1b0be5576415b24a5e64ff976efb959ecaef72d31",
       "data/transport/prepared/lookups.pkl.gz": "8a571b706449c87a41c58a9fd48b34e0fd6a72cf7f825c69db1eb3a8b6bcd73d",
-      "data/processed/bike_highway_altstetten_hoengg.pkl": "0bb1952dd997b619e32486ba3c79ff746ddf349e0694883e208a4a62738c5018"
+      "data/processed/bike_highway_altstetten_hoengg.pkl": "668fab091a8622c23588d9a1a669eef2846c2550af58931ea9a6edf37f0ba927"
     }
   },
   "reference_equations": {
@@ -2194,7 +2230,7 @@
   },
   "cache_contract": {
     "format_version": 3,
-    "model_fingerprint": "d70e9516184f6e3f0a05",
+    "model_fingerprint": "84fcd27edd22b2708dc9",
     "reference_equations": "1a1992ca1fe7a3c75cf4",
     "solver_settings": {
       "stopping_rule": "road_relative_gap",
@@ -2217,7 +2253,7 @@
     "od_threshold": 0.0,
     "drive_occupancy": 1.14
   },
-  "source_fingerprint": "874e36abcf16ca3dd8fd",
+  "source_fingerprint": "f6454b98affc2c0ea848",
   "source_convergence_passed": true,
   "gp_diagnostics": {
     "mode": "pooled",
@@ -2241,47 +2277,47 @@
         "target_reduction": "none; exact Gram likelihood identity",
         "prediction_storage": "original training targets; exact posterior identity",
         "stored_target_dtype": "float32",
-        "kernel": "1.31**2 * Matern(length_scale=[1.24, 9.39, 10, 4.9, 10, 10, 10, 10, 10], nu=2.5) + WhiteKernel(noise_level=0.00283)",
+        "kernel": "1.27**2 * Matern(length_scale=[1.21, 9.23, 10, 4.27, 10, 10, 10, 10, 10], nu=2.5) + WhiteKernel(noise_level=0.00318)",
         "theta": [
-          0.546608500510154,
-          0.21535339601166686,
-          2.2391550106364178,
+          0.4819150732650676,
+          0.19056394060622273,
+          2.222093884034521,
           2.302585092994046,
-          1.5885765053726018,
-          2.302585092994046,
-          2.302585092994046,
+          1.452374560395091,
           2.302585092994046,
           2.302585092994046,
           2.302585092994046,
-          -5.868862922208454
+          2.302585092994046,
+          2.302585092994046,
+          -5.751706157798601
         ],
         "length_scales": [
-          1.2403001366469841,
-          9.385397374924207,
+          1.209931734932805,
+          9.226630147160112,
           10.000000000000002,
-          4.896773434040251,
+          4.273249566439712,
           10.000000000000002,
           10.000000000000002,
           10.000000000000002,
           10.000000000000002,
           10.000000000000002
         ],
-        "amplitude_variance": 1.7273846480531023,
-        "noise_variance_normalized": 0.0028260849861949365,
-        "nll_per_varying_output": -97.7061815325982,
+        "amplitude_variance": 1.6191722684485288,
+        "noise_variance_normalized": 0.0031773551000957604,
+        "nll_per_varying_output": -93.2711291321723,
         "selected_optimizer_success": true,
         "optimizer_attempts": [
           {
             "success": true,
             "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
-            "iterations": 37,
-            "nll_per_output": -97.7061815325982
+            "iterations": 32,
+            "nll_per_output": -93.2711291321723
           },
           {
             "success": true,
-            "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
-            "iterations": 35,
-            "nll_per_output": -81.54622403984065
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+            "iterations": 43,
+            "nll_per_output": -77.02763801168065
           }
         ],
         "parameters_near_bound": [
@@ -2292,21 +2328,21 @@
           8,
           9
         ],
-        "fit_seconds": 17.328142541002308
+        "fit_seconds": 0.4245396000042092
       }
     },
-    "fit_seconds": 17.328142541002308
+    "fit_seconds": 0.4245396000042092
   },
   "validation": {
     "od": {
       "n_cases": 20,
-      "weighted_mae_min": 0.1080241621617913,
-      "weighted_rmse_min": 0.17700951120584066,
-      "weighted_bias_min": 0.010053921594586283,
-      "maximum_case_mae_min": 0.2331744559921244,
-      "weighted_95pct_latent_coverage": 0.749949080373661,
-      "weighted_nrmse": 0.011505165500230693,
-      "maximum_case_scaled_error": 0.01770145623265779,
+      "weighted_mae_min": 0.09552191292435325,
+      "weighted_rmse_min": 0.15595047487202127,
+      "weighted_bias_min": 0.0030737011873221446,
+      "maximum_case_mae_min": 0.17212178649186294,
+      "weighted_95pct_latent_coverage": 0.7916219861454444,
+      "weighted_nrmse": 0.010136299616257739,
+      "maximum_case_scaled_error": 0.016628005431819144,
       "limits": {
         "weighted_mae_min": 0.1,
         "weighted_rmse_min": 0.2
@@ -2315,293 +2351,293 @@
         {
           "id": "test_000_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.07742517017124897,
-          "weighted_mse_min2": 0.013281927929894934,
-          "weighted_rmse_min": 0.11524724695147791,
-          "weighted_truth_rms_min": 18.087494334160063,
-          "scaled_error": 0.006371653520511231,
-          "weighted_bias_min": 0.04766109086782822,
-          "weighted_95pct_latent_coverage": 0.8919055103402657,
+          "weighted_mae_min": 0.15925673047510722,
+          "weighted_mse_min2": 0.047061992003315005,
+          "weighted_rmse_min": 0.21693776066723608,
+          "weighted_truth_rms_min": 18.100153186482295,
+          "scaled_error": 0.011985410202453497,
+          "weighted_bias_min": 0.15607547131754,
+          "weighted_95pct_latent_coverage": 0.6553329225731832,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_000_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.16074936850610194,
-          "weighted_mse_min2": 0.05236263562787074,
-          "weighted_rmse_min": 0.22882883478239963,
-          "weighted_truth_rms_min": 18.01078928779906,
-          "scaled_error": 0.01270509754602558,
-          "weighted_bias_min": 0.12680040765602502,
-          "weighted_95pct_latent_coverage": 0.4687340363183951,
+          "weighted_mae_min": 0.04981482195102396,
+          "weighted_mse_min2": 0.009864066120217925,
+          "weighted_rmse_min": 0.09931800501529381,
+          "weighted_truth_rms_min": 18.058971753813456,
+          "scaled_error": 0.005499648948413751,
+          "weighted_bias_min": -0.019131483731727156,
+          "weighted_95pct_latent_coverage": 0.8732118131792281,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_000_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.14741561087858066,
-          "weighted_mse_min2": 0.04601629352802648,
-          "weighted_rmse_min": 0.21451408701534377,
-          "weighted_truth_rms_min": 18.3032106375118,
-          "scaled_error": 0.01172002504171069,
-          "weighted_bias_min": -0.1233762084443769,
-          "weighted_95pct_latent_coverage": 0.7492442705216132,
+          "weighted_mae_min": 0.13397064013421495,
+          "weighted_mse_min2": 0.05029033123122528,
+          "weighted_rmse_min": 0.2242550584295152,
+          "weighted_truth_rms_min": 18.272253577476143,
+          "scaled_error": 0.012272983049334983,
+          "weighted_bias_min": -0.03221116485091546,
+          "weighted_95pct_latent_coverage": 0.7818056157988802,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_000_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.07172193191289294,
-          "weighted_mse_min2": 0.009898952656255088,
-          "weighted_rmse_min": 0.0994934804711097,
-          "weighted_truth_rms_min": 18.29007883560492,
-          "scaled_error": 0.005439751319028094,
-          "weighted_bias_min": 0.04471820272399617,
-          "weighted_95pct_latent_coverage": 0.7965427744150486,
+          "weighted_mae_min": 0.11128717512929533,
+          "weighted_mse_min2": 0.025958827223540433,
+          "weighted_rmse_min": 0.16111743302181933,
+          "weighted_truth_rms_min": 18.036030740213405,
+          "scaled_error": 0.008933087071236216,
+          "weighted_bias_min": 0.08969615774115355,
+          "weighted_95pct_latent_coverage": 0.6166283627649274,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.2331744559921244,
-          "weighted_mse_min2": 0.1067805562167276,
-          "weighted_rmse_min": 0.32677294290795805,
-          "weighted_truth_rms_min": 18.460229407854467,
-          "scaled_error": 0.01770145623265779,
-          "weighted_bias_min": -0.2255880602515289,
-          "weighted_95pct_latent_coverage": 0.43027059922279165,
+          "weighted_mae_min": 0.09191865621872913,
+          "weighted_mse_min2": 0.016534146214502565,
+          "weighted_rmse_min": 0.12858517105211847,
+          "weighted_truth_rms_min": 18.406614455972502,
+          "scaled_error": 0.006985813244455484,
+          "weighted_bias_min": -0.07487436218897903,
+          "weighted_95pct_latent_coverage": 0.8893014663404056,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.15373583889545395,
-          "weighted_mse_min2": 0.046367668808886056,
-          "weighted_rmse_min": 0.2153315323144431,
-          "weighted_truth_rms_min": 18.340668409719193,
-          "scaled_error": 0.011740658928239136,
-          "weighted_bias_min": -0.1431856478862942,
-          "weighted_95pct_latent_coverage": 0.43793598566062997,
+          "weighted_mae_min": 0.06166587302123536,
+          "weighted_mse_min2": 0.007624548755470524,
+          "weighted_rmse_min": 0.08731866212597697,
+          "weighted_truth_rms_min": 18.123739661800386,
+          "scaled_error": 0.004817916376829199,
+          "weighted_bias_min": -0.01754003260503765,
+          "weighted_95pct_latent_coverage": 0.8264488961412689,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.0821158560515549,
-          "weighted_mse_min2": 0.017323288731660894,
-          "weighted_rmse_min": 0.13161796507947118,
-          "weighted_truth_rms_min": 18.10219329103184,
-          "scaled_error": 0.007270829725626516,
-          "weighted_bias_min": 0.070877511976453,
-          "weighted_95pct_latent_coverage": 0.8519138860955586,
+          "weighted_mae_min": 0.17212178649186294,
+          "weighted_mse_min2": 0.0541752202216681,
+          "weighted_rmse_min": 0.23275570932131417,
+          "weighted_truth_rms_min": 18.385283349713532,
+          "scaled_error": 0.012659892420148141,
+          "weighted_bias_min": -0.16266993306880617,
+          "weighted_95pct_latent_coverage": 0.538414085225154,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_001_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.13806696328990095,
-          "weighted_mse_min2": 0.04360133898975838,
-          "weighted_rmse_min": 0.20880933645255995,
-          "weighted_truth_rms_min": 18.09846655462959,
-          "scaled_error": 0.011537404885782795,
-          "weighted_bias_min": 0.10843359415889134,
-          "weighted_95pct_latent_coverage": 0.41905366834688307,
+          "weighted_mae_min": 0.14243221250503932,
+          "weighted_mse_min2": 0.03994235497225016,
+          "weighted_rmse_min": 0.19985583547209765,
+          "weighted_truth_rms_min": 18.322785794265496,
+          "scaled_error": 0.010907502697250698,
+          "weighted_bias_min": -0.1401305739626702,
+          "weighted_95pct_latent_coverage": 0.5325786166895057,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_002_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.07041539812079603,
-          "weighted_mse_min2": 0.009730289718535814,
-          "weighted_rmse_min": 0.09864223090814508,
-          "weighted_truth_rms_min": 9.630246378988938,
-          "scaled_error": 0.010242960255239218,
-          "weighted_bias_min": 0.04452119152706644,
-          "weighted_95pct_latent_coverage": 0.9591815845457524,
-          "negative_prediction_fraction_weighted": 0.0006420569902793618
+          "weighted_mae_min": 0.06607313353018587,
+          "weighted_mse_min2": 0.010171124657280638,
+          "weighted_rmse_min": 0.10085199381906457,
+          "weighted_truth_rms_min": 9.630242578560354,
+          "scaled_error": 0.010472425070951967,
+          "weighted_bias_min": 0.04735304098073848,
+          "weighted_95pct_latent_coverage": 0.9708318561003327,
+          "negative_prediction_fraction_weighted": 0.0002815676506978234
         },
         {
           "id": "test_002_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.06877458536431785,
-          "weighted_mse_min2": 0.009288552969050647,
-          "weighted_rmse_min": 0.09637713924500274,
-          "weighted_truth_rms_min": 9.538174105887203,
-          "scaled_error": 0.010104359406221819,
-          "weighted_bias_min": 0.051728394757332305,
-          "weighted_95pct_latent_coverage": 0.9758707187798555,
-          "negative_prediction_fraction_weighted": 0.00036720523923460484
+          "weighted_mae_min": 0.08418756568358422,
+          "weighted_mse_min2": 0.016496212362054685,
+          "weighted_rmse_min": 0.12843758157974902,
+          "weighted_truth_rms_min": 9.603062050334593,
+          "scaled_error": 0.013374648722099423,
+          "weighted_bias_min": 0.06951072620560565,
+          "weighted_95pct_latent_coverage": 0.9750968780103415,
+          "negative_prediction_fraction_weighted": 9.503609376594321e-05
         },
         {
           "id": "test_002_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.08718689820895804,
-          "weighted_mse_min2": 0.020914547987298124,
-          "weighted_rmse_min": 0.14461862946141527,
-          "weighted_truth_rms_min": 9.584877202777385,
-          "scaled_error": 0.015088208894268307,
-          "weighted_bias_min": 0.022413314324270753,
-          "weighted_95pct_latent_coverage": 0.9291364804491251,
-          "negative_prediction_fraction_weighted": 9.748355426807964e-05
+          "weighted_mae_min": 0.05362440745055262,
+          "weighted_mse_min2": 0.007092273601389996,
+          "weighted_rmse_min": 0.08421563751103471,
+          "weighted_truth_rms_min": 9.585790300607638,
+          "scaled_error": 0.008785466286039694,
+          "weighted_bias_min": 0.0158413879146285,
+          "weighted_95pct_latent_coverage": 0.9473002819410831,
+          "negative_prediction_fraction_weighted": 0.0001630459321513977
         },
         {
           "id": "test_002_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.07131994566042513,
-          "weighted_mse_min2": 0.011873490141464483,
-          "weighted_rmse_min": 0.10896554566221602,
-          "weighted_truth_rms_min": 9.557652089342245,
-          "scaled_error": 0.011400869653303627,
-          "weighted_bias_min": 0.010878438113059281,
-          "weighted_95pct_latent_coverage": 0.9360316906399355,
+          "weighted_mae_min": 0.0483725642370014,
+          "weighted_mse_min2": 0.005700173559758898,
+          "weighted_rmse_min": 0.0754994937715406,
+          "weighted_truth_rms_min": 9.59186278156294,
+          "scaled_error": 0.007871202444290844,
+          "weighted_bias_min": 0.0277675452066655,
+          "weighted_95pct_latent_coverage": 0.947724395353619,
           "negative_prediction_fraction_weighted": 1.5665250646126646e-05
         },
         {
           "id": "test_003_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.1349736926242659,
-          "weighted_mse_min2": 0.049562356981773414,
-          "weighted_rmse_min": 0.22262604740185596,
-          "weighted_truth_rms_min": 15.74952787115274,
-          "scaled_error": 0.014135410865847213,
-          "weighted_bias_min": 0.12215623856587107,
-          "weighted_95pct_latent_coverage": 0.6095628454289477,
+          "weighted_mae_min": 0.1524789858888032,
+          "weighted_mse_min2": 0.052576045544871074,
+          "weighted_rmse_min": 0.2292946696826402,
+          "weighted_truth_rms_min": 15.749512586819915,
+          "scaled_error": 0.014558842276460478,
+          "weighted_bias_min": 0.1464780261080131,
+          "weighted_95pct_latent_coverage": 0.5482454097923967,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_003_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.10085863722574362,
-          "weighted_mse_min2": 0.021816416687541678,
-          "weighted_rmse_min": 0.14770381405888502,
-          "weighted_truth_rms_min": 15.991260458301282,
-          "scaled_error": 0.009236533570573541,
-          "weighted_bias_min": -0.09345071983793887,
-          "weighted_95pct_latent_coverage": 0.6869466108493794,
+          "weighted_mae_min": 0.06556551684539723,
+          "weighted_mse_min2": 0.009115819562525359,
+          "weighted_rmse_min": 0.09547680117455422,
+          "weighted_truth_rms_min": 15.768224701760156,
+          "scaled_error": 0.006055012722129489,
+          "weighted_bias_min": 0.049463567382821656,
+          "weighted_95pct_latent_coverage": 0.8257958715896027,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_003_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.1182882189773039,
-          "weighted_mse_min2": 0.031762011620028605,
-          "weighted_rmse_min": 0.17821899904339214,
-          "weighted_truth_rms_min": 15.758610752995141,
-          "scaled_error": 0.01130930903979078,
-          "weighted_bias_min": 0.10601812403074352,
-          "weighted_95pct_latent_coverage": 0.6221986125214761,
+          "weighted_mae_min": 0.07355986357018678,
+          "weighted_mse_min2": 0.01253403131872035,
+          "weighted_rmse_min": 0.11195548811344778,
+          "weighted_truth_rms_min": 15.804228912968364,
+          "scaled_error": 0.007083894363335959,
+          "weighted_bias_min": 0.05706716673507431,
+          "weighted_95pct_latent_coverage": 0.8128183400361846,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_003_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.0673965146001933,
-          "weighted_mse_min2": 0.008660716004073804,
-          "weighted_rmse_min": 0.0930629679522086,
-          "weighted_truth_rms_min": 15.81188365275431,
-          "scaled_error": 0.005885634500984818,
-          "weighted_bias_min": 0.040181224188705365,
-          "weighted_95pct_latent_coverage": 0.795414009689098,
+          "weighted_mae_min": 0.123260176152231,
+          "weighted_mse_min2": 0.03662952782744175,
+          "weighted_rmse_min": 0.19138842135155865,
+          "weighted_truth_rms_min": 15.94929887601318,
+          "scaled_error": 0.011999801548605733,
+          "weighted_bias_min": -0.07577727813133145,
+          "weighted_95pct_latent_coverage": 0.5464667642617558,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_004_stage0",
           "stage": 0,
-          "weighted_mae_min": 0.11224586508468469,
-          "weighted_mse_min2": 0.045496303136870885,
-          "weighted_rmse_min": 0.21329862432015562,
-          "weighted_truth_rms_min": 13.340167781429525,
-          "scaled_error": 0.015989201021675507,
-          "weighted_bias_min": 0.0048718929670393245,
-          "weighted_95pct_latent_coverage": 0.8512746606190633,
+          "weighted_mae_min": 0.1142966990100312,
+          "weighted_mse_min2": 0.049204251860088866,
+          "weighted_rmse_min": 0.22182031435395827,
+          "weighted_truth_rms_min": 13.340163693324616,
+          "scaled_error": 0.016628005431819144,
+          "weighted_bias_min": -0.008109445901296475,
+          "weighted_95pct_latent_coverage": 0.8571108580098735,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_004_stage1",
           "stage": 1,
-          "weighted_mae_min": 0.1022380612565936,
-          "weighted_mse_min2": 0.032447345403232755,
-          "weighted_rmse_min": 0.1801314669990581,
-          "weighted_truth_rms_min": 13.428442537746426,
-          "scaled_error": 0.013414174167459925,
-          "weighted_bias_min": -0.0805814103011668,
-          "weighted_95pct_latent_coverage": 0.843047123939899,
+          "weighted_mae_min": 0.07943771553858504,
+          "weighted_mse_min2": 0.014932111497112734,
+          "weighted_rmse_min": 0.12219701918260009,
+          "weighted_truth_rms_min": 13.410566171698225,
+          "scaled_error": 0.009111995542774752,
+          "weighted_bias_min": -0.04806445448196452,
+          "weighted_95pct_latent_coverage": 0.8874718030990927,
           "negative_prediction_fraction_weighted": 0.0
         },
         {
           "id": "test_004_stage2",
           "stage": 2,
-          "weighted_mae_min": 0.03787943309817146,
-          "weighted_mse_min2": 0.0029044578816311475,
-          "weighted_rmse_min": 0.05389302256907797,
-          "weighted_truth_rms_min": 13.371865331257098,
-          "scaled_error": 0.00403032944424751,
-          "weighted_bias_min": 0.0012610889882427073,
-          "weighted_95pct_latent_coverage": 0.939711090367333,
+          "weighted_mae_min": 0.0629522147700208,
+          "weighted_mse_min2": 0.00897054988637437,
+          "weighted_rmse_min": 0.09471298689395435,
+          "weighted_truth_rms_min": 13.297554645423915,
+          "scaled_error": 0.007122586777753751,
+          "weighted_bias_min": -0.036197340408954976,
+          "weighted_95pct_latent_coverage": 0.8803737544688544,
           "negative_prediction_fraction_weighted": 8.181830362195299e-05
         },
         {
           "id": "test_004_stage3",
           "stage": 3,
-          "weighted_mae_min": 0.12450079731651367,
-          "weighted_mse_min2": 0.04655819012603094,
-          "weighted_rmse_min": 0.21577346946747403,
-          "weighted_truth_rms_min": 13.208760579273115,
-          "scaled_error": 0.01633563332248302,
-          "weighted_bias_min": 0.06473976376750679,
-          "weighted_95pct_latent_coverage": 0.8050054487221725,
-          "negative_prediction_fraction_weighted": 8.181830362195299e-05
+          "weighted_mae_min": 0.06416151988397759,
+          "weighted_mse_min2": 0.011537403836370093,
+          "weighted_rmse_min": 0.10741230765778237,
+          "weighted_truth_rms_min": 13.263766476515402,
+          "scaled_error": 0.008098175420078811,
+          "weighted_bias_min": 0.016927003485885272,
+          "weighted_95pct_latent_coverage": 0.9194817315331983,
+          "negative_prediction_fraction_weighted": 0.00016319098204762078
         }
       ],
       "by_stage": {
         "0": {
           "n_cases": 5,
-          "weighted_mae_min": 0.12564691639862402,
-          "weighted_rmse_min": 0.2120619880996133,
-          "weighted_bias_min": -0.0012755292647447683,
-          "maximum_case_mae_min": 0.2331744559921244,
-          "weighted_95pct_latent_coverage": 0.7484390400313641
+          "weighted_mae_min": 0.11680484102457131,
+          "weighted_rmse_min": 0.1873753240317722,
+          "weighted_bias_min": 0.05338454606320322,
+          "maximum_case_mae_min": 0.15925673047510722,
+          "weighted_95pct_latent_coverage": 0.7841645025632383
         },
         "1": {
           "n_cases": 5,
-          "weighted_mae_min": 0.11727129824964219,
-          "weighted_rmse_min": 0.18015694241221006,
-          "weighted_bias_min": -0.027737795122408516,
-          "maximum_case_mae_min": 0.16074936850610194,
-          "weighted_95pct_latent_coverage": 0.6825068951096318
+          "weighted_mae_min": 0.06813429860796516,
+          "weighted_rmse_min": 0.1077337071648249,
+          "weighted_bias_min": 0.006847664553939596,
+          "maximum_case_mae_min": 0.08418756568358422,
+          "weighted_95pct_latent_coverage": 0.8776050524039067
         },
         "2": {
           "n_cases": 5,
-          "weighted_mae_min": 0.09457720344291379,
-          "weighted_rmse_min": 0.15422101007881206,
-          "weighted_bias_min": 0.015438766175066617,
-          "maximum_case_mae_min": 0.14741561087858066,
-          "weighted_95pct_latent_coverage": 0.8184408679910213
+          "weighted_mae_min": 0.09924578248336761,
+          "weighted_rmse_min": 0.16313332354818133,
+          "weighted_bias_min": -0.03163397673579476,
+          "maximum_case_mae_min": 0.17212178649186294,
+          "weighted_95pct_latent_coverage": 0.7921424154940313
         },
         "3": {
           "n_cases": 5,
-          "weighted_mae_min": 0.0946012305559852,
-          "weighted_rmse_min": 0.1553014410220219,
-          "weighted_bias_min": 0.05379024459043178,
-          "maximum_case_mae_min": 0.13806696328990095,
-          "weighted_95pct_latent_coverage": 0.7504095183626275
+          "weighted_mae_min": 0.09790272958150895,
+          "weighted_rmse_min": 0.15476969174832733,
+          "weighted_bias_min": -0.016303429132059465,
+          "maximum_case_mae_min": 0.14243221250503932,
+          "weighted_95pct_latent_coverage": 0.7125759741206011
         }
       },
       "weighting": "fixed nominal all-passenger OD collapsed to corridor, reachable off-diagonal",
       "uncertainty_note": "Latent GP marginal intervals; OD cells are not independent validation samples.",
       "normalization": "NRMSE is divided by holdout weighted truth RMS; maximum scaled error is the worst case RMSE divided by that case's truth RMS (both use a 0.05-minute floor).",
-      "passed": false
+      "passed": true
     },
     "paired_appraisal": {
       "passed": true,
       "checks": {
         "total_benefit_mae": {
-          "value": 497066.407554547,
+          "value": 68153.27089835008,
           "limit": 1000000.0,
           "passed": true
         },
         "total_benefit_p95_error": {
-          "value": 1827906.702841615,
+          "value": 209679.1403719901,
           "limit": 5000000.0,
           "passed": true
         },
@@ -2616,22 +2652,22 @@
           "passed": true
         },
         "maximum_mode_share_error_pp": {
-          "value": 0.23999261250939874,
+          "value": 0.20159220204771233,
           "limit": 1.0,
           "passed": true
         },
         "median_mode_share_error_pp": {
-          "value": 0.02276066506645552,
+          "value": 0.021134157923149988,
           "limit": 0.25,
           "passed": true
         },
         "maximum_section_load_relative_error": {
-          "value": 0.004843741408912985,
+          "value": 0.0,
           "limit": 0.03,
           "passed": true
         },
         "median_section_load_relative_error": {
-          "value": 0.0026499900471627187,
+          "value": 0.0,
           "limit": 0.01,
           "passed": true
         }
@@ -2639,92 +2675,92 @@
       "paired_components": {
         "bike_health": {
           "n": 15,
-          "mean_reference": 7653815.777659974,
-          "mean_absolute_error": 421546.34258207085,
-          "rmse": 605163.2456198568,
-          "nrmse": 0.05498377477898721,
-          "median_absolute_relative_error": 0.026552631156874982,
-          "max_absolute_relative_error": 0.28383620865675135,
+          "mean_reference": 5362088.697588144,
+          "mean_absolute_error": 391226.765533483,
+          "rmse": 545712.9037017984,
+          "nrmse": 0.07356453998468088,
+          "median_absolute_relative_error": 0.04704592432843197,
+          "max_absolute_relative_error": 0.2579630063008243,
           "material": true,
-          "mean_absolute_reference": 7653815.777659974,
+          "mean_absolute_reference": 5362088.697588144,
           "error_limit_chf_per_year": 1000000.0,
           "passed": true
         },
         "bike_time": {
           "n": 15,
-          "mean_reference": 7774575.326395919,
-          "mean_absolute_error": 1869.3888661682606,
-          "rmse": 2587.460139001586,
-          "nrmse": 0.0002155639416891917,
-          "median_absolute_relative_error": 0.00020875785765961085,
-          "max_absolute_relative_error": 0.0007549614321091849,
+          "mean_reference": 5633938.114970216,
+          "mean_absolute_error": 1062.1823801100254,
+          "rmse": 1400.4697279154302,
+          "nrmse": 0.00018599810827097695,
+          "median_absolute_relative_error": 0.00017720495101814117,
+          "max_absolute_relative_error": 0.00041274637180246275,
           "material": true,
-          "mean_absolute_reference": 7774575.326395919,
+          "mean_absolute_reference": 5633938.114970216,
           "error_limit_chf_per_year": 1000000.0,
           "passed": true
         },
         "car_acc": {
           "n": 15,
-          "mean_reference": 397186.11620023596,
-          "mean_absolute_error": 208347.6721493577,
-          "rmse": 306682.70406195236,
-          "nrmse": 0.21684967478255388,
+          "mean_reference": 302447.4527992298,
+          "mean_absolute_error": 175873.94974925817,
+          "rmse": 235392.68802206617,
+          "nrmse": 0.2541387670556314,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 439736.19555628847,
+          "mean_absolute_reference": 319235.0993183861,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_air": {
           "n": 15,
-          "mean_reference": 54112.54989104029,
-          "mean_absolute_error": 28385.241437241682,
-          "rmse": 41782.38474958452,
-          "nrmse": 0.21684967478255315,
+          "mean_reference": 41205.375040767714,
+          "mean_absolute_error": 23961.028576193938,
+          "rmse": 32069.84850436991,
+          "nrmse": 0.25413876705564026,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 59909.563427287154,
+          "mean_absolute_reference": 43492.52034310487,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_co2": {
           "n": 15,
-          "mean_reference": 119509.90596692785,
-          "mean_absolute_error": 62690.032937720665,
-          "rmse": 92278.20316269646,
-          "nrmse": 0.2168496747825537,
+          "mean_reference": 91003.85227400796,
+          "mean_absolute_error": 52918.967555174604,
+          "rmse": 70827.64694785466,
+          "nrmse": 0.25413876705563476,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 132312.86099308904,
+          "mean_absolute_reference": 96055.11155795243,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_noise": {
           "n": 15,
-          "mean_reference": 70111.04290230473,
-          "mean_absolute_error": 36777.39977520878,
-          "rmse": 54135.43763206982,
-          "nrmse": 0.21684967478255013,
+          "mean_reference": 53387.833748472236,
+          "mean_absolute_error": 31045.158763938023,
+          "rmse": 41551.3689317484,
+          "nrmse": 0.25413876705563887,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 77621.9560927463,
+          "mean_absolute_reference": 56351.178531500445,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
         "car_time": {
           "n": 15,
-          "mean_reference": 512700.8892955462,
-          "mean_absolute_error": 903518.0801662127,
-          "rmse": 1330656.9665379634,
-          "nrmse": 0.30023507224018653,
+          "mean_reference": 333973.2760531863,
+          "mean_absolute_error": 791184.9493382652,
+          "rmse": 1059088.542583727,
+          "nrmse": 0.2855186252574764,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 950596.2984665235,
+          "mean_absolute_reference": 652592.5396430532,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -2743,14 +2779,14 @@
         },
         "external_crowding": {
           "n": 15,
-          "mean_reference": 6703.723196842521,
-          "mean_absolute_error": 286458.5853579166,
-          "rmse": 459271.29170466895,
-          "nrmse": 0.31143854297719464,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 261074.341664168,
+          "mean_absolute_reference": 0.0,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -2860,14 +2896,14 @@
         },
         "pt_crowding": {
           "n": 15,
-          "mean_reference": 8105.856203978757,
-          "mean_absolute_error": 322468.98261424847,
-          "rmse": 521504.02462680545,
-          "nrmse": 0.30934923382291346,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 294767.64120506943,
+          "mean_absolute_reference": 0.0,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -2899,14 +2935,14 @@
         },
         "pt_socioeconomic": {
           "n": 15,
-          "mean_reference": -694924.9355026087,
-          "mean_absolute_error": 249295.94844393333,
-          "rmse": 375237.071749417,
-          "nrmse": 0.1996121633266145,
+          "mean_reference": -504358.9664221922,
+          "mean_absolute_error": 145561.60753872644,
+          "rmse": 189858.97115524605,
+          "nrmse": 0.22346452383166363,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 700293.1911872108,
+          "mean_absolute_reference": 504358.9664221922,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -2951,15 +2987,15 @@
         },
         "total": {
           "n": 15,
-          "mean_reference": 14808439.37917784,
-          "mean_absolute_error": 497066.407554547,
-          "rmse": 832644.3429236239,
-          "nrmse": 0.03896553364104578,
-          "median_absolute_relative_error": 0.008983894938144632,
-          "max_absolute_relative_error": 0.16435452430279562,
+          "mean_reference": 10488468.977462674,
+          "mean_absolute_error": 68153.27089835008,
+          "rmse": 103514.4037846022,
+          "nrmse": 0.007332783904635263,
+          "median_absolute_relative_error": 0.004210698326995198,
+          "max_absolute_relative_error": 0.023346553726088782,
           "material": false,
-          "mean_absolute_reference": 14808439.37917784,
-          "error_limit_chf_per_year": 1480843.937917784,
+          "mean_absolute_reference": 10488468.977462674,
+          "error_limit_chf_per_year": 1048846.8977462675,
           "passed": null
         },
         "upfront": {
@@ -2977,14 +3013,14 @@
         },
         "walk_health": {
           "n": 15,
-          "mean_reference": -980816.8996990025,
-          "mean_absolute_error": 9813.986825324098,
-          "rmse": 13994.719221575393,
-          "nrmse": 0.009932853295730895,
+          "mean_reference": -712576.6852556706,
+          "mean_absolute_error": 8641.423680926362,
+          "rmse": 11358.372821900717,
+          "nrmse": 0.012687490470971648,
           "median_absolute_relative_error": null,
           "max_absolute_relative_error": null,
           "material": false,
-          "mean_absolute_reference": 980816.8996990025,
+          "mean_absolute_reference": 712576.6852556706,
           "error_limit_chf_per_year": 1000000.0,
           "passed": null
         },
@@ -3006,297 +3042,297 @@
         "0": {
           "avg_tt_min": {
             "n": 5,
-            "mean_reference": 15.283758633091562,
-            "mean_absolute_error": 0.012663445335847356,
-            "rmse": 0.013694783531538182,
-            "nrmse": 0.009152513705465,
-            "median_absolute_relative_error": 0.0009395032761911126,
-            "max_absolute_relative_error": 0.0013102574640986469
+            "mean_reference": 15.2834566489217,
+            "mean_absolute_error": 0.01377943390995746,
+            "rmse": 0.01502827993546391,
+            "nrmse": 0.010040334230400126,
+            "median_absolute_relative_error": 0.0009626388548089034,
+            "max_absolute_relative_error": 0.0014231865125242707
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.16120770691084096,
-            "mean_absolute_error": 0.0001682725315736655,
-            "rmse": 0.00021504211004665967,
-            "nrmse": 0.004364898472908891,
-            "median_absolute_relative_error": 0.0006869735169869958,
-            "max_absolute_relative_error": 0.0025816853423192136
+            "mean_reference": 0.16119125970264409,
+            "mean_absolute_error": 0.00019394534078812087,
+            "rmse": 0.00023789387186588792,
+            "nrmse": 0.004832209388456555,
+            "median_absolute_relative_error": 0.0007308214095396309,
+            "max_absolute_relative_error": 0.0021192687969998005
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.43290782084893636,
-            "mean_absolute_error": 0.0009560576243086815,
-            "rmse": 0.0013080211935125826,
-            "nrmse": 0.016214315125298404,
-            "median_absolute_relative_error": 0.0009037391844684181,
-            "max_absolute_relative_error": 0.005817155334608096
+            "mean_reference": 0.43301117810494194,
+            "mean_absolute_error": 0.00097838124368691,
+            "rmse": 0.001208061261288673,
+            "nrmse": 0.015003782484613194,
+            "median_absolute_relative_error": 0.0015715743224788716,
+            "max_absolute_relative_error": 0.00458838421855904
           },
           "co2_tonnes": {
             "n": 5,
-            "mean_reference": 117261.36055084218,
-            "mean_absolute_error": 280.2521930169663,
-            "rmse": 397.74324601716813,
-            "nrmse": 0.008329398902292808,
-            "median_absolute_relative_error": 0.0008772092587683451,
-            "max_absolute_relative_error": 0.0057049204621248155
+            "mean_reference": 117294.48361701751,
+            "mean_absolute_error": 289.4709765295411,
+            "rmse": 371.90836598421,
+            "nrmse": 0.007779979073986135,
+            "median_absolute_relative_error": 0.001541278862824083,
+            "max_absolute_relative_error": 0.004501490437194409
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.3486327933562702,
-            "mean_absolute_error": 0.0007842642587531978,
-            "rmse": 0.0010873058285665487,
-            "nrmse": 0.013254247581591222,
-            "median_absolute_relative_error": 0.0010212493614792655,
-            "max_absolute_relative_error": 0.005261923722041836
+            "mean_reference": 0.3485457369930486,
+            "mean_absolute_error": 0.0007766554198348041,
+            "rmse": 0.0009656171986894344,
+            "nrmse": 0.011816400606756853,
+            "median_absolute_relative_error": 0.0014095711031943748,
+            "max_absolute_relative_error": 0.004215423258757441
           },
           "section_modeled_peak": {
             "n": 5,
-            "mean_reference": 9105.668910263437,
-            "mean_absolute_error": 23.788573685375194,
-            "rmse": 30.37589719465894,
-            "nrmse": 0.004489695906624338,
-            "median_absolute_relative_error": 0.0016042505694072457,
-            "max_absolute_relative_error": 0.004843741408912985
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
           },
           "total_cost": {
             "n": 5,
-            "mean_reference": 1912867899.121703,
-            "mean_absolute_error": 1690815.9905228138,
-            "rmse": 2173343.567102112,
-            "nrmse": 0.0016915397474992356,
-            "median_absolute_relative_error": 0.00047156152839372483,
-            "max_absolute_relative_error": 0.0016837786354085324
+            "mean_reference": 1410335843.3963537,
+            "mean_absolute_error": 224489.08813946246,
+            "rmse": 238336.72335337702,
+            "nrmse": 0.0002842601886761396,
+            "median_absolute_relative_error": 0.00018195701774850937,
+            "max_absolute_relative_error": 0.00022515391812127342
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.057251678883952536,
-            "mean_absolute_error": 7.853212341882299e-06,
-            "rmse": 8.42562461458037e-06,
-            "nrmse": 0.002169994155858108,
-            "median_absolute_relative_error": 0.000125031426448726,
-            "max_absolute_relative_error": 0.00022789304201651335
+            "mean_reference": 0.05725182519936547,
+            "mean_absolute_error": 7.78048306401824e-06,
+            "rmse": 8.495927124897664e-06,
+            "nrmse": 0.002188023896684035,
+            "median_absolute_relative_error": 0.0001045453320785271,
+            "max_absolute_relative_error": 0.000239230493196408
           }
         },
         "1": {
           "avg_tt_min": {
             "n": 5,
-            "mean_reference": 15.321154051148488,
-            "mean_absolute_error": 0.014415018142168634,
-            "rmse": 0.014495995900730434,
-            "nrmse": 0.009689469531326746,
-            "median_absolute_relative_error": 0.0009377555603493391,
-            "max_absolute_relative_error": 0.0010814244709685848
+            "mean_reference": 15.3046392214288,
+            "mean_absolute_error": 0.007652054765760497,
+            "rmse": 0.009782579770653508,
+            "nrmse": 0.006641588276120736,
+            "median_absolute_relative_error": 0.0004431116881456115,
+            "max_absolute_relative_error": 0.00130856398107861
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.16642182692563273,
-            "mean_absolute_error": 0.0002258027758944181,
-            "rmse": 0.00023969387924741432,
-            "nrmse": 0.0049518645066536655,
-            "median_absolute_relative_error": 0.0012486428411401268,
-            "max_absolute_relative_error": 0.001984690043879988
+            "mean_reference": 0.16462311075263453,
+            "mean_absolute_error": 8.670137144057843e-05,
+            "rmse": 9.83874438966664e-05,
+            "nrmse": 0.002017591600000581,
+            "median_absolute_relative_error": 0.00041448446162168295,
+            "max_absolute_relative_error": 0.000931517050045843
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.4300334444834001,
-            "mean_absolute_error": 0.0012575659913668046,
-            "rmse": 0.0013204998527250008,
-            "nrmse": 0.01650226875554123,
-            "median_absolute_relative_error": 0.002721330263132429,
-            "max_absolute_relative_error": 0.004387066374962171
+            "mean_reference": 0.4315968000460904,
+            "mean_absolute_error": 0.0004661724498280395,
+            "rmse": 0.0005123642552281833,
+            "nrmse": 0.00638969985110988,
+            "median_absolute_relative_error": 0.0009183345177959949,
+            "max_absolute_relative_error": 0.0015925800566585588
           },
           "co2_tonnes": {
             "n": 5,
-            "mean_reference": 116502.38074998479,
-            "mean_absolute_error": 357.58429562805685,
-            "rmse": 394.5538316757792,
-            "nrmse": 0.008286858644409525,
-            "median_absolute_relative_error": 0.00265714408558631,
-            "max_absolute_relative_error": 0.004302026576579175
+            "mean_reference": 116945.12519978984,
+            "mean_absolute_error": 117.439761298339,
+            "rmse": 126.24866869666596,
+            "nrmse": 0.002650349126102469,
+            "median_absolute_relative_error": 0.0009008806223007037,
+            "max_absolute_relative_error": 0.0015595378943967335
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.34719579067530837,
-            "mean_absolute_error": 0.0010247805099146134,
-            "rmse": 0.0010762172030306745,
-            "nrmse": 0.013159218484111296,
-            "median_absolute_relative_error": 0.003084409717753468,
-            "max_absolute_relative_error": 0.003922564644040257
+            "mean_reference": 0.34711893306399194,
+            "mean_absolute_error": 0.0003769098669608506,
+            "rmse": 0.00041227062751906927,
+            "nrmse": 0.005170694084323897,
+            "median_absolute_relative_error": 0.0009510890749398238,
+            "max_absolute_relative_error": 0.001936640275332666
           },
           "section_modeled_peak": {
             "n": 5,
-            "mean_reference": 9112.980600159639,
-            "mean_absolute_error": 31.41960149793322,
-            "rmse": 33.68161771898365,
-            "nrmse": 0.004980749463215366,
-            "median_absolute_relative_error": 0.0034855146296691214,
-            "max_absolute_relative_error": 0.004531113008610971
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
           },
           "total_cost": {
             "n": 5,
-            "mean_reference": 1895477506.780004,
-            "mean_absolute_error": 2040398.6319811344,
-            "rmse": 2263121.1128656934,
-            "nrmse": 0.00177572027740136,
-            "median_absolute_relative_error": 0.0009847311971956508,
-            "max_absolute_relative_error": 0.0015241472818013988
+            "mean_reference": 1398108379.1319973,
+            "mean_absolute_error": 137815.73901057243,
+            "rmse": 155883.0612613376,
+            "nrmse": 0.0001873807576843507,
+            "median_absolute_relative_error": 8.420175535593115e-05,
+            "max_absolute_relative_error": 0.00027048409064219105
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.05634893791565868,
-            "mean_absolute_error": 6.982705557799507e-06,
-            "rmse": 7.574391807848714e-06,
-            "nrmse": 0.0019832411403922123,
-            "median_absolute_relative_error": 0.0001253306117404402,
-            "max_absolute_relative_error": 0.00020536453607133157
+            "mean_reference": 0.05666115613728319,
+            "mean_absolute_error": 2.5923560186214e-06,
+            "rmse": 2.978244235239444e-06,
+            "nrmse": 0.00077807729324475,
+            "median_absolute_relative_error": 5.190996105315808e-05,
+            "max_absolute_relative_error": 7.827405411031958e-05
           }
         },
         "2": {
           "avg_tt_min": {
             "n": 5,
-            "mean_reference": 15.29899269091884,
-            "mean_absolute_error": 0.006997676320916213,
-            "rmse": 0.008290083398092578,
-            "nrmse": 0.005635474653651348,
-            "median_absolute_relative_error": 0.0005306341800527165,
-            "max_absolute_relative_error": 0.0008565831443181608
+            "mean_reference": 15.301254136627069,
+            "mean_absolute_error": 0.009414804537906463,
+            "rmse": 0.010599207546600126,
+            "nrmse": 0.007078792843040712,
+            "median_absolute_relative_error": 0.0004567395915819069,
+            "max_absolute_relative_error": 0.0011406816467417643
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.163614774117495,
-            "mean_absolute_error": 0.0001437526827317237,
-            "rmse": 0.00017943950721146596,
-            "nrmse": 0.00363209073908634,
-            "median_absolute_relative_error": 0.0009522028277497289,
-            "max_absolute_relative_error": 0.0015379183318660681
+            "mean_reference": 0.16352918269386812,
+            "mean_absolute_error": 0.00013467330068659412,
+            "rmse": 0.00016784950424399598,
+            "nrmse": 0.003391532288128784,
+            "median_absolute_relative_error": 0.00046135968317962913,
+            "max_absolute_relative_error": 0.0021439535498184556
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.4318700151444485,
-            "mean_absolute_error": 0.000815019640505843,
-            "rmse": 0.0010198932547559126,
-            "nrmse": 0.012354982964380992,
-            "median_absolute_relative_error": 0.0022285050532247657,
-            "max_absolute_relative_error": 0.0036402537107797996
+            "mean_reference": 0.43158542796237703,
+            "mean_absolute_error": 0.0007791036296236232,
+            "rmse": 0.0010233740123620823,
+            "nrmse": 0.01241090223932511,
+            "median_absolute_relative_error": 0.0007411948589927901,
+            "max_absolute_relative_error": 0.00489683265913931
           },
           "co2_tonnes": {
             "n": 5,
-            "mean_reference": 116985.70852498416,
-            "mean_absolute_error": 247.16829824777088,
-            "rmse": 315.10685186948814,
-            "nrmse": 0.006711189136883617,
-            "median_absolute_relative_error": 0.002185679003484202,
-            "max_absolute_relative_error": 0.0035648668981318596
+            "mean_reference": 116879.9231147696,
+            "mean_absolute_error": 225.9077168699645,
+            "rmse": 313.2516427821358,
+            "nrmse": 0.006662388644974419,
+            "median_absolute_relative_error": 0.0007193984244565728,
+            "max_absolute_relative_error": 0.004802155933730952
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.3476920953117776,
-            "mean_absolute_error": 0.0006699273802159511,
-            "rmse": 0.000837774052715619,
-            "nrmse": 0.010501883958085058,
-            "median_absolute_relative_error": 0.0020531502682865138,
-            "max_absolute_relative_error": 0.0035705161745463025
+            "mean_reference": 0.34801712340363855,
+            "mean_absolute_error": 0.0006394221215786144,
+            "rmse": 0.0008502522036394031,
+            "nrmse": 0.010359373274363152,
+            "median_absolute_relative_error": 0.0009126377907486118,
+            "max_absolute_relative_error": 0.004426880076967522
           },
           "section_modeled_peak": {
             "n": 5,
-            "mean_reference": 9102.44665284292,
-            "mean_absolute_error": 23.817509468748902,
-            "rmse": 30.23403367725206,
-            "nrmse": 0.004435425685321528,
-            "median_absolute_relative_error": 0.002641696835799679,
-            "max_absolute_relative_error": 0.003945562756512166
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
           },
           "total_cost": {
             "n": 5,
-            "mean_reference": 1903441590.1796577,
-            "mean_absolute_error": 1538667.7128931999,
-            "rmse": 1995722.6310272536,
-            "nrmse": 0.0015555825864222855,
-            "median_absolute_relative_error": 0.0008823106533318517,
-            "max_absolute_relative_error": 0.0012920784803017533
+            "mean_reference": 1402830600.542387,
+            "mean_absolute_error": 197696.4997121811,
+            "rmse": 227828.97158819452,
+            "nrmse": 0.00027294919856052927,
+            "median_absolute_relative_error": 0.00010824554052796034,
+            "max_absolute_relative_error": 0.00022955497196265403
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.05682311542627887,
-            "mean_absolute_error": 3.2973264879415654e-06,
-            "rmse": 4.137465960579291e-06,
-            "nrmse": 0.001078178903459961,
-            "median_absolute_relative_error": 7.912711905890204e-05,
-            "max_absolute_relative_error": 0.00010653659892707152
+            "mean_reference": 0.05686826594011628,
+            "mean_absolute_error": 5.367970965171332e-06,
+            "rmse": 6.475083643297457e-06,
+            "nrmse": 0.0016793737597431205,
+            "median_absolute_relative_error": 7.800784248114884e-05,
+            "max_absolute_relative_error": 0.00019898318677502146
           }
         },
         "3": {
           "avg_tt_min": {
             "n": 5,
-            "mean_reference": 15.328579649523126,
-            "mean_absolute_error": 0.010256479124460682,
-            "rmse": 0.011316843384177825,
-            "nrmse": 0.007713105301234056,
-            "median_absolute_relative_error": 0.00045026567810438486,
-            "max_absolute_relative_error": 0.001116071393563618
+            "mean_reference": 15.3205774122404,
+            "mean_absolute_error": 0.011548524772483049,
+            "rmse": 0.01263833365894597,
+            "nrmse": 0.008462877008109633,
+            "median_absolute_relative_error": 0.0006108479207201734,
+            "max_absolute_relative_error": 0.0012482218556066228
           },
           "bike_share": {
             "n": 5,
-            "mean_reference": 0.16850405083641654,
-            "mean_absolute_error": 0.00013035777119874137,
-            "rmse": 0.00014224937201910657,
-            "nrmse": 0.0029063006166926545,
-            "median_absolute_relative_error": 0.0006319220095219435,
-            "max_absolute_relative_error": 0.0014473469508445235
+            "mean_reference": 0.16620918633921072,
+            "mean_absolute_error": 0.00015953301080698368,
+            "rmse": 0.00018536826468255635,
+            "nrmse": 0.0038035385604375527,
+            "median_absolute_relative_error": 0.0010925131903836793,
+            "max_absolute_relative_error": 0.001960917687557337
           },
           "car_share": {
             "n": 5,
-            "mean_reference": 0.429478942943574,
-            "mean_absolute_error": 0.0007752292416981609,
-            "rmse": 0.0008649182687776953,
-            "nrmse": 0.010489303889872027,
-            "median_absolute_relative_error": 0.0015363614370976035,
-            "max_absolute_relative_error": 0.0033780640909095573
+            "mean_reference": 0.4302955490228582,
+            "mean_absolute_error": 0.000852913958133672,
+            "rmse": 0.0010073805976662429,
+            "nrmse": 0.01258855006328685,
+            "median_absolute_relative_error": 0.002222677262265252,
+            "max_absolute_relative_error": 0.004296606960501708
           },
           "co2_tonnes": {
             "n": 5,
-            "mean_reference": 116333.82426411728,
-            "mean_absolute_error": 217.31281798275012,
-            "rmse": 250.68782231855013,
-            "nrmse": 0.005381099321574063,
-            "median_absolute_relative_error": 0.0015043137057306618,
-            "max_absolute_relative_error": 0.003312759673882022
+            "mean_reference": 116564.25980675395,
+            "mean_absolute_error": 253.39042327925273,
+            "rmse": 312.4299480605355,
+            "nrmse": 0.006569512929290312,
+            "median_absolute_relative_error": 0.002176283473428837,
+            "max_absolute_relative_error": 0.004213354458974433
           },
           "pt_share": {
             "n": 5,
-            "mean_reference": 0.3460349015708459,
-            "mean_absolute_error": 0.0006404755311811838,
-            "rmse": 0.0007185600904219725,
-            "nrmse": 0.00901514866809192,
-            "median_absolute_relative_error": 0.001494988410568376,
-            "max_absolute_relative_error": 0.0030765455127933256
+            "mean_reference": 0.34707502977868665,
+            "mean_absolute_error": 0.0006869353132026746,
+            "rmse": 0.0008166457683421154,
+            "nrmse": 0.010039447773633787,
+            "median_absolute_relative_error": 0.002040031964471554,
+            "max_absolute_relative_error": 0.003835936437287131
           },
           "section_modeled_peak": {
             "n": 5,
-            "mean_reference": 9095.231869358378,
-            "mean_absolute_error": 21.781424280753527,
-            "rmse": 27.165767990681378,
-            "nrmse": 0.003977220867593426,
-            "median_absolute_relative_error": 0.0024139816405438037,
-            "max_absolute_relative_error": 0.004590050847075409
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
           },
           "total_cost": {
             "n": 5,
-            "mean_reference": 1885368111.4560428,
-            "mean_absolute_error": 1486151.0807828426,
-            "rmse": 1927715.5022656056,
-            "nrmse": 0.0015143912073010781,
-            "median_absolute_relative_error": 0.0005295766815465925,
-            "max_absolute_relative_error": 0.0016170164294949743
+            "mean_reference": 1392157846.2275329,
+            "mean_absolute_error": 208842.23975822926,
+            "rmse": 254068.4632569197,
+            "nrmse": 0.0003063656179587256,
+            "median_absolute_relative_error": 0.000142151228935519,
+            "max_absolute_relative_error": 0.0002457126759972299
           },
           "walk_share": {
             "n": 5,
-            "mean_reference": 0.05598210464916359,
-            "mean_absolute_error": 4.39593931820248e-06,
-            "rmse": 5.207474246581777e-06,
-            "nrmse": 0.0013802234176212905,
-            "median_absolute_relative_error": 8.135607160214255e-05,
-            "max_absolute_relative_error": 0.00015812286983065346
+            "mean_reference": 0.05642023485924445,
+            "mean_absolute_error": 6.445634123986022e-06,
+            "rmse": 7.372933180322224e-06,
+            "nrmse": 0.0019285653634032644,
+            "median_absolute_relative_error": 0.00010244450369490146,
+            "max_absolute_relative_error": 0.00021595407450483988
           }
         }
       },
@@ -3305,7 +3341,7 @@
       "scope": "Paired annual baseline/project matched benefits and physical indicators, not full-future NPV.",
       "n_holdouts_per_stage": 5,
       "n_independent_physical_futures": 5,
-      "surrogate_fingerprint": "d70e9516184f6e3f0a05",
+      "surrogate_fingerprint": "84fcd27edd22b2708dc9",
       "component_rule": "Material mean benefit >= CHF5m/year: MAE <= max(10%, CHF1m/year).",
       "current_parameters": {
         "N_YEARS": 40,
@@ -3376,19 +3412,19 @@
         "CAPACITY_INCREASE_COMBINED": 0.0
       }
     },
-    "passed": false
+    "passed": true
   },
-  "artifact_sha256": "3d5a05f7a3d6c5e3dec836fc1f5c991a9c2dc4a00dce6c5bc8b2d1a5a82af8a7",
-  "validation_data_sha256": "1dcdf7a5f7cbf2c40e6c46e173c1d8061ef79a47d4738d11188136208562a42d",
-  "validation_passed": false,
-  "validation_status": "failed",
-  "runtime_seconds": 3064.8983676669995,
+  "artifact_sha256": "9011398a0c7024cb6f018a5d06672c7e56819f548db833b3d8ff3f9098b13b69",
+  "validation_data_sha256": "9b8ec9988c15a58faf583fb13adb7ccb4ea67550ef22f24b27f70777182e6241",
+  "validation_passed": true,
+  "validation_status": "passed",
+  "runtime_seconds": 7226.715303799996,
   "response_table": {
     "file": "response_table.npz",
     "schema": "transport_response_v1",
-    "fingerprint": "4bc918b06f36fc91a85b",
-    "sha256": "7ef0003b4b4592e67fac5c97aa2256885c91217ef6378b65cee5304e234886bf",
+    "fingerprint": "0856a03aa990fe690ebd",
+    "sha256": "ff7bf16d95ca313300c03802801d7a1da0589310641e31eb96c5ca196a39594d",
     "n_conditions": 243,
-    "preparation_seconds": 119.31594045900056
+    "preparation_seconds": 157.24522060000163
   }
 }

@@ -280,7 +280,7 @@ SECTION_DEFAULTS = {  # Generic fallback settings; configure the project's SECTI
 }
 SECTION = {  # Active project section and endpoints used for its travel-time reference.
     **SECTION_DEFAULTS,
-    "active": True,                       # Include this count and its effects in model/appraisal outputs.
+    "active": False,                       # Include this count and its effects in model/appraisal outputs.
     "kind": "pt_approach",                # PT station approach, cycling route or individual PT stop.
     "station": "Winterthur",              # Station whose approach is counted.
     "towards": "Effretikon",              # Select the side facing this station, including express services.
@@ -288,7 +288,7 @@ SECTION = {  # Active project section and endpoints used for its travel-time ref
     "mode": "PT",                         # Mode using this section; must match an enabled external flow.
     "origin": {"municipality_name": "Zürich"},  # Origin of the modeled travel-time reference.
     "destination": {"municipality_name": "Winterthur"},  # Destination of that reference.
-    "crowding_enabled": True,             # Value extra PT discomfort using the section comfort threshold.
+    "crowding_enabled": False,             # Value extra PT discomfort using the section comfort threshold.
 }
 
 # Alternative definitions (replace SECTION above; disable PT crowding for these).
@@ -313,13 +313,13 @@ EXTERNAL_FLOW_DEFAULTS = {  # Generic fallback; configure the project's EXTERNAL
 }
 EXTERNAL_FLOW = {  # One cohort shared by baseline and projects, added after mode choice.
     **EXTERNAL_FLOW_DEFAULTS,
-    "enabled": True,                      # Include this cohort's time costs and PT comfort loading.
+    "enabled": False,                      # Include this cohort's time costs and PT comfort loading.
     "mode": "PT",                         # Existing PT passengers; must match SECTION.mode.
     # One-time nominal Stage-0 calibration (25% e-bikes; 2% road-gap target):
     # 120,000 target - 66,891.950467 modeled passengers/day, both directions.
     # Winterthur approach towards Effretikon; connectivity-refined road network.
     # Keep this cohort fixed across alternatives; only general demand growth applies.
-    "additional_trips_daily": 53_108.0495332632,  # Baseline supplementary person-trips/day, both directions.
+    "additional_trips_daily": 0.0,  # Baseline supplementary person-trips/day, both directions.
 }
 
 
