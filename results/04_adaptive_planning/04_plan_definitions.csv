@@ -1,0 +1,7 @@
+﻿plan,name,description,initial state,Package 1,Package 2
+baseline,Baseline — Baseline throughout the 40-year horizon,Baseline throughout the 40-year horizon,Baseline,no later addition,no later addition
+static1,Static 1 — Stations only from Year 1,Stations only from Year 1,Package 1 – Bike Highway + Major Underpasses,no later addition,no later addition
+static2,Static 2 — Stations + tunnel from Year 1,Stations + tunnel from Year 1,Both Packages,no later addition,no later addition
+staged1,"Staged 1 — Stations in Year 1, Tunnel in Year 20","Stations in Year 1, Tunnel in Year 20",Baseline,fixed,fixed
+staged2,"Staged 2 — Stations in Year 1, Tunnel in Year 10","Stations in Year 1, Tunnel in Year 10",Baseline,fixed,fixed
+adaptive,"Adaptive — Stations via Trigger 1, Tunnel via Trigger 2","Stations via Trigger 1, Tunnel via Trigger 2",Baseline,"When Peak-hour bike demand exceeds 19,431.5 trips/peak hour for 2 consecutive years, decide to build; open after a 5-year lead time.","When Peak-hour bike demand exceeds 30,026 trips/peak hour for 2 consecutive years, decide to build; open after a 3-year lead time."

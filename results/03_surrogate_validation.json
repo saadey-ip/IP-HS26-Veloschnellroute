@@ -1,0 +1,3430 @@
+{
+  "format_version": 3,
+  "emulator_kind": "pooled_od_delay_gp",
+  "method": "Pooled one-hot ARD Mat\u00e9rn-5/2 GP of full directional OD delays; no PCA",
+  "artifact_file": "od_emulator.joblib",
+  "input_names": [
+    "PASSENGER_DEMAND_GROWTH",
+    "BIKE_ASC_SHIFT",
+    "PT_ASC_SHIFT",
+    "EBIKE_SHARE",
+    "ROAD_FREIGHT_GROWTH"
+  ],
+  "input_domain": {
+    "PASSENGER_DEMAND_GROWTH": {
+      "minimum": 0.0,
+      "maximum": 1.04,
+      "nominal": 0.0
+    },
+    "BIKE_ASC_SHIFT": {
+      "minimum": 0.0,
+      "maximum": 0.28,
+      "nominal": 0.0
+    },
+    "PT_ASC_SHIFT": {
+      "minimum": 0.0,
+      "maximum": 0.1,
+      "nominal": 0.0
+    },
+    "EBIKE_SHARE": {
+      "minimum": 0.25,
+      "maximum": 0.8,
+      "nominal": 0.25
+    },
+    "ROAD_FREIGHT_GROWTH": {
+      "minimum": 0.0,
+      "maximum": 0.1,
+      "nominal": 0.0
+    }
+  },
+  "stages": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "od_labels": [
+    "24301001",
+    "24301002",
+    "24301003",
+    "24301004",
+    "24301005",
+    "24301006",
+    "24301007",
+    "24301008",
+    "24301009",
+    "24301010",
+    "24301011",
+    "24301012",
+    "24301013",
+    "24301014",
+    "24301015",
+    "24301016",
+    "24301017",
+    "24301018",
+    "24301019",
+    "24301020",
+    "24301021",
+    "24301022",
+    "24301023",
+    "24301024",
+    "24301025",
+    "24301026",
+    "24301027",
+    "24401001",
+    "24401002",
+    "24401003",
+    "24401004",
+    "24401005",
+    "24501001",
+    "24501002",
+    "24501003",
+    "24501004",
+    "24601001",
+    "24601002",
+    "24701001",
+    "24701002",
+    "24701003",
+    "24701004",
+    "24701005",
+    "24701006",
+    "24701007",
+    "24701008",
+    "24701009",
+    "24701010",
+    "24701011",
+    "24701012",
+    "24701013",
+    "24701014",
+    "24701015",
+    "24701016",
+    "24701017",
+    "24701018",
+    "24701019",
+    "24701020",
+    "24801002",
+    "24901001",
+    "24901002",
+    "24901003",
+    "25001001",
+    "25001002",
+    "25001003",
+    "25001004",
+    "25001005",
+    "25001006",
+    "25001007",
+    "25001008",
+    "25001009",
+    "25101001",
+    "25101002",
+    "25101003",
+    "25101004",
+    "26101001",
+    "26101002",
+    "26101003",
+    "26101004",
+    "26101005",
+    "26101006",
+    "26101007",
+    "26101008",
+    "26101009",
+    "26101010",
+    "26101011",
+    "26101012",
+    "26101013",
+    "26101015",
+    "26101016",
+    "26101017",
+    "26101018",
+    "26101019",
+    "26101020",
+    "26101021",
+    "26101022",
+    "26101023",
+    "26101024",
+    "26101027",
+    "26101028",
+    "26101029",
+    "26101030",
+    "26101031",
+    "26101032",
+    "26101033",
+    "26101034",
+    "26101037",
+    "26101038",
+    "26101039",
+    "26101041",
+    "26101042",
+    "26101045",
+    "26101046",
+    "26101049",
+    "26101050",
+    "26101054",
+    "26101056",
+    "26101057",
+    "26101058",
+    "26101060",
+    "26101061",
+    "26101062",
+    "26101063",
+    "26101064",
+    "26101066",
+    "26101068",
+    "26101076",
+    "26101079",
+    "26101092",
+    "26101095",
+    "26101100",
+    "26101111",
+    "26101112",
+    "26101125",
+    "26101148",
+    "26101155",
+    "26101168",
+    "26103306",
+    "9601012",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G11",
+    "G12",
+    "G13",
+    "G14",
+    "G15",
+    "G16",
+    "G17",
+    "G18",
+    "G19",
+    "G20",
+    "G21",
+    "G22",
+    "G23",
+    "G24",
+    "G25",
+    "G26",
+    "G27",
+    "G28",
+    "G29",
+    "G30",
+    "G31",
+    "G32",
+    "G33"
+  ],
+  "od_labels_hash": "9ac6a078f34c221689b4",
+  "n_train_total": 100,
+  "n_validation_total": 20,
+  "adaptive_fill_in": {
+    "enabled": false,
+    "max_points": 20,
+    "batch_size": 4,
+    "targets": {
+      "weighted_rmse_min": 0.2
+    },
+    "points_added": 0,
+    "final_holdout_metrics": {
+      "weighted_rmse_min": 0.15595047487202127
+    },
+    "target_reached": true
+  },
+  "training_record_ids": [
+    "train_000",
+    "train_001",
+    "train_002",
+    "train_003",
+    "train_004",
+    "train_005",
+    "train_006",
+    "train_007",
+    "train_008",
+    "train_009",
+    "train_010",
+    "train_011",
+    "train_012",
+    "train_013",
+    "train_014",
+    "train_015",
+    "train_016",
+    "train_017",
+    "train_018",
+    "train_019",
+    "train_020",
+    "train_021",
+    "train_022",
+    "train_023",
+    "train_024",
+    "train_025",
+    "train_026",
+    "train_027",
+    "train_028",
+    "train_029",
+    "train_030",
+    "train_031",
+    "train_032",
+    "train_033",
+    "train_034",
+    "train_035",
+    "train_036",
+    "train_037",
+    "train_038",
+    "train_039",
+    "train_040",
+    "train_041",
+    "train_042",
+    "train_043",
+    "train_044",
+    "train_045",
+    "train_046",
+    "train_047",
+    "train_048",
+    "train_049",
+    "train_050",
+    "train_051",
+    "train_052",
+    "train_053",
+    "train_054",
+    "train_055",
+    "train_056",
+    "train_057",
+    "train_058",
+    "train_059",
+    "train_060",
+    "train_061",
+    "train_062",
+    "train_063",
+    "train_064",
+    "train_065",
+    "train_066",
+    "train_067",
+    "train_068",
+    "train_069",
+    "train_070",
+    "train_071",
+    "train_072",
+    "train_073",
+    "train_074",
+    "train_075",
+    "train_076",
+    "train_077",
+    "train_078",
+    "train_079",
+    "train_080",
+    "train_081",
+    "train_082",
+    "train_083",
+    "train_084",
+    "train_085",
+    "train_086",
+    "train_087",
+    "train_088",
+    "train_089",
+    "train_090",
+    "train_091",
+    "train_092",
+    "train_093",
+    "train_094",
+    "train_095",
+    "train_096",
+    "train_097",
+    "train_098",
+    "train_099"
+  ],
+  "validation_record_ids": [
+    "test_000_stage0",
+    "test_000_stage1",
+    "test_000_stage2",
+    "test_000_stage3",
+    "test_001_stage0",
+    "test_001_stage1",
+    "test_001_stage2",
+    "test_001_stage3",
+    "test_002_stage0",
+    "test_002_stage1",
+    "test_002_stage2",
+    "test_002_stage3",
+    "test_003_stage0",
+    "test_003_stage1",
+    "test_003_stage2",
+    "test_003_stage3",
+    "test_004_stage0",
+    "test_004_stage1",
+    "test_004_stage2",
+    "test_004_stage3"
+  ],
+  "design_sha256": "54ec5e7bf4af09d0e376d87cfbcb1b8e4a10838d68d957f1072a29d4014820b0",
+  "training_counts_by_stage": {
+    "0": 25,
+    "1": 25,
+    "2": 25,
+    "3": 25
+  },
+  "seed": 42,
+  "design": "continuous LHS with balanced stage labels; independent paired-stage LHS holdout",
+  "model_fingerprint": "84fcd27edd22b2708dc9",
+  "cache_namespace": "6151a979b9ca79a4efb4",
+  "portable_model_inputs": {
+    "identity_version": 3,
+    "corridor": {
+      "mode": "zones",
+      "municipalities": [
+        "Dietikon",
+        "Geroldswil",
+        "Oberengstringen",
+        "Oetwil an der Limmat",
+        "Schlieren",
+        "Unterengstringen",
+        "Urdorf",
+        "Weiningen (ZH)",
+        "Z\u00fcrich"
+      ],
+      "zone_ids": [
+        "24301001",
+        "24301002",
+        "24301003",
+        "24301004",
+        "24301005",
+        "24301006",
+        "24301007",
+        "24301008",
+        "24301009",
+        "24301010",
+        "24301011",
+        "24301012",
+        "24301013",
+        "24301014",
+        "24301015",
+        "24301016",
+        "24301017",
+        "24301018",
+        "24301019",
+        "24301020",
+        "24301021",
+        "24301022",
+        "24301023",
+        "24301024",
+        "24301025",
+        "24301026",
+        "24301027",
+        "24401001",
+        "24401002",
+        "24401003",
+        "24401004",
+        "24401005",
+        "24501001",
+        "24501002",
+        "24501003",
+        "24501004",
+        "24601001",
+        "24601002",
+        "24701001",
+        "24701002",
+        "24701003",
+        "24701004",
+        "24701005",
+        "24701006",
+        "24701007",
+        "24701008",
+        "24701009",
+        "24701010",
+        "24701011",
+        "24701012",
+        "24701013",
+        "24701014",
+        "24701015",
+        "24701016",
+        "24701017",
+        "24701018",
+        "24701019",
+        "24701020",
+        "24901001",
+        "24901002",
+        "24901003",
+        "25001001",
+        "25001002",
+        "25001003",
+        "25001004",
+        "25001005",
+        "25001006",
+        "25001007",
+        "25001008",
+        "25001009",
+        "25101001",
+        "25101002",
+        "25101003",
+        "25101004",
+        "26101001",
+        "26101002",
+        "26101003",
+        "26101004",
+        "26101005",
+        "26101006",
+        "26101007",
+        "26101008",
+        "26101010",
+        "26101011",
+        "26101012",
+        "26101013",
+        "26101015",
+        "26101016",
+        "26101018",
+        "26101019",
+        "26101020",
+        "26101021",
+        "26101022",
+        "26101023",
+        "26101024",
+        "26101027",
+        "26101029",
+        "26101030",
+        "26101031",
+        "26101032",
+        "26101033",
+        "26101034",
+        "26101039",
+        "26101041",
+        "26101042",
+        "26101045",
+        "26101046",
+        "26101054",
+        "26101058",
+        "26101064",
+        "26103306"
+      ]
+    },
+    "stages": {
+      "0": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.25,
+        "EBIKE_SPEED_MULTIPLIER": 1.5
+      },
+      "1": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.25,
+        "EBIKE_SPEED_MULTIPLIER": 1.5,
+        "bike_highways": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 5.0,
+              "speed_increase_pct": 23.076923076923084
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 11.538461538461542
+            }
+          }
+        ]
+      },
+      "2": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.25,
+        "EBIKE_SPEED_MULTIPLIER": 1.5,
+        "bike_highways": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 12.5,
+              "distance_reduction_pct": 5.0
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 6.25,
+              "distance_reduction_pct": 2.5
+            }
+          }
+        ]
+      },
+      "3": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.25,
+        "EBIKE_SPEED_MULTIPLIER": 1.5,
+        "bike_highways": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 5.0,
+              "speed_increase_pct": 23.076923076923084
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "distance_reduction_pct": 2.5,
+              "speed_increase_pct": 11.538461538461542
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 12.5
+            }
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "Altstetten"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              },
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "city_quartier": "H\u00f6ngg"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 6.25
+            }
+          }
+        ]
+      }
+    },
+    "section_signatures": {
+      "0": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661",
+      "1": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661",
+      "2": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661",
+      "3": "3c71fe24f97a2511bd266bda4c013f235003cd712b5bd4cf4689b22219276661"
+    },
+    "input_domain": {
+      "PASSENGER_DEMAND_GROWTH": {
+        "minimum": 0.0,
+        "maximum": 1.04,
+        "nominal": 0.0
+      },
+      "BIKE_ASC_SHIFT": {
+        "minimum": 0.0,
+        "maximum": 0.28,
+        "nominal": 0.0
+      },
+      "PT_ASC_SHIFT": {
+        "minimum": 0.0,
+        "maximum": 0.1,
+        "nominal": 0.0
+      },
+      "EBIKE_SHARE": {
+        "minimum": 0.25,
+        "maximum": 0.8,
+        "nominal": 0.25
+      },
+      "ROAD_FREIGHT_GROWTH": {
+        "minimum": 0.0,
+        "maximum": 0.1,
+        "nominal": 0.0
+      }
+    },
+    "drive_occupancy": 1.14,
+    "prepared_inputs": {
+      "data/transport/config/mode_choice.json": "b099f6dbfe7c3f2b0f72868ccb0598a0a4b7653ea34cf37a85e1ad1111f13d85",
+      "data/transport/prepared/zones.parquet": "86696f4eed8fb24a1cd8011c332f0ed6a868d65013cddfcf13930b3e11ccd623",
+      "data/transport/prepared/demand.pkl.gz": "c7fa90c312ecad089b5b7ff21d36363283b4c9f2c72fdda7af67d1efd0708994",
+      "data/transport/prepared/skims.pkl.gz": "8c6e321818f13afe85cce069b7df002db2f1c74d33764fda4c175fc689b8d7bf",
+      "data/transport/prepared/assignment_network.pkl": "26cbf5ab36717fedd1d071e1b0be5576415b24a5e64ff976efb959ecaef72d31",
+      "data/transport/prepared/lookups.pkl.gz": "8a571b706449c87a41c58a9fd48b34e0fd6a72cf7f825c69db1eb3a8b6bcd73d",
+      "data/processed/bike_highway_altstetten_hoengg.pkl": "668fab091a8622c23588d9a1a669eef2846c2550af58931ea9a6edf37f0ba927"
+    }
+  },
+  "reference_equations": {
+    "code/transport_model_interface.py:_corridor_shortest_time_table": "35336b26fbbc94b8b970c35160c3eb6fa2c63177c73be6a813187749ca38a533",
+    "code/transport_model_interface.py:_sparse_shortest_path_inputs": "137f477a654037df98ce5ca3bbbc0386becf23f84af25328898aea85c9e940c7",
+    "code/transport_model_interface.py:_bpr_link_times": "0ab54cdbfbc413a0c37290f60fa5dd7783f742520f3be37edd66ed3407612f2f",
+    "code/transport_model_interface.py:collapse_od_to_gates": "ad8c543fd63e5f6bd58d4eee926d5ecd17aebdb38e8f9b054c21db4e521c7609",
+    "code/transport_model_interface.py:CorridorContext": "4890f3f6bafc40c34e1fad51a873ac5d5de11f3ac51f2576ce2417a85e9f4612",
+    "code/transport_model_interface.py:TransportContext": "80530b81ffbf12ec8631e7156530659dc46e03d7251a709a185827ef13929ffa",
+    "code/transport_model_interface.py:DEFAULT_PASSTHROUGH_FRACTION": "48107cfe7237c6d213451d7833ce0ab8102b70c833493bdeca4f4f5a82d91711",
+    "code/transport_model_interface.py:run_coupled_corridor_assignment": "2ff21519f30a723141bc0068ab0a08d3a3f0b127443adfe2e69ebc9a502ea400",
+    "code/transport_model_interface.py:gate_totals": "f8a66350729fd663e4662c9edd199f9d3d3c787482fd6ee6a84e248e1e9ea326",
+    "code/transport_model_interface.py:_corridor_mode_summary": "443d47429a76bbfb868eada887127dd62010c074afaf0a6e3323278defe3a838",
+    "code/transport_model_interface.py:_synthetic_assignment_background": "cc7532e294b8724459a1a0d70553c1d0cfa202521d05ae8af4a52170dad3c2f3",
+    "code/transport_model_interface.py:_project_corridor_delay_to_full_od": "08d0d14eacebfe2d87ef130d1fcf0befc1f4323adffa46384adc9b04630b0f9a",
+    "code/transport_model_interface.py:_all_or_nothing_sparse": "eb46f5da329080fce594c83ccc204ec525e3f23a294da3a41957aa85164b5559",
+    "code/transport_model_interface.py:AssignmentResult": "56d2481127764b2a4fdc27843325237f2f848cb475f9e641779ce9930bcbdb7b",
+    "code/transport_model_interface.py:ModeChoiceResult": "c6e4c1dc2259fa1409b8bcbfad6ba88eb0f45e7b99e67cce08c388588d9bb700",
+    "code/transport_model_interface.py:_report_unserved_road_demand": "79fb146415520fc22ea83b4aff24321067093021a8a5ab016ecf4505fc73775c",
+    "code/transport_model_interface.py:resolve_assignment_settings": "4fad46305924815e12d3c6f9a8dea630b062ea3e4b9d11a78c86b14429b448d6",
+    "code/transport_model_interface.py:run_transport_mode_choice": "f50a251a2162187629027d13b29a6d01219106624a4f54c63943bb019897a80d",
+    "code/transport_model_interface.py:apply_road_capacity_stage": "72bab627fc2b76188b757ab5989c36efa0815c697ad96deab57e99fd7ab73510",
+    "code/transport_model_interface.py:_road_change_columns": "72fef994e8897dd6d61f5e71af4119623600735fe72dbd88d36b8ca7e04f1823",
+    "code/transport_model_interface.py:_prepare_road_edges": "47ddea68175ff334d8d11b1b6b57906fdbaccffe4451a6ffd90e72e4e5199b87",
+    "code/transport_model_interface.py:build_corridor_context": "ea57e230732b37e84260c45b52c5139db0217a601723b67ff606ef571c9d4880",
+    "code/transport_model_interface.py:_select_spaced_gates": "3097bd37ec6353e712f22a35f7217ba6a962d86c72d9d7e131d8eda5e8781403",
+    "code/transport_model_interface.py:_reachable_gate_candidates": "02bae839d741d03589a61e55413ee737fc5494f5b0cd6708a4d9507c725465d2",
+    "code/transport_model_interface.py:_retain_internal_road_connections": "cbd89718f6ba69995822c8519be461b1a2f3c4be1653ce0527c7e51f8681697f",
+    "code/transport_model_interface.py:_get_core_zones": "32d8a413ab5501a1f49e7321ace40681cb4c0451667f6fde7e2a560fe39e3e14",
+    "code/transport_model_interface.py:resolve_corridor_zone_ids": "7f6110ee39dbc6affa781738723e764625d08cba418760d9c843792818d2a116",
+    "code/transport_model_interface.py:DEFAULT_GATE_SEPARATION_M": "d525993c205d38203a6d7a35dbee9bb8d8ac27193c67b6688c10a7b4eebc6aec",
+    "code/transport_model_interface.py:DEFAULT_MAX_GATES": "2675fd702424da9df6e5e64dca98f0136fb8354991335d6d7700446981e4a8fa",
+    "code/transport_model_interface.py:DEFAULT_CORRIDOR_BUFFER_M": "da12853a5516bba19d5f5363006ce409852bea9b534ef24e9602bed82d609946",
+    "code/transport_model_interface.py:load_transport_context": "7d5dfde36d8291f94d39a25b95908cc3485b411329e18b660cfea68d213cf93c",
+    "code/transport_model_interface.py:_detailed_network_file_identity": "7bb9b6e9622a64eacca60363ae01f762df865ac8ca0daab56226023828204162",
+    "code/transport_model_interface.py:_merge_detailed_road_network": "78dcca6645d5d5393600a6b970593bc5e0a148a78d7b47b90368c3b70f83b6a4",
+    "code/transport_model_interface.py:_DETAILED_NETWORK_MERGE_POLICY": "4f83a98b0e49ea42739e1d345149bf1a86150a58cc18c8ab81cf6cd71acaf8ee",
+    "code/transport_model_interface.py:_read_detailed_network": "ca3cb819a1babb72fe7b863bdf4815064836d476c941bc605a56bbab25a61bc9",
+    "code/transport_model_interface.py:_validate_detailed_network": "7e3167de7a6e1144da9734861730e874730c73366b1949f77763b807d69e1a2c",
+    "code/transport_model_interface.py:_detailed_network_scope": "5d3ccc91bed868d230a5e7e1b013a4c3b0a4c4dc0cbb519782e3d152e29ac619",
+    "code/transport_model_interface.py:_load_assignment_network": "3772521ed90913aac4d5f9f12a4e98c28f2b746e8d9ed55807adb384874e007f",
+    "code/transport_model_interface.py:context_cache_status": "c166d24df53de8f596cd434009590cc5a7dbcfa312e3dd63d829682bafa0f716",
+    "code/transport_model_interface.py:configured_input_paths": "48147f1249b0d9bec7f73d300f6b40be2554346111ec620afb4d7e094fa29b96",
+    "code/transport_model_interface.py:_import_transport_modules": "0d0e06234c91bcf411d32c5be2444bd4da0fae9d9affa58d31dad195bd4f39f1",
+    "code/transport_model_interface.py:readiness_flags": "73b7cf7741b19a7250f587208c320d10c53d5aaa4301b2d5aa7ef11fdddca8bb",
+    "code/transport_model_interface.py:transport_input_status": "2feefc4f1c2af349a8dab97595f98def3fb823eb31f7f38a9574e795a34e3c14",
+    "code/transport_model_interface.py:configured_detailed_network_path": "91fb824f27f92738746e123117e3b0c9ea8ceacdb51327d85c440ca2c1e8b079",
+    "code/additional/uncertainty.py:TRANSPORT_BINDINGS": "fe67f80cba6185461f49d1c793acd654957136e5024394ed95be6ac800e3b679",
+    "code/additional/uncertainty.py:native_transport_inputs": "a5024d6a740482b4cd93325ec5740c5e155528fde177b42c1ccb83909f91ff2c",
+    "code/additional/uncertainty.py:complete_transport_inputs": "fee8083e1df16ae1167f60d6b684b09eee2613fcb141e6e538e24b709421cdd0",
+    "code/additional/section_flows.py:apply_section_time_saving": "5c6036f33efe9abf53109a1c4f8f7893ba60eb55122cdf022127af348c1e6321",
+    "code/additional/section_flows.py:_values": "5ecd8496e322a72c8cdfc774ac61a12cb57f6c0bac4e4b94aa43297238bc2106",
+    "code/additional/section_flows.py:section_saving_weights": "1d9a8c7f86dd6bf22d7d91a9d5542f762b41a06c3ab09ce29985470f6ed4c543",
+    "code/additional/section_flows.py:coverage_masks": "d33c1ab47869a16c8d06c746c6d8ed1dc9ffbea13ee3d50f84856c82c30b2482",
+    "code/additional/section_flows.py:_MODES": "de7a3199230af62f055db731b5cfd20469249804395856fb8ece68a786ccfda6",
+    "code/additional/section_flows.py:_coverage": "5a530303e1dbc920f34e754bc089406db4fe664b72fbd4bb8c30996bf94d34aa",
+    "code/additional/section_flows.py:_name": "1bd9de44bf00f6ff5067cb8db96e0e1935fbe8bb6c3219b9cb7bf1b27ea41996",
+    "code/additional/section_flows.py:_minimal_context": "f3d55878babccae893cabe00aa8ba7abc027882e86402d4d539d0f763090ee38",
+    "code/additional/section_flows.py:_mode": "fb489fe52eaa9ff9b8f8d60a32527ebfde71099d2e0ffc5f2066f61a1f05be26",
+    "code/additional/section_flows.py:_recipe_contract": "36f0063c2583c4324eaab9e2103ffd5a4ede5756597fcea7ebe638f7e153a042",
+    "code/additional/section_flows.py:_routing_path": "dd3cd26f384adea1f3653b2f3b232d22537f33a59007b7298e95683bc7faab7d",
+    "code/additional/section_flows.py:_ROOT": "cf6aca5137e6698eda21fd3c2c781bc7143743fe3a592ddb608c4516c6b77db1",
+    "code/additional/section_flows.py:_CODE_DIR": "770d495023aab802bcfccf37f4c928d6ce31e80a5a4d6813d1e9482226b0fe02",
+    "code/additional/section_flows.py:_digest_path": "1247b736c50e119dd665f031547666ecdb7fbbd8b2999a1940b68883ab2ac202",
+    "code/additional/section_flows.py:_file_digest": "365e540e23b8e7fafc3ac8d21dc2d2c821fd9028e2543cb62ff01eb3fd8308eb",
+    "code/additional/section_flows.py:_RECIPE_VERSION": "a786c4927daaeb9cae90979a0d5edd423485328b70b0b25c5776c14821ec49e4",
+    "code/additional/section_flows.py:_read_coverage": "344b5482e12aef81ee6d14be9e194217b44b3a58785e1a81bfd8870498dca4e6",
+    "code/additional/section_flows.py:_hash": "fbe7897d1570a7e1bfbfd177c43f7333d67f6a1a8717d2ceb35c9f2861d04b69",
+    "code/additional/section_flows.py:_prepare_recipe": "bda4d978d6daec8f9bab3c9d9b8d62b3b73bd985f509b8da59a97c064ef233e5",
+    "code/additional/section_flows.py:_no_path_time": "044f0aefb7e57d8f3949a1c1175d8363163b181b845c44f2c0bb678066bbdb7d",
+    "code/additional/section_flows.py:_station_group": "d00a2b4a4d9d1a073d7a05bbba5a71d02b74d113fec0ce170ab2aff8840ccc63",
+    "code/additional/section_flows.py:route_input_signature": "9095352c695f72b0d5b6995d07108528dc984bf72d49e7c829cad29e102f5648",
+    "code/additional/section_flows.py:_trace_features": "83261bf748896cb1b6f2c0ef4bd90c2da19744f7b824f312243bb381aff9ab22",
+    "code/additional/section_flows.py:_ancestor_sum": "d219e5b695bfcc091515dbdb6137a31530cd4d2e1aacbd12c300f1621e88bfc2",
+    "code/additional/section_flows.py:_route_inputs": "bec1d5f4f96426cbef389ad668a01fe9d32bbe1521dff6103e77f038c2749158",
+    "code/additional/section_flows.py:_path": "102d3b7f8fc18fb31d338fc8dd9faf1917cab01c21558f780ea27b281e4e45c1",
+    "code/additional/section_flows.py:_DEFAULT_COVERAGE": "0cbff2e6cff4f1e779c4b46180af870d6ef354b4f82188ec27cdede21292f72d",
+    "code/additional/section_flows.py:_ensure_recipe_coverage": "7cef10662779643512b0fba0be1cc9f5abfac6fd57ac55159e8b76edb7960e4e",
+    "code/additional/section_flows.py:section_config": "774a6309cddbcdc8120f73f25383b58dba8f0a33765b5e8350bfc38114600b64",
+    "code/additional/section_flows.py:_selector": "8339b5f5d8380ca4e57aa52c35e114220766b5dab1d3b8049bcb032251ad68a7",
+    "code/additional/section_flows.py:_INTERNAL_SECTION": "f54aabcec41d74ee788fe73e002df49ab8ed6ce98365fb6b2af4d43738164d85",
+    "code/additional/section_flows.py:_validate_route_inputs": "72a69ad3247429de1742e0ad5e14734493d48abcf76dcde1478aa188818b18fb",
+    "code/additional/section_flows.py:physical_signature": "cfa684f11987d8c8b98539b8140998e3abbe504b140b4797b3bd4c9dadad3146",
+    "code/additional/section_flows.py:_saving": "28f2fa915d5c0412c311e34dd046f6c5f4c4279dbb95b31d02332cd4d6bfcb49",
+    "code/transport_core/interventions.py:apply_interventions": "6c258742f41df402b16fe75353c1b9bf104b3362a9f44964e63914aee319932e",
+    "code/transport_core/interventions.py:_apply_mobility_hub": "91af188a65d4df848b7446a5a3382f00ffa2a62509d4b4ffc565b19ccc79b10c",
+    "code/transport_core/interventions.py:_multiply_selected": "61b2f047a7bb5108c79946829dc1d305d0a7bed171a2e56584f0a08db8f5999a",
+    "code/transport_core/interventions.py:_reduce_station_transfer": "6c2e7d3464268d479c045434d0ee4efd92c1657e1573c25a2645bcc982622423",
+    "code/transport_core/interventions.py:_reduction_factor": "e9cadd0b2c95b0b47b1504b1b6f2613a92a7946637c341d042fcfcdc04be768f",
+    "code/transport_core/interventions.py:_percentage": "d73898aba9f4c88c14326dcbd89f52285c3bb3207e57939d4a06e8b930dca88b",
+    "code/transport_core/interventions.py:_hub_mode_masks": "5f0e14e9fccd1da3fd4f3d9115dc49b6bc6ef8f6cb083eeeac75d0e747ee975a",
+    "code/transport_core/interventions.py:_hub_stop_ids": "23eabab313e46741710ca452d75cdf60068983cd02d0c9af098007bced821fcb",
+    "code/transport_core/interventions.py:_hub_zone_ids": "19d3264c6aa9512a989dae7775c583ac90764cc7b5df827c341fc6370a0cae7a",
+    "code/transport_core/interventions.py:_selector_zone_ids": "7980adc36156794782aed8df3834a12b9494801247b9c9bee5ec04d8e36f1846",
+    "code/transport_core/interventions.py:_speed_factor": "07a44caedf67e0e8d3c67addbbb4f70c149ad53c081c1275485af4a386d4c9ea",
+    "code/transport_core/interventions.py:station_transfer_walk_minutes": "85e8068b62a874f18b6d49c957009dad2101d43f0207b190f28ed1c5b0ae1ab2",
+    "code/transport_core/interventions.py:_railway_expansion_mask": "5a2a37f528a7db237369d3cf68e39417e2a1cc02fc4382046aae2349d76a53a5",
+    "code/transport_core/interventions.py:_od_mask": "e7f59309a47c13effbfd906adade3cd201a10bda2152b615d4b6dd69cb5dc5e8",
+    "code/transport_core/interventions.py:_as_list": "5b66d0105722c8fd4cecfd020241d235b18e8258836cda2606510829c058e254",
+    "code/transport_core/interventions.py:_apply_railway_expansion": "2d80edec14f28b82ca64bfe164828f2090b0e31f3b4a4773bd349b2fd61bf328",
+    "code/transport_core/interventions.py:_apply_bike_highway": "46d6c4487f8ea2d8f4be380e9ae39d5e00039abfb4131bd09bf355d778ff7cad",
+    "code/transport_core/interventions.py:_bike_highway_mask": "42fba334ee71508d0b71356a660c95c4ebcb3f16cc0c694d17b8ba04a89ba587",
+    "code/transport_core/mode_choice_zurich.py:mode_split_aggregated": "39740dfec6610d700022825fa26bc7df4e23fd921644504f53920e1f2e7322b9",
+    "code/transport_core/mode_choice_zurich.py:UNAVAILABLE_UTILITY": "cf607803da6a985966cf4c2ea3b127db7f605c7e6a149527e92c7ecc9b3d36c5",
+    "code/transport_core/mode_choice_zurich.py:_matrix": "57dc83eb9c08d84e5c067cfdb3749012164060b9c93cdd461d9d7b7183ab00b1",
+    "code/transport_core/mode_choice_zurich.py:load_mode_choice_parameters": "1954ce4e9752eff79cbffaf35710d5d714118c420c59d1796071d9ed1383da1d",
+    "code/transport_core/mode_choice_zurich.py:_availability": "94a468b5ae10f41e5887bd7ee156ab1752f5e5942d8e887d92947493d6e8337a",
+    "code/transport_core/travel_times.py:rebuild_pt_out_of_vehicle_times": "8fcd9b866f27eb8136c207a96e1ab35a7e49d027fb2b47e274409f9a70a1b3f3",
+    "code/transport_core/travel_times.py:standalone_walk_mask": "d7735f72360d69b5bb0d7ed9a25822ca1aae4aab818888b6b17ced91bcf84b2c",
+    "code/transport_core/travel_times.py:apply_ebike_share": "8a90180b70b6580b1ee9a846a3678886d30cab825dee9552def2e49491f3054d",
+    "code/transport_core/travel_times.py:_valid": "a303d1441d1e9388073ac5e6c9be62213e0654a12a87574ba1b0313ee4d81a55",
+    "code/transport_core/travel_times.py:ebike_time_factor": "5a224a3cc955488f7c0f08892fcb233614344057540aa161a3a8d59728ac2ba1",
+    "code/transport_core/travel_times.py:apply_perceived_time_policies": "d9b0cf13a242d84cac666d0aede0b36b313586074f3ebe9ad49a09983c128a3a",
+    "code/transport_core/travel_times.py:_apply_pt_component_floors": "0e8812bfe109e9ecae2728c70f5c15a9c96f4529ba6b06d029e3b3d8c78ef520",
+    "code/transport_core/travel_times.py:_apply_drive_perceived_times": "865e5ce0bb682aa6131a1f00c3da691a1efa42c7d24fce7628627d6c0f7eb683",
+    "code/transport_core/travel_times.py:load_travel_times": "07b30a5688c7523ea98bc9e845a4f6b1ed0bdde1baca8d2f9b98b54b944c0ae7",
+    "code/transport_core/travel_times.py:STRING_SKIMS": "82bc265c8c9ba871ec6316664733231c2d1ab4540bff8e2cc3ae06aa7b69602d",
+    "code/transport_core/travel_times.py:LENGTH_SKIMS": "394dd3a769c5516156dc01cf5c8c99d0fea6ebdab25c45b99ee180ce4c58bed0",
+    "code/transport_core/travel_times.py:NUMERIC_SKIMS": "aca88426b2b2b21e64c32a93fef548abb5f76064cdc63fbe2abee96014e7f501",
+    "code/transport_core/input_packages.py:align_matrix": "76dbbf55971153e022d13a521cb78cf551b19da71a5f6fec86880b21aee9437d",
+    "code/transport_core/input_packages.py:load_package": "5f31d2c5c671de6e12e522141674762acd59ab91c2d69a3bcf2982aca55acbea",
+    "code/transport_core/input_packages.py:PACKAGE_VERSION": "c8ecf5522fe2e582aad4ce39f2e1e86393b302ec27c730debacca131719facec",
+    "code/transport_core/zoning.py:load_model_inputs": "9808b7f189d676aa3d78b14c242c5fb19d391df089e7da4c44d472935f0e9d9b",
+    "code/transport_core/zoning.py:load_od_table": "0b7485fef5fa3225656200fe9c7c83420518175af29ee11d4f0cb01d84244d4c",
+    "code/transport_core/zoning.py:load_zones": "e4ff2f6dc374b15d729e038ac3dd8a7bbf1f687236f448378e554a49d1f79dcc",
+    "code/transport_core/zoning.py:REQUIRED_ZONE_COLUMNS": "6c0996518ec604b212065acccbaabc2dcb99a70aa2de591bb7e876d426e457b9",
+    "code/transport_core/config.py:EBIKE_SPEED_MULTIPLIER": "dae0a3ec813244e77b789467df96d6f2e0d6f7c16f717a18306789eda7898e35",
+    "code/transport_core/config.py:PT_TRANSFER_PHYSICAL_FLOOR_MIN": "891fb690d8fa21cd3f8b644b4a640272b5b7a343e9bc51dc4fb5a0d71ee7449c",
+    "code/transport_core/config.py:PT_EGRESS_FLOOR_MIN": "d11da43ce124d295c5319f6a1684c132d777a858ddefefd264d93d44925e26bd",
+    "code/transport_core/config.py:PT_ACCESS_FLOOR_MIN": "79b75ae5254b1e3364b913f7bf47cff814ed4d737f7b1949f5b131130a5daeb0",
+    "code/transport_core/config.py:PT_INTRAZONAL_MIN": "9784a2a2e5d1e650ee513facf2cf97835f6eff8e6fb2cf5a210c90d7d8c92f7c",
+    "code/transport_core/config.py:DRIVE_INTRAZONAL_MIN": "e8b7513fbd7e4bb009aaffe8b5fea9caf28cb3c53259f4e32b6e7bd4d93edb15",
+    "code/transport_core/config.py:CAR_TERMINAL_CANTON_MIN": "7fe6cc51ce7a7f1236f2857ee88069124531d676746793d3680f35add68d1709",
+    "code/transport_core/config.py:CAR_TERMINAL_CITY_MIN": "1b77d172d496339efc2e17351c351f6cc49c4ac09be6009437d88e0f6f9d0ea6",
+    "code/transport_core/config.py:DRIVE_CONNECTOR_CANTON_MIN": "ef4c062c2ae29db9269421fb6413a96305528df72b178922f57b3142c9478abd",
+    "code/transport_core/config.py:DRIVE_CONNECTOR_CITY_MIN": "00c22847a1f79cffedecae3f49d4e7163a5fbdd7894b638bb37e1b4c5665b7b7",
+    "code/transport_core/config.py:EXTERNAL_BACKGROUND_CANTON_FACTOR": "27b0704fc392a277ccba62e6c6646fd5845cf50889a2149736147ac248cb8543",
+    "code/transport_core/config.py:EXTERNAL_BACKGROUND_CITY_FACTOR": "83c01584df0c620435ed995a2af1f2c9fb3bef0aaa26a831a66a607d4ffdd0d1",
+    "code/transport_core/config.py:MAX_WALK_DISTANCE_KM": "238ac3760cb98234fe768907e7e7d99bf6b16d8126aff5f25f548a685d648ea6",
+    "code/transport_core/config.py:NO_PATH_TIME_MIN": "942afa32d696e2c8a76eee2b169778cb9314019c9785972617ce9a88cc96c263",
+    "code/transport_core/config.py:MODE_ORDER": "2da0be188cb14dc5749a7bf3516a887cd68e34d296c87e8c4294073605d35edd",
+    "code/transport_core/config.py:MODE_CHOICE_FILE": "b45669feb78764b43d7cd0ee193524b3f96c6bbf6969c44ed9d86cce7f2c652e",
+    "code/transport_core/config.py:CONFIG_DIR": "8a6f624a109282a3149dd66c40f6bfa4941bbc0c0ac2c309cdeffacefb0a09e8",
+    "code/transport_core/config.py:INPUT_DIR": "edebd47019ec5ddad464a4923968789d37d24014a4924265b62666547638ad48",
+    "code/transport_core/config.py:ROOT": "2bef70ceee57a55974079bf60e7106a8f67a3d9c19fb3e191d569ce146bbf9b5",
+    "code/transport_core/config.py:LOOKUP_PACKAGE_FILE": "7260b956d28d3fce830bcf3e0775c78153a768834fe6adfea7e3115e10f2b5fc",
+    "code/transport_core/config.py:PREPARED_DIR": "973b0b92d7f22416f6dc3a6fc56fd1523204a537106866643c3b5924e5772ae5",
+    "code/transport_core/config.py:SKIM_PACKAGE_FILE": "b508870e31b5400e8090b1d5dc0314a8fc311ae04df2a2a2db3f3343576ad932",
+    "code/transport_core/config.py:DEMAND_PACKAGE_FILE": "c59bfec7af3e43024603d2915fd9bd663d9c97fc8da34a0ff56b6596ca674cb7",
+    "code/transport_core/config.py:ZONES_FILE": "75fed50e7affacbf9b812923291434b77b018850a124b5b6c97786b8bc44d515"
+  },
+  "cache_contract": {
+    "format_version": 3,
+    "model_fingerprint": "84fcd27edd22b2708dc9",
+    "reference_equations": "1a1992ca1fe7a3c75cf4",
+    "solver_settings": {
+      "stopping_rule": "road_relative_gap",
+      "min_iterations": 8,
+      "max_iterations": 64,
+      "check_every": 4,
+      "road_gap_threshold": 0.02,
+      "od_threshold": 0.0,
+      "drive_occupancy": 1.14
+    },
+    "route_loader": "native_predecessor_tree",
+    "target": "directional_internal_zone_gate_od_delay_minutes"
+  },
+  "training_solver_settings": {
+    "stopping_rule": "road_relative_gap",
+    "min_iterations": 8,
+    "max_iterations": 64,
+    "check_every": 4,
+    "road_gap_threshold": 0.02,
+    "od_threshold": 0.0,
+    "drive_occupancy": 1.14
+  },
+  "source_fingerprint": "f6454b98affc2c0ea848",
+  "source_convergence_passed": true,
+  "gp_diagnostics": {
+    "mode": "pooled",
+    "stage_counts": {
+      "0": 25,
+      "1": 25,
+      "2": 25,
+      "3": 25
+    },
+    "feature_encoding": "5 continuous + 4 one-hot",
+    "models": {
+      "pooled": {
+        "n_simulations": 100,
+        "n_features": 9,
+        "n_outputs": 29584,
+        "n_varying_outputs": 28553,
+        "n_constant_outputs": 1031,
+        "output_scale_floor_minutes": 0.01,
+        "standardize_outputs": true,
+        "kernel_family": "matern52",
+        "target_reduction": "none; exact Gram likelihood identity",
+        "prediction_storage": "original training targets; exact posterior identity",
+        "stored_target_dtype": "float32",
+        "kernel": "1.27**2 * Matern(length_scale=[1.21, 9.23, 10, 4.27, 10, 10, 10, 10, 10], nu=2.5) + WhiteKernel(noise_level=0.00318)",
+        "theta": [
+          0.4819150732650676,
+          0.19056394060622273,
+          2.222093884034521,
+          2.302585092994046,
+          1.452374560395091,
+          2.302585092994046,
+          2.302585092994046,
+          2.302585092994046,
+          2.302585092994046,
+          2.302585092994046,
+          -5.751706157798601
+        ],
+        "length_scales": [
+          1.209931734932805,
+          9.226630147160112,
+          10.000000000000002,
+          4.273249566439712,
+          10.000000000000002,
+          10.000000000000002,
+          10.000000000000002,
+          10.000000000000002,
+          10.000000000000002
+        ],
+        "amplitude_variance": 1.6191722684485288,
+        "noise_variance_normalized": 0.0031773551000957604,
+        "nll_per_varying_output": -93.2711291321723,
+        "selected_optimizer_success": true,
+        "optimizer_attempts": [
+          {
+            "success": true,
+            "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "iterations": 32,
+            "nll_per_output": -93.2711291321723
+          },
+          {
+            "success": true,
+            "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+            "iterations": 43,
+            "nll_per_output": -77.02763801168065
+          }
+        ],
+        "parameters_near_bound": [
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "fit_seconds": 0.4245396000042092
+      }
+    },
+    "fit_seconds": 0.4245396000042092
+  },
+  "validation": {
+    "od": {
+      "n_cases": 20,
+      "weighted_mae_min": 0.09552191292435325,
+      "weighted_rmse_min": 0.15595047487202127,
+      "weighted_bias_min": 0.0030737011873221446,
+      "maximum_case_mae_min": 0.17212178649186294,
+      "weighted_95pct_latent_coverage": 0.7916219861454444,
+      "weighted_nrmse": 0.010136299616257739,
+      "maximum_case_scaled_error": 0.016628005431819144,
+      "limits": {
+        "weighted_mae_min": 0.1,
+        "weighted_rmse_min": 0.2
+      },
+      "cases": [
+        {
+          "id": "test_000_stage0",
+          "stage": 0,
+          "weighted_mae_min": 0.15925673047510722,
+          "weighted_mse_min2": 0.047061992003315005,
+          "weighted_rmse_min": 0.21693776066723608,
+          "weighted_truth_rms_min": 18.100153186482295,
+          "scaled_error": 0.011985410202453497,
+          "weighted_bias_min": 0.15607547131754,
+          "weighted_95pct_latent_coverage": 0.6553329225731832,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_000_stage1",
+          "stage": 1,
+          "weighted_mae_min": 0.04981482195102396,
+          "weighted_mse_min2": 0.009864066120217925,
+          "weighted_rmse_min": 0.09931800501529381,
+          "weighted_truth_rms_min": 18.058971753813456,
+          "scaled_error": 0.005499648948413751,
+          "weighted_bias_min": -0.019131483731727156,
+          "weighted_95pct_latent_coverage": 0.8732118131792281,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_000_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.13397064013421495,
+          "weighted_mse_min2": 0.05029033123122528,
+          "weighted_rmse_min": 0.2242550584295152,
+          "weighted_truth_rms_min": 18.272253577476143,
+          "scaled_error": 0.012272983049334983,
+          "weighted_bias_min": -0.03221116485091546,
+          "weighted_95pct_latent_coverage": 0.7818056157988802,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_000_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.11128717512929533,
+          "weighted_mse_min2": 0.025958827223540433,
+          "weighted_rmse_min": 0.16111743302181933,
+          "weighted_truth_rms_min": 18.036030740213405,
+          "scaled_error": 0.008933087071236216,
+          "weighted_bias_min": 0.08969615774115355,
+          "weighted_95pct_latent_coverage": 0.6166283627649274,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage0",
+          "stage": 0,
+          "weighted_mae_min": 0.09191865621872913,
+          "weighted_mse_min2": 0.016534146214502565,
+          "weighted_rmse_min": 0.12858517105211847,
+          "weighted_truth_rms_min": 18.406614455972502,
+          "scaled_error": 0.006985813244455484,
+          "weighted_bias_min": -0.07487436218897903,
+          "weighted_95pct_latent_coverage": 0.8893014663404056,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage1",
+          "stage": 1,
+          "weighted_mae_min": 0.06166587302123536,
+          "weighted_mse_min2": 0.007624548755470524,
+          "weighted_rmse_min": 0.08731866212597697,
+          "weighted_truth_rms_min": 18.123739661800386,
+          "scaled_error": 0.004817916376829199,
+          "weighted_bias_min": -0.01754003260503765,
+          "weighted_95pct_latent_coverage": 0.8264488961412689,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.17212178649186294,
+          "weighted_mse_min2": 0.0541752202216681,
+          "weighted_rmse_min": 0.23275570932131417,
+          "weighted_truth_rms_min": 18.385283349713532,
+          "scaled_error": 0.012659892420148141,
+          "weighted_bias_min": -0.16266993306880617,
+          "weighted_95pct_latent_coverage": 0.538414085225154,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.14243221250503932,
+          "weighted_mse_min2": 0.03994235497225016,
+          "weighted_rmse_min": 0.19985583547209765,
+          "weighted_truth_rms_min": 18.322785794265496,
+          "scaled_error": 0.010907502697250698,
+          "weighted_bias_min": -0.1401305739626702,
+          "weighted_95pct_latent_coverage": 0.5325786166895057,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_002_stage0",
+          "stage": 0,
+          "weighted_mae_min": 0.06607313353018587,
+          "weighted_mse_min2": 0.010171124657280638,
+          "weighted_rmse_min": 0.10085199381906457,
+          "weighted_truth_rms_min": 9.630242578560354,
+          "scaled_error": 0.010472425070951967,
+          "weighted_bias_min": 0.04735304098073848,
+          "weighted_95pct_latent_coverage": 0.9708318561003327,
+          "negative_prediction_fraction_weighted": 0.0002815676506978234
+        },
+        {
+          "id": "test_002_stage1",
+          "stage": 1,
+          "weighted_mae_min": 0.08418756568358422,
+          "weighted_mse_min2": 0.016496212362054685,
+          "weighted_rmse_min": 0.12843758157974902,
+          "weighted_truth_rms_min": 9.603062050334593,
+          "scaled_error": 0.013374648722099423,
+          "weighted_bias_min": 0.06951072620560565,
+          "weighted_95pct_latent_coverage": 0.9750968780103415,
+          "negative_prediction_fraction_weighted": 9.503609376594321e-05
+        },
+        {
+          "id": "test_002_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.05362440745055262,
+          "weighted_mse_min2": 0.007092273601389996,
+          "weighted_rmse_min": 0.08421563751103471,
+          "weighted_truth_rms_min": 9.585790300607638,
+          "scaled_error": 0.008785466286039694,
+          "weighted_bias_min": 0.0158413879146285,
+          "weighted_95pct_latent_coverage": 0.9473002819410831,
+          "negative_prediction_fraction_weighted": 0.0001630459321513977
+        },
+        {
+          "id": "test_002_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.0483725642370014,
+          "weighted_mse_min2": 0.005700173559758898,
+          "weighted_rmse_min": 0.0754994937715406,
+          "weighted_truth_rms_min": 9.59186278156294,
+          "scaled_error": 0.007871202444290844,
+          "weighted_bias_min": 0.0277675452066655,
+          "weighted_95pct_latent_coverage": 0.947724395353619,
+          "negative_prediction_fraction_weighted": 1.5665250646126646e-05
+        },
+        {
+          "id": "test_003_stage0",
+          "stage": 0,
+          "weighted_mae_min": 0.1524789858888032,
+          "weighted_mse_min2": 0.052576045544871074,
+          "weighted_rmse_min": 0.2292946696826402,
+          "weighted_truth_rms_min": 15.749512586819915,
+          "scaled_error": 0.014558842276460478,
+          "weighted_bias_min": 0.1464780261080131,
+          "weighted_95pct_latent_coverage": 0.5482454097923967,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_003_stage1",
+          "stage": 1,
+          "weighted_mae_min": 0.06556551684539723,
+          "weighted_mse_min2": 0.009115819562525359,
+          "weighted_rmse_min": 0.09547680117455422,
+          "weighted_truth_rms_min": 15.768224701760156,
+          "scaled_error": 0.006055012722129489,
+          "weighted_bias_min": 0.049463567382821656,
+          "weighted_95pct_latent_coverage": 0.8257958715896027,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_003_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.07355986357018678,
+          "weighted_mse_min2": 0.01253403131872035,
+          "weighted_rmse_min": 0.11195548811344778,
+          "weighted_truth_rms_min": 15.804228912968364,
+          "scaled_error": 0.007083894363335959,
+          "weighted_bias_min": 0.05706716673507431,
+          "weighted_95pct_latent_coverage": 0.8128183400361846,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_003_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.123260176152231,
+          "weighted_mse_min2": 0.03662952782744175,
+          "weighted_rmse_min": 0.19138842135155865,
+          "weighted_truth_rms_min": 15.94929887601318,
+          "scaled_error": 0.011999801548605733,
+          "weighted_bias_min": -0.07577727813133145,
+          "weighted_95pct_latent_coverage": 0.5464667642617558,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_004_stage0",
+          "stage": 0,
+          "weighted_mae_min": 0.1142966990100312,
+          "weighted_mse_min2": 0.049204251860088866,
+          "weighted_rmse_min": 0.22182031435395827,
+          "weighted_truth_rms_min": 13.340163693324616,
+          "scaled_error": 0.016628005431819144,
+          "weighted_bias_min": -0.008109445901296475,
+          "weighted_95pct_latent_coverage": 0.8571108580098735,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_004_stage1",
+          "stage": 1,
+          "weighted_mae_min": 0.07943771553858504,
+          "weighted_mse_min2": 0.014932111497112734,
+          "weighted_rmse_min": 0.12219701918260009,
+          "weighted_truth_rms_min": 13.410566171698225,
+          "scaled_error": 0.009111995542774752,
+          "weighted_bias_min": -0.04806445448196452,
+          "weighted_95pct_latent_coverage": 0.8874718030990927,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_004_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.0629522147700208,
+          "weighted_mse_min2": 0.00897054988637437,
+          "weighted_rmse_min": 0.09471298689395435,
+          "weighted_truth_rms_min": 13.297554645423915,
+          "scaled_error": 0.007122586777753751,
+          "weighted_bias_min": -0.036197340408954976,
+          "weighted_95pct_latent_coverage": 0.8803737544688544,
+          "negative_prediction_fraction_weighted": 8.181830362195299e-05
+        },
+        {
+          "id": "test_004_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.06416151988397759,
+          "weighted_mse_min2": 0.011537403836370093,
+          "weighted_rmse_min": 0.10741230765778237,
+          "weighted_truth_rms_min": 13.263766476515402,
+          "scaled_error": 0.008098175420078811,
+          "weighted_bias_min": 0.016927003485885272,
+          "weighted_95pct_latent_coverage": 0.9194817315331983,
+          "negative_prediction_fraction_weighted": 0.00016319098204762078
+        }
+      ],
+      "by_stage": {
+        "0": {
+          "n_cases": 5,
+          "weighted_mae_min": 0.11680484102457131,
+          "weighted_rmse_min": 0.1873753240317722,
+          "weighted_bias_min": 0.05338454606320322,
+          "maximum_case_mae_min": 0.15925673047510722,
+          "weighted_95pct_latent_coverage": 0.7841645025632383
+        },
+        "1": {
+          "n_cases": 5,
+          "weighted_mae_min": 0.06813429860796516,
+          "weighted_rmse_min": 0.1077337071648249,
+          "weighted_bias_min": 0.006847664553939596,
+          "maximum_case_mae_min": 0.08418756568358422,
+          "weighted_95pct_latent_coverage": 0.8776050524039067
+        },
+        "2": {
+          "n_cases": 5,
+          "weighted_mae_min": 0.09924578248336761,
+          "weighted_rmse_min": 0.16313332354818133,
+          "weighted_bias_min": -0.03163397673579476,
+          "maximum_case_mae_min": 0.17212178649186294,
+          "weighted_95pct_latent_coverage": 0.7921424154940313
+        },
+        "3": {
+          "n_cases": 5,
+          "weighted_mae_min": 0.09790272958150895,
+          "weighted_rmse_min": 0.15476969174832733,
+          "weighted_bias_min": -0.016303429132059465,
+          "maximum_case_mae_min": 0.14243221250503932,
+          "weighted_95pct_latent_coverage": 0.7125759741206011
+        }
+      },
+      "weighting": "fixed nominal all-passenger OD collapsed to corridor, reachable off-diagonal",
+      "uncertainty_note": "Latent GP marginal intervals; OD cells are not independent validation samples.",
+      "normalization": "NRMSE is divided by holdout weighted truth RMS; maximum scaled error is the worst case RMSE divided by that case's truth RMS (both use a 0.05-minute floor).",
+      "passed": true
+    },
+    "paired_appraisal": {
+      "passed": true,
+      "checks": {
+        "total_benefit_mae": {
+          "value": 68153.27089835008,
+          "limit": 1000000.0,
+          "passed": true
+        },
+        "total_benefit_p95_error": {
+          "value": 209679.1403719901,
+          "limit": 5000000.0,
+          "passed": true
+        },
+        "material_total_sign_errors": {
+          "value": 0,
+          "limit": 0,
+          "passed": true
+        },
+        "material_component_failures": {
+          "value": 0,
+          "limit": 0,
+          "passed": true
+        },
+        "maximum_mode_share_error_pp": {
+          "value": 0.20159220204771233,
+          "limit": 1.0,
+          "passed": true
+        },
+        "median_mode_share_error_pp": {
+          "value": 0.021134157923149988,
+          "limit": 0.25,
+          "passed": true
+        },
+        "maximum_section_load_relative_error": {
+          "value": 0.0,
+          "limit": 0.03,
+          "passed": true
+        },
+        "median_section_load_relative_error": {
+          "value": 0.0,
+          "limit": 0.01,
+          "passed": true
+        }
+      },
+      "paired_components": {
+        "bike_health": {
+          "n": 15,
+          "mean_reference": 5362088.697588144,
+          "mean_absolute_error": 391226.765533483,
+          "rmse": 545712.9037017984,
+          "nrmse": 0.07356453998468088,
+          "median_absolute_relative_error": 0.04704592432843197,
+          "max_absolute_relative_error": 0.2579630063008243,
+          "material": true,
+          "mean_absolute_reference": 5362088.697588144,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": true
+        },
+        "bike_time": {
+          "n": 15,
+          "mean_reference": 5633938.114970216,
+          "mean_absolute_error": 1062.1823801100254,
+          "rmse": 1400.4697279154302,
+          "nrmse": 0.00018599810827097695,
+          "median_absolute_relative_error": 0.00017720495101814117,
+          "max_absolute_relative_error": 0.00041274637180246275,
+          "material": true,
+          "mean_absolute_reference": 5633938.114970216,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": true
+        },
+        "car_acc": {
+          "n": 15,
+          "mean_reference": 302447.4527992298,
+          "mean_absolute_error": 175873.94974925817,
+          "rmse": 235392.68802206617,
+          "nrmse": 0.2541387670556314,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 319235.0993183861,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_air": {
+          "n": 15,
+          "mean_reference": 41205.375040767714,
+          "mean_absolute_error": 23961.028576193938,
+          "rmse": 32069.84850436991,
+          "nrmse": 0.25413876705564026,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 43492.52034310487,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_co2": {
+          "n": 15,
+          "mean_reference": 91003.85227400796,
+          "mean_absolute_error": 52918.967555174604,
+          "rmse": 70827.64694785466,
+          "nrmse": 0.25413876705563476,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 96055.11155795243,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_noise": {
+          "n": 15,
+          "mean_reference": 53387.833748472236,
+          "mean_absolute_error": 31045.158763938023,
+          "rmse": 41551.3689317484,
+          "nrmse": 0.25413876705563887,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 56351.178531500445,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_time": {
+          "n": 15,
+          "mean_reference": 333973.2760531863,
+          "mean_absolute_error": 791184.9493382652,
+          "rmse": 1059088.542583727,
+          "nrmse": 0.2855186252574764,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 652592.5396430532,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "construction_co2": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "external_crowding": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "external_delay": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "external_time": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "investment": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "operation": {
+          "n": 15,
+          "mean_reference": -112639.97333333336,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 112639.97333333336,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_acc": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_access": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_air": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_co2": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_crowding": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_egress": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_noise": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_socioeconomic": {
+          "n": 15,
+          "mean_reference": -504358.9664221922,
+          "mean_absolute_error": 145561.60753872644,
+          "rmse": 189858.97115524605,
+          "nrmse": 0.22346452383166363,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 504358.9664221922,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_time": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_transfer_walk": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_waiting": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "total": {
+          "n": 15,
+          "mean_reference": 10488468.977462674,
+          "mean_absolute_error": 68153.27089835008,
+          "rmse": 103514.4037846022,
+          "nrmse": 0.007332783904635263,
+          "median_absolute_relative_error": 0.004210698326995198,
+          "max_absolute_relative_error": 0.023346553726088782,
+          "material": false,
+          "mean_absolute_reference": 10488468.977462674,
+          "error_limit_chf_per_year": 1048846.8977462675,
+          "passed": null
+        },
+        "upfront": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "walk_health": {
+          "n": 15,
+          "mean_reference": -712576.6852556706,
+          "mean_absolute_error": 8641.423680926362,
+          "rmse": 11358.372821900717,
+          "nrmse": 0.012687490470971648,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 712576.6852556706,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "walk_time": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        }
+      },
+      "metrics": {
+        "0": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 15.2834566489217,
+            "mean_absolute_error": 0.01377943390995746,
+            "rmse": 0.01502827993546391,
+            "nrmse": 0.010040334230400126,
+            "median_absolute_relative_error": 0.0009626388548089034,
+            "max_absolute_relative_error": 0.0014231865125242707
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.16119125970264409,
+            "mean_absolute_error": 0.00019394534078812087,
+            "rmse": 0.00023789387186588792,
+            "nrmse": 0.004832209388456555,
+            "median_absolute_relative_error": 0.0007308214095396309,
+            "max_absolute_relative_error": 0.0021192687969998005
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.43301117810494194,
+            "mean_absolute_error": 0.00097838124368691,
+            "rmse": 0.001208061261288673,
+            "nrmse": 0.015003782484613194,
+            "median_absolute_relative_error": 0.0015715743224788716,
+            "max_absolute_relative_error": 0.00458838421855904
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 117294.48361701751,
+            "mean_absolute_error": 289.4709765295411,
+            "rmse": 371.90836598421,
+            "nrmse": 0.007779979073986135,
+            "median_absolute_relative_error": 0.001541278862824083,
+            "max_absolute_relative_error": 0.004501490437194409
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.3485457369930486,
+            "mean_absolute_error": 0.0007766554198348041,
+            "rmse": 0.0009656171986894344,
+            "nrmse": 0.011816400606756853,
+            "median_absolute_relative_error": 0.0014095711031943748,
+            "max_absolute_relative_error": 0.004215423258757441
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1410335843.3963537,
+            "mean_absolute_error": 224489.08813946246,
+            "rmse": 238336.72335337702,
+            "nrmse": 0.0002842601886761396,
+            "median_absolute_relative_error": 0.00018195701774850937,
+            "max_absolute_relative_error": 0.00022515391812127342
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.05725182519936547,
+            "mean_absolute_error": 7.78048306401824e-06,
+            "rmse": 8.495927124897664e-06,
+            "nrmse": 0.002188023896684035,
+            "median_absolute_relative_error": 0.0001045453320785271,
+            "max_absolute_relative_error": 0.000239230493196408
+          }
+        },
+        "1": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 15.3046392214288,
+            "mean_absolute_error": 0.007652054765760497,
+            "rmse": 0.009782579770653508,
+            "nrmse": 0.006641588276120736,
+            "median_absolute_relative_error": 0.0004431116881456115,
+            "max_absolute_relative_error": 0.00130856398107861
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.16462311075263453,
+            "mean_absolute_error": 8.670137144057843e-05,
+            "rmse": 9.83874438966664e-05,
+            "nrmse": 0.002017591600000581,
+            "median_absolute_relative_error": 0.00041448446162168295,
+            "max_absolute_relative_error": 0.000931517050045843
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.4315968000460904,
+            "mean_absolute_error": 0.0004661724498280395,
+            "rmse": 0.0005123642552281833,
+            "nrmse": 0.00638969985110988,
+            "median_absolute_relative_error": 0.0009183345177959949,
+            "max_absolute_relative_error": 0.0015925800566585588
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 116945.12519978984,
+            "mean_absolute_error": 117.439761298339,
+            "rmse": 126.24866869666596,
+            "nrmse": 0.002650349126102469,
+            "median_absolute_relative_error": 0.0009008806223007037,
+            "max_absolute_relative_error": 0.0015595378943967335
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.34711893306399194,
+            "mean_absolute_error": 0.0003769098669608506,
+            "rmse": 0.00041227062751906927,
+            "nrmse": 0.005170694084323897,
+            "median_absolute_relative_error": 0.0009510890749398238,
+            "max_absolute_relative_error": 0.001936640275332666
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1398108379.1319973,
+            "mean_absolute_error": 137815.73901057243,
+            "rmse": 155883.0612613376,
+            "nrmse": 0.0001873807576843507,
+            "median_absolute_relative_error": 8.420175535593115e-05,
+            "max_absolute_relative_error": 0.00027048409064219105
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.05666115613728319,
+            "mean_absolute_error": 2.5923560186214e-06,
+            "rmse": 2.978244235239444e-06,
+            "nrmse": 0.00077807729324475,
+            "median_absolute_relative_error": 5.190996105315808e-05,
+            "max_absolute_relative_error": 7.827405411031958e-05
+          }
+        },
+        "2": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 15.301254136627069,
+            "mean_absolute_error": 0.009414804537906463,
+            "rmse": 0.010599207546600126,
+            "nrmse": 0.007078792843040712,
+            "median_absolute_relative_error": 0.0004567395915819069,
+            "max_absolute_relative_error": 0.0011406816467417643
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.16352918269386812,
+            "mean_absolute_error": 0.00013467330068659412,
+            "rmse": 0.00016784950424399598,
+            "nrmse": 0.003391532288128784,
+            "median_absolute_relative_error": 0.00046135968317962913,
+            "max_absolute_relative_error": 0.0021439535498184556
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.43158542796237703,
+            "mean_absolute_error": 0.0007791036296236232,
+            "rmse": 0.0010233740123620823,
+            "nrmse": 0.01241090223932511,
+            "median_absolute_relative_error": 0.0007411948589927901,
+            "max_absolute_relative_error": 0.00489683265913931
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 116879.9231147696,
+            "mean_absolute_error": 225.9077168699645,
+            "rmse": 313.2516427821358,
+            "nrmse": 0.006662388644974419,
+            "median_absolute_relative_error": 0.0007193984244565728,
+            "max_absolute_relative_error": 0.004802155933730952
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.34801712340363855,
+            "mean_absolute_error": 0.0006394221215786144,
+            "rmse": 0.0008502522036394031,
+            "nrmse": 0.010359373274363152,
+            "median_absolute_relative_error": 0.0009126377907486118,
+            "max_absolute_relative_error": 0.004426880076967522
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1402830600.542387,
+            "mean_absolute_error": 197696.4997121811,
+            "rmse": 227828.97158819452,
+            "nrmse": 0.00027294919856052927,
+            "median_absolute_relative_error": 0.00010824554052796034,
+            "max_absolute_relative_error": 0.00022955497196265403
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.05686826594011628,
+            "mean_absolute_error": 5.367970965171332e-06,
+            "rmse": 6.475083643297457e-06,
+            "nrmse": 0.0016793737597431205,
+            "median_absolute_relative_error": 7.800784248114884e-05,
+            "max_absolute_relative_error": 0.00019898318677502146
+          }
+        },
+        "3": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 15.3205774122404,
+            "mean_absolute_error": 0.011548524772483049,
+            "rmse": 0.01263833365894597,
+            "nrmse": 0.008462877008109633,
+            "median_absolute_relative_error": 0.0006108479207201734,
+            "max_absolute_relative_error": 0.0012482218556066228
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.16620918633921072,
+            "mean_absolute_error": 0.00015953301080698368,
+            "rmse": 0.00018536826468255635,
+            "nrmse": 0.0038035385604375527,
+            "median_absolute_relative_error": 0.0010925131903836793,
+            "max_absolute_relative_error": 0.001960917687557337
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.4302955490228582,
+            "mean_absolute_error": 0.000852913958133672,
+            "rmse": 0.0010073805976662429,
+            "nrmse": 0.01258855006328685,
+            "median_absolute_relative_error": 0.002222677262265252,
+            "max_absolute_relative_error": 0.004296606960501708
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 116564.25980675395,
+            "mean_absolute_error": 253.39042327925273,
+            "rmse": 312.4299480605355,
+            "nrmse": 0.006569512929290312,
+            "median_absolute_relative_error": 0.002176283473428837,
+            "max_absolute_relative_error": 0.004213354458974433
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.34707502977868665,
+            "mean_absolute_error": 0.0006869353132026746,
+            "rmse": 0.0008166457683421154,
+            "nrmse": 0.010039447773633787,
+            "median_absolute_relative_error": 0.002040031964471554,
+            "max_absolute_relative_error": 0.003835936437287131
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 0.0,
+            "mean_absolute_error": 0.0,
+            "rmse": 0.0,
+            "nrmse": 0.0,
+            "median_absolute_relative_error": 0.0,
+            "max_absolute_relative_error": 0.0
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1392157846.2275329,
+            "mean_absolute_error": 208842.23975822926,
+            "rmse": 254068.4632569197,
+            "nrmse": 0.0003063656179587256,
+            "median_absolute_relative_error": 0.000142151228935519,
+            "max_absolute_relative_error": 0.0002457126759972299
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.05642023485924445,
+            "mean_absolute_error": 6.445634123986022e-06,
+            "rmse": 7.372933180322224e-06,
+            "nrmse": 0.0019285653634032644,
+            "median_absolute_relative_error": 0.00010244450369490146,
+            "max_absolute_relative_error": 0.00021595407450483988
+          }
+        }
+      },
+      "appraisal_welfare_version": "matched_zone_od_sections_external_component_vot_v4",
+      "reference": "Independent heldout MSA OD delays; identical native postprocessing; no new MSA.",
+      "scope": "Paired annual baseline/project matched benefits and physical indicators, not full-future NPV.",
+      "n_holdouts_per_stage": 5,
+      "n_independent_physical_futures": 5,
+      "surrogate_fingerprint": "84fcd27edd22b2708dc9",
+      "component_rule": "Material mean benefit >= CHF5m/year: MAE <= max(10%, CHF1m/year).",
+      "current_parameters": {
+        "N_YEARS": 40,
+        "APPRAISAL_START_YEAR": 2026,
+        "DISCOUNT_RATE": 0.02,
+        "PASSENGER_DEMAND_GROWTH": 0.0,
+        "PASSENGER_DEMAND_GROWTH_Y40": 0.744,
+        "PT_ASC_SHIFT": 0.0,
+        "PT_ASC_SHIFT_Y40": 0.1,
+        "BIKE_ASC_SHIFT": 0.0,
+        "BIKE_ASC_SHIFT_Y40": 0.2,
+        "EBIKE_SHARE": 0.25,
+        "EBIKE_SHARE_Y40": 0.5,
+        "EBIKE_SPEED_MULTIPLIER": 1.5,
+        "ROAD_FREIGHT_GROWTH": 0.0,
+        "ROAD_FREIGHT_GROWTH_Y40": 0.1,
+        "PT_PEAK_SHARE": 0.0946,
+        "CAR_PEAK_SHARE": 0.1049,
+        "BIKE_PEAK_SHARE": 0.15,
+        "WALK_PEAK_SHARE": 0.15,
+        "EQUIVALENT_DAYS_PER_YEAR": 300,
+        "NUMBER_OF_PEAK_HOURS": 4,
+        "PEAK_TO_ANNUAL_TRAIN": 3391.5,
+        "PT_HEADWAY_BASELINE": 20.0,
+        "PT_CAPACITY_BASELINE": 11352.0,
+        "CROWDING_SLOPE": 2.0,
+        "CROWDING_MAX": 3.0,
+        "TRAIN_GROSS_TONNES": 375.0,
+        "PT_TRAIN_KM_PEAK_STAGE0": 3414.6,
+        "C_TT_CAR": 23.3,
+        "C_TT_PT": 14.4,
+        "C_TT_PT_WAITING": 14.4,
+        "C_TT_PT_ACCESS": 14.4,
+        "C_TT_PT_TRANSFER": 14.4,
+        "C_TT_BIKE": 18.7,
+        "C_TT_WALK": 16.0,
+        "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,
+        "BENEFIT_HEALTH_WALK_PER_KM": 1.0,
+        "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,
+        "CAR_CO2_KG_PER_VEHICLE_KM": 0.139,
+        "CAR_CO2_KG_PER_VEHICLE_KM_Y40": 0.05,
+        "RAIL_ENERGY_WH_PER_GROSS_TONNE_KM": 30.0,
+        "RAIL_ELECTRICITY_CO2_G_PER_KWH": 19.58,
+        "CO2_VALUE_CHF_PER_TONNE": 41.68,
+        "CO2_REFERENCE_YEAR": 2015,
+        "CO2_VALUE_ANNUAL_GROWTH": 0.03,
+        "C_NOISE_CAR": 0.0149,
+        "C_AIR_CAR": 0.0115,
+        "C_ACCIDENT_CAR": 0.08441,
+        "C_AIR_PT": 0.00344,
+        "C_NOISE_PT": 0.00204,
+        "C_ACCIDENT_PT": 0.2221,
+        "ACCIDENT_COST_MULTIPLIER": 1.0,
+        "ACCIDENT_COST_MULTIPLIER_Y40": 0.85,
+        "LOCAL_AIR_COST_MULTIPLIER": 1.0,
+        "LOCAL_AIR_COST_MULTIPLIER_Y40": 0.65,
+        "OPEX_RATE": 0.005,
+        "OPEX_MULTIPLIER": 1.0,
+        "CAPEX_MULTIPLIER": 1.0,
+        "C_FLEX": 1500000,
+        "MAX_AVG_TT": 15.0,
+        "PT_SHARE_TARGET": 0.35,
+        "MIN_STRATEGIC_PKM_DISTANCE": 0.0,
+        "C_INV_STAGE1": 31103872,
+        "CAPACITY_INCREASE_STAGE1": 0.0,
+        "C_INV_STAGE2": 2688120,
+        "CAPACITY_INCREASE_STAGE2": 0.0,
+        "CAPACITY_INCREASE_COMBINED": 0.0
+      }
+    },
+    "passed": true
+  },
+  "artifact_sha256": "9011398a0c7024cb6f018a5d06672c7e56819f548db833b3d8ff3f9098b13b69",
+  "validation_data_sha256": "9b8ec9988c15a58faf583fb13adb7ccb4ea67550ef22f24b27f70777182e6241",
+  "validation_passed": true,
+  "validation_status": "passed",
+  "runtime_seconds": 7226.715303799996,
+  "response_table": {
+    "file": "response_table.npz",
+    "schema": "transport_response_v1",
+    "fingerprint": "0856a03aa990fe690ebd",
+    "sha256": "ff7bf16d95ca313300c03802801d7a1da0589310641e31eb96c5ca196a39594d",
+    "n_conditions": 243,
+    "preparation_seconds": 157.24522060000163
+  }
+}
