@@ -1,2 +1,2 @@
 ﻿indicator,operator,threshold,start_year
-bike_share_trips,>=,0.20,20
+bike_share_trips,>=,0.2,20
