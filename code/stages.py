@@ -635,7 +635,7 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
                                            **intervention.pop("standalone_effects", {})}
         stages[stage] = specification
     combined = deepcopy(stages[2])
-    combined["name"] = "Both stages - Tunnel and Hubs"
+    combined["name"] = "Both stages - Major and Minor Underpasses"
     combined["section_time_saving_min"] = minute_effect(3, "section_time_saving_min")
     for key in ("railway_expansions", "mobility_hubs", "bike_highways", "road_capacity"):
         if key in stages[1] or key in stages[2] or key in combined_effects:
