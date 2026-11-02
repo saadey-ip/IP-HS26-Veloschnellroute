@@ -77,7 +77,10 @@ DEFAULT_TRIGGERS = {
     },
     "trigger2": {                       # build Stage 2 (5 minor underpasses)
         "signpost":    "bike_trips",
-        "threshold":   1.777*16897,               
+        # The national scenario reports growth in bicycle person-km. Dividing
+        # by the assumed 15% increase in average trip length gives a trip-count
+        # multiplier of about 1.545 instead of applying 1.777 directly.
+        "threshold":   1.545*16897,
         "persistence": 2,
         "lead_time":   3,
     },
