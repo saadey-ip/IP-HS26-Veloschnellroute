@@ -1,0 +1,7 @@
+﻿plan,all_requirements_met_percent,mean_failure_years,median_failure_years,p90_failure_years
+baseline,85.0,0.275,0.0,1.0
+static1,99.0,0.01,0.0,0.0
+static2,100.0,0.0,0.0,0.0
+staged1,100.0,0.0,0.0,0.0
+staged2,100.0,0.0,0.0,0.0
+adaptive,99.0,0.01,0.0,0.0

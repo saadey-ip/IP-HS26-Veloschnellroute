@@ -1,0 +1,5 @@
+﻿configuration,initial_shortfall_percent,all_requirements_met_percent,mean_failure_years,median_first_failure_year_among_failures
+Stage 0 – Baseline Network,0.0,85.0,0.28,20.0
+Stage 1 – Major Underpasses,0.0,99.0,0.01,20.0
+Stage 2 - Additional Minor Underpasses,0.0,95.5,0.06,20.0
+Both stages - Major and Minor Underpasses,0.0,100.0,0.0,

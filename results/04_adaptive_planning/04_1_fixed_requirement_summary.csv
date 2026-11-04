@@ -1,0 +1,5 @@
+﻿requirement,failure_percent,mean_failure_years,configuration
+Cycling trip share >= 20 % (Years 20–40),15.0,0.28,Stage 0 – Baseline Network
+Cycling trip share >= 20 % (Years 20–40),1.0,0.01,Stage 1 – Major Underpasses
+Cycling trip share >= 20 % (Years 20–40),4.5,0.06,Stage 2 - Additional Minor Underpasses
+Cycling trip share >= 20 % (Years 20–40),0.0,0.0,Both stages - Major and Minor Underpasses
