@@ -1,0 +1,5 @@
+﻿plan,mean_NPV_MCHF,negative_NPV_percent,expected_downside_loss_MCHF,worst_tail_mean_NPV_MCHF,mean_regret_MCHF,worst_tail_mean_regret_MCHF,requirements_met_percent,mean_failure_years,no_commitment_percent,pending_opening_percent
+flexible,165.2814581860281,0.0,0.0,125.31152696717217,150.6924589293698,164.73842125874089,99.0,0.01,0.0,0.0
+staged1,257.57584003750037,0.0,0.0,230.587165342309,58.39807707789754,60.755886558387644,100.0,0.0,0.0,0.0
+static2,315.9739171153979,0.0,0.0,286.65904430447625,0.0,0.0,100.0,0.0,0.0,0.0
+_best_tested,222.94776681802082,0.0,0.0,189.39078512560135,93.02615029737709,98.31804110400371,100.0,0.0,0.0,0.0

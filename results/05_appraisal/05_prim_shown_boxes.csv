@@ -1,0 +1,7 @@
+﻿mechanism,plan,box_source,density_in_plan,coverage_in_plan
+negative_npv,staged1,none,,
+negative_npv,static2,none,,
+negative_npv,flexible,none,,
+requirement_1,staged1,none,,
+requirement_1,static2,none,,
+requirement_1,flexible,none,,

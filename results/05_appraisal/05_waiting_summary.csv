@@ -1,0 +1,3 @@
+﻿comparator,CAPEX,OPEX,Residual value,Time and access,Crowding,Other effects,NPV_difference_MCHF,expenditure_saving_MCHF,extra_failure_years,fraction_higher_NPV,fraction_cheaper_without_extra_failure
+staged1,4.721476318374463,1.8940572521440422,0.0,-50.70605836547227,0.0,-48.2038570565186,-92.29438185147227,6.6155335705185045,0.01,0.0,0.99
+static2,5.602923577365711,2.1047847110676554,0.0,-86.74170168905137,0.0,-71.65846552875172,-150.6924589293698,7.707708288433366,0.01,0.0,0.99

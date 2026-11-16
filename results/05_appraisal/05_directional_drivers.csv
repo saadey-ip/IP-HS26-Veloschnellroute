@@ -1,0 +1,217 @@
+﻿plan,outcome,uncertainty,spearman_correlation,scenarios,status
+baseline,NPV_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+baseline,NPV_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+baseline,NPV_MCHF,EBIKE_SHARE,,200,Insufficient variation
+baseline,NPV_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+baseline,NPV_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_car_time_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+baseline,NPV_car_time_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+baseline,NPV_car_time_MCHF,EBIKE_SHARE,,200,Insufficient variation
+baseline,NPV_car_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+baseline,NPV_car_time_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_car_time_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_pt_time_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+baseline,NPV_pt_time_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+baseline,NPV_pt_time_MCHF,EBIKE_SHARE,,200,Insufficient variation
+baseline,NPV_pt_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+baseline,NPV_pt_time_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_pt_time_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_pt_crowding_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+baseline,NPV_pt_crowding_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+baseline,NPV_pt_crowding_MCHF,EBIKE_SHARE,,200,Insufficient variation
+baseline,NPV_pt_crowding_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+baseline,NPV_pt_crowding_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_pt_crowding_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_inv_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+baseline,NPV_inv_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+baseline,NPV_inv_MCHF,EBIKE_SHARE,,200,Insufficient variation
+baseline,NPV_inv_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+baseline,NPV_inv_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_inv_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_op_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+baseline,NPV_op_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+baseline,NPV_op_MCHF,EBIKE_SHARE,,200,Insufficient variation
+baseline,NPV_op_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+baseline,NPV_op_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+baseline,NPV_op_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+static1,NPV_MCHF,PASSENGER_DEMAND_GROWTH,0.9189814745368634,200,Estimated
+static1,NPV_MCHF,BIKE_ASC_SHIFT,0.18591764794119858,200,Estimated
+static1,NPV_MCHF,EBIKE_SHARE,-0.07217130428260708,200,Estimated
+static1,NPV_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.028641716042901076,200,Estimated
+static1,NPV_MCHF,OPEX_MULTIPLIER,-0.12685067126678168,200,Estimated
+static1,NPV_MCHF,CAPEX_MULTIPLIER,-0.3751683792094803,200,Estimated
+static1,NPV_car_time_MCHF,PASSENGER_DEMAND_GROWTH,0.9725058126453162,200,Estimated
+static1,NPV_car_time_MCHF,BIKE_ASC_SHIFT,-0.024107102677566945,200,Estimated
+static1,NPV_car_time_MCHF,EBIKE_SHARE,0.2112757818945474,200,Estimated
+static1,NPV_car_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.018843471086777173,200,Estimated
+static1,NPV_car_time_MCHF,OPEX_MULTIPLIER,-0.04559513987849697,200,Estimated
+static1,NPV_car_time_MCHF,CAPEX_MULTIPLIER,-0.10102152553813845,200,Estimated
+static1,NPV_pt_time_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+static1,NPV_pt_time_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+static1,NPV_pt_time_MCHF,EBIKE_SHARE,,200,Insufficient variation
+static1,NPV_pt_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+static1,NPV_pt_time_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+static1,NPV_pt_time_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+static1,NPV_pt_crowding_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+static1,NPV_pt_crowding_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+static1,NPV_pt_crowding_MCHF,EBIKE_SHARE,,200,Insufficient variation
+static1,NPV_pt_crowding_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+static1,NPV_pt_crowding_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+static1,NPV_pt_crowding_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+static1,NPV_inv_MCHF,PASSENGER_DEMAND_GROWTH,0.08776119402985076,200,Estimated
+static1,NPV_inv_MCHF,BIKE_ASC_SHIFT,0.002013050326258157,200,Estimated
+static1,NPV_inv_MCHF,EBIKE_SHARE,0.13205880147003676,200,Estimated
+static1,NPV_inv_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.1090902272556814,200,Estimated
+static1,NPV_inv_MCHF,OPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+static1,NPV_inv_MCHF,CAPEX_MULTIPLIER,-1.0,200,Estimated
+static1,NPV_op_MCHF,PASSENGER_DEMAND_GROWTH,0.04360009000225006,200,Estimated
+static1,NPV_op_MCHF,BIKE_ASC_SHIFT,-0.02667666691667292,200,Estimated
+static1,NPV_op_MCHF,EBIKE_SHARE,0.010023250581264534,200,Estimated
+static1,NPV_op_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.03330533263331584,200,Estimated
+static1,NPV_op_MCHF,OPEX_MULTIPLIER,-1.0,200,Estimated
+static1,NPV_op_MCHF,CAPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+static2,NPV_MCHF,PASSENGER_DEMAND_GROWTH,0.9441176029400737,200,Estimated
+static2,NPV_MCHF,BIKE_ASC_SHIFT,0.19451586289657244,200,Estimated
+static2,NPV_MCHF,EBIKE_SHARE,-0.08636465911647792,200,Estimated
+static2,NPV_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.012237305932648318,200,Estimated
+static2,NPV_MCHF,OPEX_MULTIPLIER,-0.10265656641416038,200,Estimated
+static2,NPV_MCHF,CAPEX_MULTIPLIER,-0.30016500412510316,200,Estimated
+static2,NPV_car_time_MCHF,PASSENGER_DEMAND_GROWTH,0.9427525688142205,200,Estimated
+static2,NPV_car_time_MCHF,BIKE_ASC_SHIFT,0.07365034125853148,200,Estimated
+static2,NPV_car_time_MCHF,EBIKE_SHARE,-0.2908272706817671,200,Estimated
+static2,NPV_car_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.03931148278706969,200,Estimated
+static2,NPV_car_time_MCHF,OPEX_MULTIPLIER,-0.028461711542788575,200,Estimated
+static2,NPV_car_time_MCHF,CAPEX_MULTIPLIER,-0.040630015750393766,200,Estimated
+static2,NPV_pt_time_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+static2,NPV_pt_time_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+static2,NPV_pt_time_MCHF,EBIKE_SHARE,,200,Insufficient variation
+static2,NPV_pt_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+static2,NPV_pt_time_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+static2,NPV_pt_time_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+static2,NPV_pt_crowding_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+static2,NPV_pt_crowding_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+static2,NPV_pt_crowding_MCHF,EBIKE_SHARE,,200,Insufficient variation
+static2,NPV_pt_crowding_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+static2,NPV_pt_crowding_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+static2,NPV_pt_crowding_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+static2,NPV_inv_MCHF,PASSENGER_DEMAND_GROWTH,0.08776119402985076,200,Estimated
+static2,NPV_inv_MCHF,BIKE_ASC_SHIFT,0.002013050326258157,200,Estimated
+static2,NPV_inv_MCHF,EBIKE_SHARE,0.13205880147003676,200,Estimated
+static2,NPV_inv_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.1090902272556814,200,Estimated
+static2,NPV_inv_MCHF,OPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+static2,NPV_inv_MCHF,CAPEX_MULTIPLIER,-1.0,200,Estimated
+static2,NPV_op_MCHF,PASSENGER_DEMAND_GROWTH,0.04360009000225006,200,Estimated
+static2,NPV_op_MCHF,BIKE_ASC_SHIFT,-0.02667666691667292,200,Estimated
+static2,NPV_op_MCHF,EBIKE_SHARE,0.010023250581264534,200,Estimated
+static2,NPV_op_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.03330533263331584,200,Estimated
+static2,NPV_op_MCHF,OPEX_MULTIPLIER,-1.0,200,Estimated
+static2,NPV_op_MCHF,CAPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+staged1,NPV_MCHF,PASSENGER_DEMAND_GROWTH,0.9393159828995726,200,Estimated
+staged1,NPV_MCHF,BIKE_ASC_SHIFT,0.19300982524563115,200,Estimated
+staged1,NPV_MCHF,EBIKE_SHARE,-0.09311482787069678,200,Estimated
+staged1,NPV_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.015850896272406812,200,Estimated
+staged1,NPV_MCHF,OPEX_MULTIPLIER,-0.10414160354008853,200,Estimated
+staged1,NPV_MCHF,CAPEX_MULTIPLIER,-0.3118187954698868,200,Estimated
+staged1,NPV_car_time_MCHF,PASSENGER_DEMAND_GROWTH,0.9657511437785947,200,Estimated
+staged1,NPV_car_time_MCHF,BIKE_ASC_SHIFT,0.05070876771919298,200,Estimated
+staged1,NPV_car_time_MCHF,EBIKE_SHARE,-0.2228245706142654,200,Estimated
+staged1,NPV_car_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.02971874296857422,200,Estimated
+staged1,NPV_car_time_MCHF,OPEX_MULTIPLIER,-0.030005250131253287,200,Estimated
+staged1,NPV_car_time_MCHF,CAPEX_MULTIPLIER,-0.053617340433510845,200,Estimated
+staged1,NPV_pt_time_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+staged1,NPV_pt_time_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+staged1,NPV_pt_time_MCHF,EBIKE_SHARE,,200,Insufficient variation
+staged1,NPV_pt_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+staged1,NPV_pt_time_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+staged1,NPV_pt_time_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+staged1,NPV_pt_crowding_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+staged1,NPV_pt_crowding_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+staged1,NPV_pt_crowding_MCHF,EBIKE_SHARE,,200,Insufficient variation
+staged1,NPV_pt_crowding_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+staged1,NPV_pt_crowding_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+staged1,NPV_pt_crowding_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+staged1,NPV_inv_MCHF,PASSENGER_DEMAND_GROWTH,0.08776119402985076,200,Estimated
+staged1,NPV_inv_MCHF,BIKE_ASC_SHIFT,0.002013050326258157,200,Estimated
+staged1,NPV_inv_MCHF,EBIKE_SHARE,0.13205880147003676,200,Estimated
+staged1,NPV_inv_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.1090902272556814,200,Estimated
+staged1,NPV_inv_MCHF,OPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+staged1,NPV_inv_MCHF,CAPEX_MULTIPLIER,-1.0,200,Estimated
+staged1,NPV_op_MCHF,PASSENGER_DEMAND_GROWTH,0.04360009000225006,200,Estimated
+staged1,NPV_op_MCHF,BIKE_ASC_SHIFT,-0.02667666691667292,200,Estimated
+staged1,NPV_op_MCHF,EBIKE_SHARE,0.010023250581264534,200,Estimated
+staged1,NPV_op_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.03330533263331584,200,Estimated
+staged1,NPV_op_MCHF,OPEX_MULTIPLIER,-1.0,200,Estimated
+staged1,NPV_op_MCHF,CAPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+staged2,NPV_MCHF,PASSENGER_DEMAND_GROWTH,0.9432400810020252,200,Estimated
+staged2,NPV_MCHF,BIKE_ASC_SHIFT,0.1947588689717243,200,Estimated
+staged2,NPV_MCHF,EBIKE_SHARE,-0.08858771469286734,200,Estimated
+staged2,NPV_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.012295807395184882,200,Estimated
+staged2,NPV_MCHF,OPEX_MULTIPLIER,-0.10204005100127504,200,Estimated
+staged2,NPV_MCHF,CAPEX_MULTIPLIER,-0.3015900397509938,200,Estimated
+staged2,NPV_car_time_MCHF,PASSENGER_DEMAND_GROWTH,0.9448451211280283,200,Estimated
+staged2,NPV_car_time_MCHF,BIKE_ASC_SHIFT,0.06934073351833797,200,Estimated
+staged2,NPV_car_time_MCHF,EBIKE_SHARE,-0.285451136278407,200,Estimated
+staged2,NPV_car_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.039258981474536866,200,Estimated
+staged2,NPV_car_time_MCHF,OPEX_MULTIPLIER,-0.02813320333008326,200,Estimated
+staged2,NPV_car_time_MCHF,CAPEX_MULTIPLIER,-0.041206030150753775,200,Estimated
+staged2,NPV_pt_time_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+staged2,NPV_pt_time_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+staged2,NPV_pt_time_MCHF,EBIKE_SHARE,,200,Insufficient variation
+staged2,NPV_pt_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+staged2,NPV_pt_time_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+staged2,NPV_pt_time_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+staged2,NPV_pt_crowding_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+staged2,NPV_pt_crowding_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+staged2,NPV_pt_crowding_MCHF,EBIKE_SHARE,,200,Insufficient variation
+staged2,NPV_pt_crowding_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+staged2,NPV_pt_crowding_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+staged2,NPV_pt_crowding_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+staged2,NPV_inv_MCHF,PASSENGER_DEMAND_GROWTH,0.08776119402985076,200,Estimated
+staged2,NPV_inv_MCHF,BIKE_ASC_SHIFT,0.002013050326258157,200,Estimated
+staged2,NPV_inv_MCHF,EBIKE_SHARE,0.13205880147003676,200,Estimated
+staged2,NPV_inv_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.1090902272556814,200,Estimated
+staged2,NPV_inv_MCHF,OPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+staged2,NPV_inv_MCHF,CAPEX_MULTIPLIER,-1.0,200,Estimated
+staged2,NPV_op_MCHF,PASSENGER_DEMAND_GROWTH,0.04360009000225006,200,Estimated
+staged2,NPV_op_MCHF,BIKE_ASC_SHIFT,-0.02667666691667292,200,Estimated
+staged2,NPV_op_MCHF,EBIKE_SHARE,0.010023250581264534,200,Estimated
+staged2,NPV_op_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.03330533263331584,200,Estimated
+staged2,NPV_op_MCHF,OPEX_MULTIPLIER,-1.0,200,Estimated
+staged2,NPV_op_MCHF,CAPEX_MULTIPLIER,0.0012450311257781446,200,Estimated
+flexible,NPV_MCHF,PASSENGER_DEMAND_GROWTH,0.9668596714917874,200,Estimated
+flexible,NPV_MCHF,BIKE_ASC_SHIFT,0.21363534088352212,200,Estimated
+flexible,NPV_MCHF,EBIKE_SHARE,0.020060001500037502,200,Estimated
+flexible,NPV_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.01853596339908498,200,Estimated
+flexible,NPV_MCHF,OPEX_MULTIPLIER,-0.06543463586589665,200,Estimated
+flexible,NPV_MCHF,CAPEX_MULTIPLIER,-0.24261906547663695,200,Estimated
+flexible,NPV_car_time_MCHF,PASSENGER_DEMAND_GROWTH,0.9875796894922375,200,Estimated
+flexible,NPV_car_time_MCHF,BIKE_ASC_SHIFT,0.06475961899047476,200,Estimated
+flexible,NPV_car_time_MCHF,EBIKE_SHARE,-0.11543238580964525,200,Estimated
+flexible,NPV_car_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.01224780619515488,200,Estimated
+flexible,NPV_car_time_MCHF,OPEX_MULTIPLIER,-0.03773794344858622,200,Estimated
+flexible,NPV_car_time_MCHF,CAPEX_MULTIPLIER,-0.0689387234680867,200,Estimated
+flexible,NPV_pt_time_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+flexible,NPV_pt_time_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+flexible,NPV_pt_time_MCHF,EBIKE_SHARE,,200,Insufficient variation
+flexible,NPV_pt_time_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+flexible,NPV_pt_time_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+flexible,NPV_pt_time_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+flexible,NPV_pt_crowding_MCHF,PASSENGER_DEMAND_GROWTH,,200,Insufficient variation
+flexible,NPV_pt_crowding_MCHF,BIKE_ASC_SHIFT,,200,Insufficient variation
+flexible,NPV_pt_crowding_MCHF,EBIKE_SHARE,,200,Insufficient variation
+flexible,NPV_pt_crowding_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,,200,Insufficient variation
+flexible,NPV_pt_crowding_MCHF,OPEX_MULTIPLIER,,200,Insufficient variation
+flexible,NPV_pt_crowding_MCHF,CAPEX_MULTIPLIER,,200,Insufficient variation
+flexible,NPV_inv_MCHF,PASSENGER_DEMAND_GROWTH,-0.04029400735018376,200,Estimated
+flexible,NPV_inv_MCHF,BIKE_ASC_SHIFT,-0.026414160354008853,200,Estimated
+flexible,NPV_inv_MCHF,EBIKE_SHARE,0.11371184279606993,200,Estimated
+flexible,NPV_inv_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,-0.11373884347108679,200,Estimated
+flexible,NPV_inv_MCHF,OPEX_MULTIPLIER,0.008551713792844822,200,Estimated
+flexible,NPV_inv_MCHF,CAPEX_MULTIPLIER,-0.988334208355209,200,Estimated
+flexible,NPV_op_MCHF,PASSENGER_DEMAND_GROWTH,-0.11513537838445963,200,Estimated
+flexible,NPV_op_MCHF,BIKE_ASC_SHIFT,-0.06628965724143104,200,Estimated
+flexible,NPV_op_MCHF,EBIKE_SHARE,-0.0024480612015300384,200,Estimated
+flexible,NPV_op_MCHF,CAR_CO2_KG_PER_VEHICLE_KM,0.03027975699392485,200,Estimated
+flexible,NPV_op_MCHF,OPEX_MULTIPLIER,-0.9838790969774246,200,Estimated
+flexible,NPV_op_MCHF,CAPEX_MULTIPLIER,0.019770494262356563,200,Estimated

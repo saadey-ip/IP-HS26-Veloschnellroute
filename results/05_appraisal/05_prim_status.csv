@@ -1,0 +1,7 @@
+﻿mechanism,plan,scenarios,failures,failure_share,status,accepted,density,coverage,selected_step,density_threshold
+negative_npv,staged1,200,0,0.0,No failures,False,,,,0.75
+negative_npv,static2,200,0,0.0,No failures,False,,,,0.75
+negative_npv,flexible,200,0,0.0,No failures,False,,,,0.75
+requirement_1,staged1,200,0,0.0,No failures,False,,,,0.75
+requirement_1,static2,200,0,0.0,No failures,False,,,,0.75
+requirement_1,flexible,200,2,0.01,Too few cases: need 15 per class,False,,,,0.75

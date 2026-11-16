@@ -1,0 +1,9 @@
+﻿,uncertainty,case,input_start,input_end,units,input_basis
+0,BIKE_PEAK_SHARE,P10,0.126,0.126,parameter units,Configured parameter input
+5,BIKE_PEAK_SHARE,P90,0.174,0.174,parameter units,Configured parameter input
+10,CO2_VALUE_CHF_PER_TONNE,P10,41.05873982225401,41.05873982225401,CHF/tonne CO2,Reference-year value (2015); calendar escalation applied
+15,CO2_VALUE_CHF_PER_TONNE,P90,158.3563548199807,158.3563548199807,CHF/tonne CO2,Reference-year value (2015); calendar escalation applied
+20,C_TT_BIKE,P10,19.84,19.84,CHF/person-hour,Configured parameter input
+25,C_TT_BIKE,P90,29.759999999999998,29.759999999999998,CHF/person-hour,Configured parameter input
+30,BENEFIT_HEALTH_BIKE_PER_KM,P10,0.7836000000000001,0.7836000000000001,parameter units,Configured parameter input
+35,BENEFIT_HEALTH_BIKE_PER_KM,P90,1.8284,1.8284,parameter units,Configured parameter input
