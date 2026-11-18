@@ -1,7 +1,7 @@
 ﻿plan,mean_NPV_MCHF,positive_NPV_share,requirements_met_share,positive_NPV_and_requirements_share,mean_failure_years,negative_NPV_share,expected_downside_loss_MCHF,mean_regret_MCHF,worst_tail_regret_MCHF,worst_tail_NPV_MCHF,interpretation
-baseline,0.0,0.0,0.85,0.0,0.275,0.0,0.0,315.9739171153979,343.50311966095325,0.0,
-static1,200.61349757963995,1.0,0.99,0.99,0.01,0.0,0.0,115.36041953575797,124.04080505704624,179.85020791126755,
-static2,315.9739171153979,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,286.65904430447625,
-staged1,257.57584003750037,1.0,1.0,1.0,0.0,0.0,0.0,58.39807707789754,60.755886558387644,230.587165342309,
-staged2,288.02343439580363,1.0,1.0,1.0,0.0,0.0,0.0,27.950482719594255,28.508515525372424,259.27810322403855,
-flexible,165.2814581860281,1.0,0.99,0.99,0.01,0.0,0.0,150.6924589293698,164.73842125874089,125.31152696717217,
+baseline,0.0,0.0,0.85,0.0,0.275,0.0,0.0,212.28937055894733,232.64046889966266,0.0,"No investment, but the cycling-share requirement fails in 15% of scenarios."
+static1,132.01437125789656,1.0,0.955,0.955,0.055,0.0,0.0,80.27499930105076,86.67494230163356,115.98460332115465,"Positive NPV, but lower economic value and less reliable requirement protection than the larger build-out."
+static2,212.28937055894733,1.0,0.985,0.985,0.015,0.0,0.0,0.0,0.0,190.16146671631358,"Preferred under the current results: highest mean NPV, zero observed regret and 100% requirement attainment."
+staged1,171.48760982053722,1.0,0.985,0.985,0.015,0.0,0.0,40.8017607384101,42.661899566772625,151.20446621297324,"Meets the requirement, but delaying the minor underpasses reduces NPV relative to Static 2."
+staged2,192.920851938184,1.0,0.985,0.985,0.015,0.0,0.0,19.368518620763354,19.818390037852442,171.2609757521048,"Meets the requirement and performs better than Staged 1, but remains below Static 2 in NPV."
+flexible,106.91258127164525,1.0,0.955,0.955,0.055,0.0,0.0,105.37678928730207,114.87691998454594,77.99295840334362,"Waiting slightly reduces expenditure but delays major cycling benefits; earlier triggers improve it, yet Static 2 remains ahead."

@@ -1,7 +1,8 @@
 ﻿mechanism,plan,box_source,density_in_plan,coverage_in_plan
-negative_npv,staged1,none,,
+negative_npv,static1,none,,
 negative_npv,static2,none,,
 negative_npv,flexible,none,,
-requirement_1,staged1,none,,
-requirement_1,static2,none,,
-requirement_1,flexible,none,,
+requirement_1,baseline,Plan PRIM box,0.7916666666666666,0.6333333333333333
+requirement_1,static1,Baseline reference box,0.2916666666666667,0.7777777777777778
+requirement_1,static2,Baseline reference box,0.125,1.0
+requirement_1,flexible,Baseline reference box,0.2916666666666667,0.7777777777777778
