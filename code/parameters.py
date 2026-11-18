@@ -420,8 +420,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "sensitivity",
         "transient": False,
         "distribution": "uniform",
-        "minimum": 24.80*(1-0.25),
-        "maximum": 24.80*(1+0.25),
+        "minimum": 18.7*(1-0.25),
+        "maximum": 18.7*(1+0.25),
     },
     "BENEFIT_HEALTH_BIKE_PER_KM": {
         "category": "post_modelling", "use": "sensitivity", "transient": False,
