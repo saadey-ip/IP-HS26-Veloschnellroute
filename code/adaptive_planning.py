@@ -71,7 +71,7 @@ SIGNPOSTS = {
 DEFAULT_TRIGGERS = {
     "trigger1": {                       # build Stage 1 (bike highway + 3 major underpasses)
         "signpost":    "bike_trips",    # or the bike-PKM column
-        "threshold":   1.15*16897,               
+        "threshold":   1.15*16897,
         "persistence": 2,
         "lead_time":   5,
     },
@@ -131,8 +131,8 @@ PLAN_DEFINITIONS = {
     "staged2": {
         "name": "Staged 2",
         "initial_packages": [],
-        "stations": {"type": "fixed", "opening_year": 1},
-        "tunnel": {"type": "fixed", "opening_year": 10},
+        "stations": {"type": "fixed", "opening_year": 6},
+        "tunnel": {"type": "fixed", "opening_year": 9},
     },
     "flexible": {
         "name": "Flexible",

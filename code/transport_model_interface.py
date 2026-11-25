@@ -52,7 +52,7 @@ ASSIGNMENT_SETTINGS = {
     "method": "MSA",
     "force_regenerate_corridor_network": False,  # Reuse prepared roads unless a rebuild is explicitly requested.
     "max_iterations": 70,
-    "min_iterations": 8,
+    "min_iterations": 70,
     "stopping_rule": "road_relative_gap",
     "road_gap_threshold": 0.02,
     "check_every": 4,

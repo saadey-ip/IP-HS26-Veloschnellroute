@@ -146,11 +146,11 @@ NOMINAL_PARAMS = {
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
     # Package-specific CAPEX is defined in stages.py, alongside each intervention.
-    "OPEX_RATE": 0.005,  # Annual infrastructure operating/maintenance cost as a fraction of base construction cost.
+    "OPEX_RATE": 0.022714,  # KNA 2017: upkeep 3.84 CHF/m2 x 4.8 m x 8_500 m = 156_672 + ageing 2 % x construction excl. land 31_025_435 = 620_509 -> 777_181 CHF/yr / Stage 1 capital 34_215_476.
     "OPEX_MULTIPLIER": 1.0,  # Multiplier on annual infrastructure operating/maintenance costs.
     "CAPEX_MULTIPLIER": 1.0,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)
-    "C_FLEX": 1_500_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
+    "C_FLEX": 928_762,  # 5 % of total capital (37_155_246) / 2 packages; the adaptive plan pays both at time zero = 5 % of both packages (1.86 MCHF). Fixed plans pay none.
 
     # -------------------------------------------------------------------------
     # Performance requirements and strategic mode-share indicators
@@ -347,7 +347,7 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum": 0.45,#0.744*(1+/-0.40), uncertainty is from the appraisal
+        "minimum": -0.10,  # Pessimistic: 10 % decline (KNA tests 0 % growth); mode stays at nominal 0.744.
         "maximum": 1.04,
     },
     #"PT_ASC_SHIFT": {  # Final additive PT preference shift; negative values reduce PT attractiveness.
@@ -364,7 +364,7 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum":0.12,
+        "minimum": -0.05,  # Pessimistic: slight decline in cycling preference, below all VP2050 scenarios; mode stays 0.20.
         "maximum":0.28,
      },
      "BIKE_PEAK_SHARE": {
@@ -426,8 +426,9 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
     "BENEFIT_HEALTH_BIKE_PER_KM": {
         "category": "post_modelling", "use": "sensitivity", "transient": False,
         "distribution": "uniform",
-        "minimum": 1.306 * (1 - 0.50),
-        "maximum": 1.306 * (1 + 0.50),
+        "minimum": 0.475,   # KNA 2017: lower value of the health benefit range (CHF/pkm)
+        "maximum": 1.713,   # KNA 2017: upper value of the health benefit range (CHF/pkm)
+
     },
     "CAR_CO2_KG_PER_VEHICLE_KM": {  # Final car emissions (kg CO2/vehicle-km); sigma is relative to its nominal endpoint.
         "category": "post_modelling",

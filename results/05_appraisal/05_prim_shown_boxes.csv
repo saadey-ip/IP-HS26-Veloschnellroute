@@ -2,7 +2,7 @@
 negative_npv,static1,none,,
 negative_npv,static2,none,,
 negative_npv,flexible,none,,
-requirement_1,baseline,Plan PRIM box,0.7916666666666666,0.6333333333333333
-requirement_1,static1,Baseline reference box,0.2916666666666667,0.7777777777777778
-requirement_1,static2,Baseline reference box,0.125,1.0
-requirement_1,flexible,Baseline reference box,0.2916666666666667,0.7777777777777778
+requirement_1,baseline,Plan PRIM box,0.7615384615384615,0.8839285714285714
+requirement_1,static1,Plan PRIM box,0.7976190476190477,0.8589743589743589
+requirement_1,static2,Plan PRIM box,0.7761194029850746,0.7878787878787878
+requirement_1,flexible,Plan PRIM box,0.7976190476190477,0.8170731707317073

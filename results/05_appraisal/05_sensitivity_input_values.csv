@@ -5,5 +5,5 @@
 15,CO2_VALUE_CHF_PER_TONNE,P90,158.3563548199807,158.3563548199807,CHF/tonne CO2,Reference-year value (2015); calendar escalation applied
 20,C_TT_BIKE,P10,14.959999999999999,14.959999999999999,CHF/person-hour,Configured parameter input
 25,C_TT_BIKE,P90,22.439999999999998,22.439999999999998,CHF/person-hour,Configured parameter input
-30,BENEFIT_HEALTH_BIKE_PER_KM,P10,0.7836000000000001,0.7836000000000001,CHF/person-km,Configured parameter input
-35,BENEFIT_HEALTH_BIKE_PER_KM,P90,1.8284,1.8284,CHF/person-km,Configured parameter input
+30,BENEFIT_HEALTH_BIKE_PER_KM,P10,0.5988,0.5988,CHF/person-km,Configured parameter input
+35,BENEFIT_HEALTH_BIKE_PER_KM,P90,1.5892,1.5892,CHF/person-km,Configured parameter input

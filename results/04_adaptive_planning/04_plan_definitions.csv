@@ -3,5 +3,5 @@ baseline,Baseline — Baseline throughout the 40-year horizon,Baseline throughou
 static1,Static 1 — Stations only from Year 1,Stations only from Year 1,Stage 1 – Major Underpasses,no later addition,no later addition
 static2,Static 2 — Stations + tunnel from Year 1,Stations + tunnel from Year 1,Both stages - Major and Minor Underpasses,no later addition,no later addition
 staged1,"Staged 1 — Stations in Year 1, Tunnel in Year 20","Stations in Year 1, Tunnel in Year 20",Stage 0 – Baseline Network,fixed,fixed
-staged2,"Staged 2 — Stations in Year 1, Tunnel in Year 10","Stations in Year 1, Tunnel in Year 10",Stage 0 – Baseline Network,fixed,fixed
+staged2,"Staged 2 — Stations in Year 6, Tunnel in Year 9","Stations in Year 6, Tunnel in Year 9",Stage 0 – Baseline Network,fixed,fixed
 adaptive,"Adaptive — Stations via Trigger 1, Tunnel via Trigger 2","Stations via Trigger 1, Tunnel via Trigger 2",Stage 0 – Baseline Network,"When Peak-hour bike demand exceeds 19,431.5 trips/peak hour for 2 consecutive years, decide to build; open after a 5-year lead time.","When Peak-hour bike demand exceeds 26,105.9 trips/peak hour for 2 consecutive years, decide to build; open after a 3-year lead time."

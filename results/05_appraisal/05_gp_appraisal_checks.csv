@@ -1,9 +1,9 @@
 ﻿index,value,limit,passed
-total_benefit_mae,69044.66035870711,1000000.0,True
-total_benefit_p95_error,220209.40745956876,5000000.0,True
+total_benefit_mae,36743.95809103648,1000000.0,True
+total_benefit_p95_error,117798.24651782493,5000000.0,True
 material_total_sign_errors,0.0,0.0,True
 material_component_failures,0.0,0.0,True
-maximum_mode_share_error_pp,0.279700805704014,1.0,True
-median_mode_share_error_pp,0.01570025950172471,0.25,True
+maximum_mode_share_error_pp,0.2582392347143081,1.0,True
+median_mode_share_error_pp,0.02121278527154602,0.25,True
 maximum_section_load_relative_error,0.0,0.03,True
 median_section_load_relative_error,0.0,0.01,True

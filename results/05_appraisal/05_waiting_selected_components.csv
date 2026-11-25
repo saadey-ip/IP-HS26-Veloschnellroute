@@ -1,8 +1,8 @@
 ﻿index,Difference (CHF million),scenario,comparator
-CAPEX,4.346310216911082,0,staged1
-OPEX,1.9223335834158957,0,staged1
+CAPEX,8.684606975883707,0,staged1
+OPEX,12.706829601994642,0,staged1
 Residual value,0.0,0,staged1
-Time and access,-40.02565269178831,0,staged1
+Time and access,-57.551706633013964,0,staged1
 Crowding,0.0,0,staged1
-Other effects,-34.74264258448005,0,staged1
-Total NPV difference,-68.49965147593684,0,staged1
+Other effects,-47.30822289664346,0,staged1
+Total NPV difference,-83.46849295178254,0,staged1

@@ -1,12 +1,12 @@
 ﻿scenario,transition,source_state,target_state,package,window_count,restorable_years,has_reachable_window,all_windows_reachable,first_window_start,last_window_end,last_restoration_decision_year
-0,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+0,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 0,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 0,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-0,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-1,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
-1,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-1,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-1,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+0,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+1,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,10,True,True,31.0,40.0,35.0
+1,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+1,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,2,True,True,29.0,30.0,27.0
+1,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,12,True,True,29.0,40.0,35.0
 2,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 2,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 2,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -23,26 +23,26 @@
 5,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 5,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 5,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-6,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-6,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+6,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
+6,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
 6,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-6,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-7,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-7,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+6,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+7,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
+7,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
 7,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 7,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
 8,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 8,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 8,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 8,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-9,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-9,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-9,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-9,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-10,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
-10,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,2,True,True,22.0,23.0,20.0
-10,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
-10,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,21.0,21.0,16.0
+9,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
+9,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,24.0,24.0,21.0
+9,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+9,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
+10,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,6,True,True,30.0,35.0,30.0
+10,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,35.0,35.0,32.0
+10,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,29.0,29.0,26.0
+10,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,6,True,True,29.0,34.0,29.0
 11,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 11,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 11,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -51,102 +51,102 @@
 12,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 12,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 12,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-13,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-13,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-13,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-13,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-14,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+13,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
+13,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+13,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+13,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,22.0,24.0,19.0
+14,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 14,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 14,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-14,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+14,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 15,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 15,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 15,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 15,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-16,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+16,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
 16,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-16,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-16,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+16,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+16,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,21.0,23.0,18.0
 17,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 17,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 17,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 17,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-18,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
-18,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,2,True,True,21.0,22.0,19.0
-18,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
-18,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-19,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+18,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,26.0,28.0,23.0
+18,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+18,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,25.0,25.0,22.0
+18,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,4,True,True,25.0,28.0,23.0
+19,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 19,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 19,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-19,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+19,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 20,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 20,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 20,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 20,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-21,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-21,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-21,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-21,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-22,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+21,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
+21,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,24.0,24.0,21.0
+21,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+21,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
+22,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 22,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 22,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-22,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-23,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-23,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+22,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+23,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
+23,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
 23,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-23,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-24,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-24,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-24,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-24,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-25,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-25,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+23,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+24,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,25.0,27.0,22.0
+24,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,27.0,27.0,24.0
+24,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,24.0,24.0,21.0
+24,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,24.0,26.0,21.0
+25,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
+25,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
 25,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-25,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-26,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-26,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-26,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-26,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-27,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+25,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,21.0,21.0,16.0
+26,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,24.0,25.0,20.0
+26,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+26,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,23.0,23.0,20.0
+26,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,23.0,25.0,20.0
+27,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
 27,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 27,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-27,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+27,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
 28,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 28,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 28,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 28,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-29,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+29,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
 29,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 29,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-29,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-30,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
-30,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
+29,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+30,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+30,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 30,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-30,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-31,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+30,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+31,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
 31,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-31,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-31,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-32,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+31,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+31,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,22.0,24.0,19.0
+32,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 32,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 32,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-32,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-33,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
-33,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-33,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-33,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+32,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+33,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,25.0,27.0,22.0
+33,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,27.0,27.0,24.0
+33,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,24.0,24.0,21.0
+33,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,24.0,26.0,21.0
 34,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 34,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 34,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 34,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-35,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+35,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
 35,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 35,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-35,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-36,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+35,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
+36,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 36,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 36,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-36,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+36,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 37,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 37,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 37,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -155,26 +155,26 @@
 38,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 38,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 38,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-39,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+39,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 39,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 39,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-39,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-40,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-40,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+39,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+40,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
+40,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
 40,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 40,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
 41,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 41,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 41,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 41,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-42,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
-42,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-42,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-42,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-43,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
-43,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-43,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
-43,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+42,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,5,True,True,27.0,31.0,26.0
+42,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,31.0,31.0,28.0
+42,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,26.0,26.0,23.0
+42,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,5,True,True,26.0,30.0,25.0
+43,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,8,True,True,31.0,38.0,33.0
+43,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,2,True,True,37.0,38.0,35.0
+43,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,3,True,True,28.0,30.0,27.0
+43,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,9,True,True,28.0,36.0,31.0
 44,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 44,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 44,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -183,22 +183,22 @@
 45,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 45,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 45,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-46,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-46,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-46,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-46,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-47,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-47,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+46,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+46,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
+46,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+46,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
+47,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,24.0,26.0,21.0
+47,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,26.0,26.0,23.0
 47,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-47,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-48,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+47,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,24.0,25.0,20.0
+48,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 48,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 48,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-48,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-49,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+48,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+49,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 49,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-49,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-49,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+49,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+49,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
 50,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 50,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 50,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -207,82 +207,82 @@
 51,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 51,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 51,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-52,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-52,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-52,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-52,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+52,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,25.0,27.0,22.0
+52,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,27.0,27.0,24.0
+52,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,24.0,24.0,21.0
+52,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,24.0,26.0,21.0
 53,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 53,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 53,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 53,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-54,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+54,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 54,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 54,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-54,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-55,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+54,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+55,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
 55,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 55,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-55,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+55,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,23.0,24.0,19.0
 56,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 56,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 56,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 56,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-57,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-57,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-57,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-57,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+57,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
+57,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
+57,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+57,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
 58,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 58,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 58,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 58,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-59,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+59,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 59,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 59,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-59,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+59,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 60,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 60,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 60,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 60,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-61,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+61,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 61,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 61,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-61,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-62,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
-62,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-62,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-62,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-63,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+61,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+62,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,6,True,True,28.0,33.0,28.0
+62,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,2,True,True,32.0,33.0,30.0
+62,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,27.0,27.0,24.0
+62,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,5,True,True,27.0,31.0,26.0
+63,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,24.0,25.0,20.0
 63,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 63,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-63,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-64,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-64,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-64,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-64,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-65,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+63,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,24.0,25.0,20.0
+64,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
+64,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,24.0,24.0,21.0
+64,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+64,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
+65,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
 65,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 65,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-65,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-66,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+65,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+66,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,22.0,22.0,17.0
 66,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-66,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-66,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+66,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+66,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
 67,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 67,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 67,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 67,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-68,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+68,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
 68,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 68,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-68,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+68,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
 69,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 69,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 69,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 69,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-70,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-70,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-70,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-70,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+70,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,24.0,26.0,21.0
+70,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,26.0,26.0,23.0
+70,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,23.0,23.0,20.0
+70,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,23.0,25.0,20.0
 71,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 71,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 71,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -291,38 +291,38 @@
 72,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 72,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 72,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-73,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-73,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+73,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
+73,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
 73,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-73,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+73,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 74,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 74,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 74,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 74,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-75,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+75,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 75,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-75,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-75,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-76,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+75,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+75,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+76,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
 76,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 76,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-76,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+76,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,23.0,24.0,19.0
 77,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 77,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 77,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 77,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-78,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-78,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+78,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
+78,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
 78,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 78,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-79,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-79,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-79,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-79,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-80,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-80,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-80,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-80,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+79,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
+79,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
+79,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+79,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+80,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,22.0,22.0,17.0
+80,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
+80,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+80,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,21.0,21.0,16.0
 81,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 81,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 81,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -355,62 +355,62 @@
 88,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 88,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 88,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-89,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+89,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 89,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-89,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-89,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-90,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-90,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+89,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+89,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+90,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+90,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
 90,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-90,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-91,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-91,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-91,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-91,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+90,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,22.0,22.0,17.0
+91,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+91,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
+91,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+91,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
 92,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 92,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 92,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 92,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-93,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+93,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 93,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-93,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-93,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-94,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+93,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+93,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+94,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 94,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 94,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-94,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+94,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,21.0,21.0,16.0
 95,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 95,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 95,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 95,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-96,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-96,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+96,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
+96,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
 96,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-96,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-97,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
-97,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-97,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
-97,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-98,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-98,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-98,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-98,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+96,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+97,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+97,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+97,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
+97,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+98,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,4,True,True,26.0,29.0,24.0
+98,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,29.0,29.0,26.0
+98,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,25.0,25.0,22.0
+98,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,4,True,True,25.0,28.0,23.0
 99,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 99,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 99,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 99,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-100,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-100,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-100,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-100,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-101,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-101,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-101,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-101,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-102,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-102,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+100,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,26.0,28.0,23.0
+100,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,28.0,28.0,25.0
+100,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,25.0,25.0,22.0
+100,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,25.0,27.0,22.0
+101,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+101,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
+101,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+101,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
+102,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
+102,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
 102,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-102,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+102,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 103,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 103,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 103,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -419,34 +419,34 @@
 104,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 104,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 104,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-105,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+105,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 105,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 105,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-105,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-106,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-106,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-106,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-106,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-107,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+105,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+106,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,26.0,28.0,23.0
+106,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,28.0,28.0,25.0
+106,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,25.0,25.0,22.0
+106,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,25.0,27.0,22.0
+107,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 107,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-107,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-107,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-108,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-108,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-108,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-108,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-109,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-109,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-109,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-109,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+107,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+107,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+108,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
+108,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
+108,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+108,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+109,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+109,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
+109,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+109,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
 110,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 110,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 110,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 110,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-111,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
-111,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
+111,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+111,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 111,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-111,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,21.0,21.0,16.0
+111,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
 112,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 112,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 112,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -463,30 +463,30 @@
 115,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 115,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 115,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-116,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+116,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,22.0,22.0,17.0
 116,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-116,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-116,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-117,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+116,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+116,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
+117,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 117,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-117,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-117,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+117,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+117,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
 118,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 118,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 118,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 118,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-119,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+119,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,25.0,26.0,21.0
 119,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-119,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-119,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-120,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+119,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,24.0,24.0,21.0
+119,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,24.0,26.0,21.0
+120,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 120,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-120,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-120,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-121,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+120,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+120,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+121,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 121,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 121,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-121,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+121,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 122,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 122,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 122,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -495,14 +495,14 @@
 123,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 123,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 123,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-124,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
-124,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-124,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-124,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-125,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-125,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-125,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-125,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+124,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,4,True,True,26.0,29.0,24.0
+124,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,29.0,29.0,26.0
+124,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,25.0,25.0,22.0
+124,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,4,True,True,25.0,28.0,23.0
+125,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,25.0,26.0,21.0
+125,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+125,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,24.0,24.0,21.0
+125,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,24.0,26.0,21.0
 126,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 126,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 126,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -511,48 +511,48 @@
 127,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 127,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 127,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-128,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+128,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 128,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-128,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-128,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-129,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-129,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-129,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-129,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+128,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+128,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
+129,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,26.0,28.0,23.0
+129,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,28.0,28.0,25.0
+129,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,25.0,25.0,22.0
+129,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,25.0,27.0,22.0
 130,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 130,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 130,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 130,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-131,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
-131,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
-131,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
-131,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
-132,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-132,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+131,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,8,True,True,31.0,38.0,33.0
+131,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,2,True,True,37.0,38.0,35.0
+131,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,2,True,True,29.0,30.0,27.0
+131,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,8,True,True,29.0,36.0,31.0
+132,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
+132,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
 132,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 132,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
 133,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 133,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 133,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 133,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-134,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+134,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
 134,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 134,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-134,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+134,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
 135,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 135,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 135,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 135,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-136,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+136,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,24.0,24.0,19.0
 136,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-136,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-136,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-137,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+136,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,23.0,23.0,20.0
+136,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,23.0,24.0,19.0
+137,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 137,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 137,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-137,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-138,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-138,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+137,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+138,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
+138,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
 138,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 138,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
 139,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
@@ -571,34 +571,34 @@
 142,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 142,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 142,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-143,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+143,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,24.0,25.0,20.0
 143,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-143,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-143,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+143,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,23.0,23.0,20.0
+143,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,23.0,25.0,20.0
 144,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 144,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 144,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 144,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-145,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-145,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-145,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-145,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-146,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-146,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-146,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-146,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+145,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
+145,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,24.0,24.0,21.0
+145,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+145,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
+146,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,22.0,22.0,17.0
+146,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
+146,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+146,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,21.0,21.0,16.0
 147,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 147,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 147,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 147,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-148,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
-148,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,2,True,True,21.0,22.0,19.0
-148,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
-148,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-149,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-149,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-149,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-149,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+148,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,4,True,True,26.0,29.0,24.0
+148,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,29.0,29.0,26.0
+148,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,25.0,25.0,22.0
+148,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,4,True,True,25.0,28.0,23.0
+149,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+149,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
+149,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+149,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
 150,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 150,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 150,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -611,18 +611,18 @@
 152,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 152,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 152,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-153,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-153,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+153,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
+153,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
 153,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-153,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-154,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
-154,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
-154,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
-154,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
-155,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-155,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-155,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-155,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+153,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,21.0,21.0,16.0
+154,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+154,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+154,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
+154,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+155,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+155,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,23.0,23.0,20.0
+155,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+155,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
 156,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 156,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 156,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -631,14 +631,14 @@
 157,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 157,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 157,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-158,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
-158,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
-158,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-158,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
-159,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+158,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,8,True,True,31.0,38.0,33.0
+158,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,3,True,True,36.0,38.0,35.0
+158,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,2,True,True,29.0,30.0,27.0
+158,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,7,True,True,29.0,35.0,30.0
+159,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,23.0,23.0,18.0
 159,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-159,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-159,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+159,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+159,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
 160,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 160,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 160,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -655,22 +655,22 @@
 163,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 163,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 163,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-164,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-164,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-164,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-164,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+164,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
+164,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+164,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+164,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,22.0,24.0,19.0
 165,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 165,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 165,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 165,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-166,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-166,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
+166,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
+166,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 166,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-166,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-167,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+166,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,21.0,22.0,17.0
+167,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 167,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 167,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-167,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+167,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 168,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 168,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 168,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -679,26 +679,26 @@
 169,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 169,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 169,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-170,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+170,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
 170,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 170,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-170,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+170,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
 171,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 171,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 171,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 171,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-172,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+172,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,21.0,21.0,16.0
 172,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-172,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-172,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+172,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
+172,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
 173,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 173,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 173,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 173,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-174,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-174,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+174,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
+174,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
 174,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-174,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+174,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 175,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 175,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 175,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -707,28 +707,28 @@
 176,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 176,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 176,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-177,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+177,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 177,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 177,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-177,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+177,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 178,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 178,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 178,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 178,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-179,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+179,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 179,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 179,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-179,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-180,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-180,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
-180,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-180,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-181,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-181,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-181,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-181,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-182,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-182,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+179,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+180,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,3,True,True,27.0,29.0,24.0
+180,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,29.0,29.0,26.0
+180,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,26.0,26.0,23.0
+180,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,26.0,28.0,23.0
+181,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,24.0,25.0,20.0
+181,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+181,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,23.0,23.0,20.0
+181,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,23.0,25.0,20.0
+182,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
+182,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
 182,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 182,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
 183,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
@@ -747,30 +747,30 @@
 186,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 186,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 186,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-187,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-187,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-187,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-187,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+187,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
+187,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,24.0,24.0,21.0
+187,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,22.0,22.0,19.0
+187,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,22.0,23.0,18.0
 188,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 188,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 188,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 188,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-189,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+189,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 189,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 189,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-189,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-190,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
-190,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+189,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
+190,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,20.0,21.0,16.0
+190,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,21.0,21.0,18.0
 190,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-190,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+190,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 191,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 191,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 191,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 191,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-192,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+192,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,23.0,24.0,19.0
 192,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 192,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-192,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+192,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,23.0,24.0,19.0
 193,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 193,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 193,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
@@ -779,18 +779,18 @@
 194,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 194,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
 194,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-195,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
-195,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,20.0,20.0,17.0
-195,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-195,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
-196,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,21.0,22.0,17.0
-196,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,1,1,True,True,22.0,22.0,19.0
-196,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,20.0,20.0,17.0
-196,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,2,True,True,20.0,21.0,16.0
-197,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
+195,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,2,True,True,22.0,23.0,18.0
+195,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+195,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,1,True,True,21.0,21.0,18.0
+195,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,3,True,True,21.0,23.0,18.0
+196,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,5,True,True,36.0,40.0,35.0
+196,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
+196,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,1,4,True,True,32.0,35.0,32.0
+196,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,9,True,True,32.0,40.0,35.0
+197,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,1,1,True,True,20.0,20.0,15.0
 197,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 197,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,
-197,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,0,0,False,False,,,
+197,Stage 2 - Additional Minor Underpasses → Both stages - Major and Minor Underpasses,2,3,1,1,1,True,True,20.0,20.0,15.0
 198,Stage 0 – Baseline Network → Stage 1 – Major Underpasses,0,1,1,0,0,False,False,,,
 198,Stage 0 – Baseline Network → Stage 2 - Additional Minor Underpasses,0,2,2,0,0,False,False,,,
 198,Stage 1 – Major Underpasses → Both stages - Major and Minor Underpasses,1,3,2,0,0,False,False,,,

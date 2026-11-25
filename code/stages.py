@@ -264,12 +264,14 @@ PACKAGES = {
         # Set capital_share to 0 to disable residual valuation (lifetime may then be None).
         # No asset replacement is assumed.
         "appraisal": {
-            "capital_cost_chf": 28_422_872+2_681_000,  # Station-package CAPEX (CHF).
+            "capital_cost_chf": 34_215_476,  # Highway 26.42 M (Apr 2016, incl. 10 % land) x 100.7/83.4 = 31_900_408 + 3 major underpasses (30 m) x 771_690.
             "lifetime_years": 40,  # Service life of the share valued below (years).
             "capital_share": 0.0,  # Fraction of actual capital paid eligible for residual value.
             # Total construction emissions (tonnes CO2e), spread over construction years.
             # Pre-horizon emissions are charged at time zero; omitted entries mean zero.
-            "construction_co2_tonnes": 0.0,  # Add a project-specific total when available.
+            # BAFU 2025: path 1.1 kg CO2e/m2a (p. 25) x 40,800 m2 x 40 a = 1,795 t
+            # + 3 major underpasses: bridge 10.5 kg CO2e/m2a (p. 31, upper bound) x 150 m2 (30 m x 5 m) x 40 a = 63 t each.
+            "construction_co2_tonnes": 1_984.0,
         },
     },
 
@@ -330,7 +332,8 @@ PACKAGES = {
                     # 16 km/h (stage 1) -> 18 km/h (stage 2) = +12.5%. No further distance reduction. At the moment evaluated from baseline, higher pct increse
                     "speed_increase_pct": 12.5,
                 },
-                "standalone_effects": {"distance_reduction_pct": 5.0},
+                # Stage 2 alone (without Stage 1): ~20 s saved per underpass -> +5.8 % speed, no distance reduction.
+                "standalone_effects": {"speed_increase_pct": 5.8, "distance_reduction_pct": 0.0},
             },
             {
                 "name": "Limmattal Bike Highway - 5 minor underpasses - outer",
@@ -339,17 +342,18 @@ PACKAGES = {
                 "effects": {
                     "speed_increase_pct": OUTER_EFFECT_SHARE * 12.5,
                 },
-                "standalone_effects": {"distance_reduction_pct": OUTER_EFFECT_SHARE * 5.0},
+                "standalone_effects": {"speed_increase_pct": OUTER_EFFECT_SHARE * 5.8, "distance_reduction_pct": 0.0},
             },
 
         ],
 
         # Appraisal considerations: the same valuation and construction conventions.
         "appraisal": {
-            "capital_cost_chf": 5*537_624,  # Tunnel/Winterthur package CAPEX (CHF).
+            "capital_cost_chf": 5*587_954,  # 5 minor underpasses (20 m): (20*15_000 + 2*90_000)*0.95 x 100.7/78.1.
             "lifetime_years": 40,  # Service life of the share valued below (years).
             "capital_share": 0.0,  # Fraction of actual capital paid eligible for residual value.
-            "construction_co2_tonnes": 0.0,  # Total construction emissions (tonnes CO2e).
+            # BAFU 2025: 5 minor underpasses, bridge 10.5 kg CO2e/m2a (p. 31, upper bound) x 100 m2 (20 m x 5 m) x 40 a = 42 t each.
+            "construction_co2_tonnes": 210.0,
         },
     },
 }
