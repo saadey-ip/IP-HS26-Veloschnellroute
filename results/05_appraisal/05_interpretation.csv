@@ -1,7 +1,7 @@
 ﻿plan,mean_NPV_MCHF,positive_NPV_share,requirements_met_share,positive_NPV_and_requirements_share,mean_failure_years,negative_NPV_share,expected_downside_loss_MCHF,mean_regret_MCHF,worst_tail_regret_MCHF,worst_tail_NPV_MCHF,interpretation
-baseline,0.0,0.0,0.44,0.0,2.945,0.0,0.0,170.7871212260047,205.80257547902875,0.0,"No investment, but the cycling-share requirement fails in 15% of scenarios."
+baseline,0.0,0.0,0.44,0.0,2.945,0.0,0.0,170.7871212260047,205.80257547902875,0.0,Reference case without investment.
 static1,98.9915141977439,1.0,0.61,0.61,1.79,0.0,0.0,71.79560702826082,82.41067717483638,67.54348802215081,"Positive NPV, but lower economic value and less reliable requirement protection than the larger build-out."
-static2,170.7871212260047,1.0,0.67,0.67,1.455,0.0,0.0,0.0,0.0,126.12863213183445,"Preferred under the current results: highest mean NPV, zero observed regret and 100% requirement attainment."
+static2,170.7871212260047,1.0,0.67,0.67,1.455,0.0,0.0,0.0,0.0,126.12863213183445,Highest mean NPV and zero observed regret. Cycling-share target attainment matches the staged plans.
 staged1,133.5742220822219,1.0,0.67,0.67,1.455,0.0,0.0,37.21289914378281,40.299221300364664,92.82492522865869,"Meets the requirement, but delaying the minor underpasses reduces NPV relative to Static 2."
 staged2,140.10073052785143,1.0,0.67,0.67,1.455,0.0,0.0,30.686390698153282,33.104039550753804,97.69007033311918,"Meets the requirement and performs better than Staged 1, but remains below Static 2 in NPV."
 flexible,65.43966800726449,0.965,0.59,0.59,1.92,0.035,0.2685130304660015,105.34745321874023,127.77904793195758,3.6783584205726583,"Waiting slightly reduces expenditure but delays major cycling benefits; earlier triggers improve it, yet Static 2 remains ahead."
